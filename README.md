@@ -3,19 +3,9 @@
 **An open standard for Governed Autonomic Replayable Domains (GARDs)
 on KERI.**
 
-> **Abstract** — A governance layer for KERI-based identifier
-> infrastructure is presented. KERI settles who speaks for an
-> identifier: key state committed to witnessed, end-verifiable
-> logs; duplicity — two voices at one coordinate — evident to any
-> observer holding both; recovery provided at the key tier; the
-> trust decision ruled in KERI's own words (an honest validator
-> MUST NOT trust key state carrying unreconciled evidence of
-> duplicity). There KERI deliberately stops. Whether a duplicitous
-> authority keeps its seat, whether acts it signed retain standing,
-> what a counterparty is owed once trust is withdrawn — these are
-> law above key state, and KERI imposes none; every consuming
-> system improvises its consequences, and improvisation does not
-> compose. This document presents the GARD — Governed Autonomic
+> **Abstract** —
+> 
+> This document presents the GARD — Governed Autonomic
 > Replayable Domain — which extends end-verifiability from control
 > provenance to governance provenance: law, evidence, and judgment
 > as committed bytes under one identifier, every judgment
