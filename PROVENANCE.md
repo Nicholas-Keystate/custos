@@ -42,7 +42,7 @@ above rather than published with dangling citations.
   at any time*. The kernel's abstract extends it from control
   provenance to governance provenance, with attribution.
 - **The GEL** (governance event log) descends from the lead
-  author's earlier published work on chartered registries: the
+  author's earlier work on chartered registries: the
   Standing Registry — the registry that charters every
   operational registry in its scope — and the constitutional-
   registries line where the Governance Event Log is first named
