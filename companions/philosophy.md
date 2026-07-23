@@ -45,22 +45,18 @@ the domain's entire in-force law, not just the fragments someone
 chose to show it.
 
 Earlier work in the chartered-registries line put this as a job
-description with six properties, and the list survives translation
-into 4.0 vocabulary intact. A governance layer that earns its
-adjectives must deliver: completeness (closed-world rule discovery
-— rule-state is committed enumeration, never testimony);
-cross-rule order with non-duplicity (rule changes totally ordered
-against each other and against governed events, equivocation
-third-party-detectable); position-varying law without
-retroactivity (rules change; past judgments are stable under
-future change — the law in force at a position wins, never the
-latest law); judgment non-duplicity (the domain's own rulings are
-equivocation-proof — it cannot tell one party "affirmed" and
-another "defeated" undetectably); self-amendment with a home (the
-amendment rule governs itself from a well-defined place, so the
-domain has identity criteria as an object); and KERI-nativity
-(end-verifiable from the domain's own identifier, no foreign
-consensus, the domain's own witnesses as the trust floor).
+description with six properties, and the table survives
+translation into 4.0 vocabulary intact. A governance layer that
+earns its adjectives must deliver:
+
+| | Property | Statement | Failure means |
+|---|---|---|---|
+| **P1** | **Completeness** (closed-world rule discovery) | A stranger can know it holds the domain's *entire* in-force rule set, not just the rules someone chose to show it | Rule-state is testimony; split-view by omission |
+| **P2** | **Cross-rule order with non-duplicity** | Rule changes are totally ordered against each other and against governed events; equivocation is third-party-detectable | "Which came first, the rule or the act" is litigated, not computed |
+| **P3** | **Position-varying law without retroactivity** | Rules change; past judgments are stable under future change (the in-force fold: law-in-force-at-the-position wins, never latest-wins) | Judgment drift; historical verification impossible |
+| **P4** | **Judgment non-duplicity** | The domain's *findings* are equivocation-proof: it cannot tell one party "affirmed" and another "defeated" undetectably | Governance accountability is unevidenceable |
+| **P5** | **Self-amendment with a home** | The amendment rule governs itself from a well-defined place; the domain has identity criteria as an object | Meta-governance is circular or undefined; "the domain" is a fuzzy cluster |
+| **P6** | **KERI-nativity** | End-verifiable from the gAID alone; no foreign consensus; the domain's own witnesses are the trust floor | Sovereignty mortgaged to infrastructure the domain does not control |
 
 That same earlier work then ran the elimination ladder: try to do
 the job without a committed governance log, steelman each
@@ -72,46 +68,29 @@ today not as advocacy but as explanation: this is why the
 standard's central object has the shape it has, and why no smaller
 shape suffices.
 
-Rules carried only in credential bodies give you per-artifact
-contract law, frozen at issuance — the right tool for bilateral
-terms, and no tool at all for domain law, because norms that apply
-to classes of parties and change over time cannot live inside
-issued artifacts; amending a rule embedded in ten thousand
-credentials means mass re-issuance, so the norms simply never
-change. Governance-framework documents, even digest-anchored, give
-you a governance record with content integrity — at document
-granularity, not clause granularity, not machine-evaluable, with
-"which version governed at this position" left as administrative
-testimony. Charter chains — governance as credentials and edges —
-deliver issuance authority and scope completely, and fail exactly
-at completeness and order. This failure has a name, and the name
-is the most important exploit in the whole argument: **split-view
-by omission**. Show different verifiers different subsets of the
-rule set. No single log is forked; no witness catches anything,
-because no log is incomplete; each verifier holds a perfectly
-valid, perfectly partial view. Equivocation without duplicity —
-the attack that per-artifact integrity is structurally unable to
-see, because every artifact shown is genuine and the lie is in the
-enumeration. Per-topic registries without a constitutional root
-push the same hole one level up (which registries are the
-domain's?) and leave the amendment rule homeless. A re-signed
-whole-state document gives you the current set with threshold
-self-amendment and no history — a tip without a log, historical
-verification impossible, and per-client split-view returns through
-the serving layer. An external ledger genuinely buys completeness
-and order — at the cost of nativity: governance held hostage to a
-validator set the domain does not control, sovereignty mortgaged
-to infrastructure whose failures become the domain's failures.
+The ladder, one rung per alternative — what each genuinely
+delivers, where it breaks against the table above, and the
+exploit that breaks it:
 
-And the serious alternative, the one that deserves respect: seal
-governance acts directly into the KEL, bare. This delivers nearly
-everything — total order, witnessing, duplicity evidence, all
-inherited. What it fails is a question KERI itself already asked
-and answered, about credentials: why TELs, rather than sealing
-credential state directly into KELs? Segregation of identity
-lifecycle from artifact lifecycle; registry-level semantics;
-verifier cost-scoping. The GEL is justified by the identical
-argument applied to law instead of credentials. A reviewer who
+| Alternative | What it genuinely delivers | What breaks | The exploit |
+|---|---|---|---|
+| **Rules in credential bodies only** | Per-artifact, frozen-at-issuance contract law (the right tool for bilateral terms) | No domain law: norms that apply to classes and change over time cannot live in issued artifacts | Amending a rule embedded in ten thousand credentials requires mass re-issuance — so norms never change |
+| **Governance-framework documents**, even digest-anchored | A governance *record* with content integrity | Document granularity, not clause granularity; not machine-evaluable; "which version governed at this position" is administrative testimony (**P2, P3**) | The recurring qualification audit — the standing operational cost of law carried at document granularity |
+| **Pure charter chains** (governance as credentials and edges) | Issuance authority and scope completely; per-credential revocation | **P1, P2**: no completeness surface — a verifier can never know it has seen *all* applicable rules; per-credential lifecycles, never a sequence of the rule *set* | **Split-view by omission**: show different verifiers different rule subsets without equivocating on any single log. No witness catches it, because no log is incomplete |
+| **Per-topic registries, no constitutional root** | Operational governance of each concern (roles, schemas, witnesses) | **P1** one level up (which registries are the domain's?) and **P5** — the amendment rule has no home that governs itself | Meta-governance circularity; the domain has no birth certificate, no identity criteria, no boundary |
+| **Bare KEL anchoring** (governance acts sealed directly into the KEL) | Nearly everything: total order, witnessing, duplicity evidence — all inherited | Nothing cryptographic. It fails on KERI's own settled doctrine — the same segregation argument that gave credentials the TEL | Identity verification pays governance traffic; typing and state semantics get rebuilt as seal conventions — a nameless GEL |
+| **Re-signed whole-state document** (root-document re-signed on every change) | The current set with threshold self-amendment — deployed at ecosystem scale for a decade elsewhere | **P3** (a tip without history: historical verification impossible) and **P2** (per-client split-view through the serving layer) | Serve different clients different "currents"; rollback and freeze held off only by expiry conventions |
+| **External ledger** | P1, P2, P3 genuinely — global consensus supplies order and completeness | **P6**: governance hostage to a validator set the domain does not control; block-time displaces the domain's own first-seen coordinate | Mandate-fragility reborn one layer down: the domain escapes its regulator's mandate and acquires its validators' |
+| **Schema-layer governance** (rules as schema evolution) | Typed vocabulary | Schemas are immutable and unordered; "which schema is current" *is* the open question; no standing semantics | Schemas are governance's vocabulary, not its state |
+
+The rung that deserves the most respect is bare KEL anchoring,
+because it fails last and teaches most: it delivers total order,
+witnessing, and duplicity evidence for free, and what it fails is
+a question KERI itself already asked and answered about
+credentials — why TELs, rather than sealing credential state
+directly into KELs? Segregation of identity lifecycle from
+artifact lifecycle; registry-level semantics; verifier
+cost-scoping. A reviewer who
 accepts TELs but rejects the GEL must explain why rules deserve
 less structure than the credentials those rules govern. The
 kernel's answer is the modest one: rules deserve the same
