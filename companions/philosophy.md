@@ -74,7 +74,7 @@ exploit that breaks it:
 
 | Alternative | What it genuinely delivers | What breaks | The exploit |
 |---|---|---|---|
-| **Rules in credential bodies only** | Per-artifact, frozen-at-issuance contract law (the right tool for bilateral terms) | No domain law: norms that apply to classes and change over time cannot live in issued artifacts | Amending a rule embedded in ten thousand credentials requires mass re-issuance — so norms never change |
+| **Rules sections (the ACDC `r` field) only** | A Ricardian contract per artifact: human- and machine-readable terms, digest-referenced, per-clause SAIDs, assent-gated disclosure — the right tool for exactly what it was designed for | No domain law: norms that apply to classes of parties and change over time cannot live in issued artifacts, and no enumeration surface says which artifacts' rules are the domain's (**P1, P2**) | Amending a rule embedded in ten thousand credentials requires mass re-issuance — so norms never change |
 | **Governance-framework documents**, even digest-anchored | A governance *record* with content integrity | Document granularity, not clause granularity; not machine-evaluable; "which version governed at this position" is administrative testimony (**P2, P3**) | The recurring qualification audit — the standing operational cost of law carried at document granularity |
 | **Pure charter chains** (governance as credentials and edges) | Issuance authority and scope completely; per-credential revocation | **P1, P2**: no completeness surface — a verifier can never know it has seen *all* applicable rules; per-credential lifecycles, never a sequence of the rule *set* | **Split-view by omission**: show different verifiers different rule subsets without equivocating on any single log. No witness catches it, because no log is incomplete |
 | **Per-topic registries, no constitutional root** | Operational governance of each concern (roles, schemas, witnesses) | **P1** one level up (which registries are the domain's?) and **P5** — the amendment rule has no home that governs itself | Meta-governance circularity; the domain has no birth certificate, no identity criteria, no boundary |
@@ -99,6 +99,33 @@ by the same seal discipline, adding no new anchoring pattern to
 the wire. What the KEL is to keys and the TEL is to credentials,
 the GEL is to law. Not an invention; the name for the place every
 sound path was already going.
+
+The first rung deserves the same careful treatment, because it is
+the objection a reader fluent in ACDC raises first: the credential
+layer already has a rules section. It does, and it is well made.
+The `r` field carries a Ricardian contract — terms and conditions
+that are human-readable, machine-readable, and referenceable by
+digest — and its deployed uses are precisely contractual:
+chain-link confidentiality terms a disclosee must accept before
+full disclosure, waivers agreed before issuance, terms of use
+that follow disclosed data through a chain of parties. Its
+binding mechanism is assent, gated by the exchange ceremony
+itself. Nested rule-groups even carry their own self-addressing
+identifiers, so the substrate already provides clause-grade
+addressing — which is why this standard mints no corpus
+primitive. What the rules section cannot do is carry the
+authority structure it depends on. A rules section has force
+because the credential bearing it was issued under some
+framework: something outside the artifact says which schemas are
+authoritative, which issuers have standing, which terms a class
+of transactions requires. That something is domain law, and it is
+exactly what no artifact-interior mechanism can state about
+itself. A Ricardian contract needs a jurisdiction. The rules
+section is the contract; the GEL is the legal system — and the
+relation between them is not competition but consumption: every
+`r` field in a governed ecosystem draws its force from the law a
+GEL commits. Contract law presupposes a jurisdiction; it cannot
+be one.
 
 ## 2. Order and law
 
