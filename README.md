@@ -23,9 +23,7 @@ on KERI.**
 the question this standard exists to answer mechanically. Custos's
 answer: the committed log guards the guardian, because the
 guardian cannot speak except onto the record. **Custos** names the
-standard; **GARD** names the object class it defines. The pairing
-follows the substrate's own convention: KERI is the protocol's
-name, AID is what it mints.
+standard; **GARD** names the object class it defines. 
 
 The smallest GARD is one identifier that has committed how it will
 behave and keeps the receipts — one key state, one page of law,
