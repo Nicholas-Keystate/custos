@@ -36,13 +36,16 @@ definition.
 
 ## Status
 
-**Draft, pre-ratification.** The kernel at `spec/` is the
-candidate text of Custos 4.0, through three first-round
-adversarial reviews, two second-look reviews, and a succession-
-completeness audit against its predecessor (all repairs executed
-in bytes; see `PROVENANCE.md`). Ratification is an enactment in
-the maintainers' governance event log; when it lands, this README
-will carry the ratified digest and its enactment coordinate.
+**Ratified.** The kernel at `spec/` is Custos 4.0, ratified and
+effective 2026-07-23 by enactment in the maintainers' governance
+event log — ratification anchored at KEL sn 181, effectuation at
+sn 182, kernel SAID
+`ELDBQXbJ20g3K-MSIqvcz1z4dSzasKxx8FkBovmo8cF1`. The full record,
+including the adopted-grade confession the kernel's own genesis
+knot requires of this domain, is in `SUCCESSION.md`. The text
+reached ratification through three first-round adversarial
+reviews, two second-look reviews, and a succession-completeness
+audit, all repairs executed in bytes (`PROVENANCE.md`).
 
 **This repository is a projection, never an authority.** Per the
 specification's own succession clause: a repository or mirror
