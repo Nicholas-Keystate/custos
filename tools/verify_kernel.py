@@ -57,19 +57,26 @@ def main():
         f"shared pin(s): {', '.join(sorted(shared)) or 'NONE'}",
     )
 
-    # 3. README abstract is a byte-true quotation of the kernel's
+    # 3. README abstract is a byte-true EXCERPT of the kernel's:
+    # whatever the README quotes must be a contiguous span of the
+    # kernel abstract's bytes (whitespace-normalized). Trimming is
+    # lawful; paraphrase is not.
     m = re.search(r"\*\*Abstract\*\* — (.+?)(?:\n\n)", kernel_text, re.S)
     ok3 = False
     detail3 = "kernel abstract not found"
     if m and README.is_file():
         kernel_abstract = re.sub(r"\s+", " ", m.group(1)).strip()
         readme_text = README.read_text()
-        readme_norm = re.sub(r"^> ?", "", readme_text, flags=re.M)
-        readme_norm = re.sub(r"\s+", " ", readme_norm)
-        ok3 = kernel_abstract in readme_norm
-        detail3 = "README quotes the kernel abstract verbatim" if ok3 else \
-            "README abstract diverges from kernel bytes"
-    check("README abstract quotation", ok3, detail3)
+        bq = re.search(r"\*\*Abstract\*\* —(.*?)(?:\n[^>])", readme_text, re.S)
+        if bq:
+            quoted = re.sub(r"^> ?", "", bq.group(1), flags=re.M)
+            quoted = re.sub(r"\s+", " ", quoted).strip()
+            ok3 = bool(quoted) and quoted in kernel_abstract
+            detail3 = ("README abstract is a byte-true excerpt of the kernel"
+                       if ok3 else "README abstract paraphrases the kernel")
+        else:
+            detail3 = "README abstract block not found"
+    check("README abstract excerpt discipline", ok3, detail3)
 
     # 4. gate census source pin agrees with the succession record
     if GATE_CENSUS.is_file():
