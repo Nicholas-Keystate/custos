@@ -1,15 +1,5 @@
 # Custos 4.0 — kernel, assembled draft v1 (spine-inverted)
-# Round: reviews/rounds/40-drafting-2026-07-22/
-# Status: ASSEMBLED DRAFT — the three reviewed blocks re-seated
-# into the medium-first architecture ruled 2026-07-22 (the SR/GR
-# conviction; transformation law ripened and survived user review;
-# consumption/federation split ratified). Section 6 carries the
-# three ratified amendment texts verbatim (6.2, 6.3, 6.5); the
-# conservativity gate covers the 52-span finding-codomain
-# signature of section 6 only.
-# NOTE: this header is scaffolding and is stripped at
-# ratification; the ratified bytes begin at the first heading.
-# Predecessor block files retained unedited as review record.
+
 
 ---
 
