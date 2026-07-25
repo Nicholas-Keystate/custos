@@ -1,4 +1,4 @@
-# Custos 4.0 — kernel, assembled draft v1 (spine-inverted)
+# Custos 4.0 — kernel, assembled draft v1 
 
 
 ---
