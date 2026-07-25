@@ -23,10 +23,7 @@ provenance to governance provenance: law, evidence, and judgment
 as committed bytes under one identifier, every judgment
 recomputable by any verifier holding the logs. Ambient
 verifiability, carried from key state to judgment. KERI detects;
-a GARD appraises. The boundary between those two verbs is the
-boundary of this document: everything below it belongs to the
-substrate and is cited, never restated; everything above it is
-specified here.
+a GARD appraises. 
 
 The GARD's defining obligation is replay: a conforming domain
 MUST make every judgment it issues recomputable,
