@@ -3,7 +3,9 @@
 """verify_kernel.py — repo-scope byte verification for the Custos kernel.
 
 Checks (all stdlib, no dependencies, run from the repo root):
-  1. spec kernel file exists and its SHA-256 is computed;
+  1. spec kernel file exists and its SHA-256 equals the ratified
+     digest recorded in SUCCESSION.md's Custos 4.0 row (the bytes
+     in spec/ ARE the law, not merely some bytes);
   2. the kernel's §15 predecessor pin matches SUCCESSION.md's
      predecessor row (the two commitments must agree);
   3. the abstract in README.md is byte-identical to the kernel's
@@ -36,20 +38,33 @@ def check(name, ok, detail=""):
     print(f"[{'PASS' if ok else 'FAIL'}] {name}" + (f" — {detail}" if detail else ""))
 
 def main():
-    # 1. kernel digest
+    # 1. kernel digest vs the ratified digest in SUCCESSION.md
     if not KERNEL.is_file():
         check("kernel file present", False, str(KERNEL))
         return finish()
     kernel_bytes = KERNEL.read_bytes()
     kernel_sha = hashlib.sha256(kernel_bytes).hexdigest()
-    check("kernel digest computed", True, f"sha256 {kernel_sha}")
+
+    succession_text = SUCCESSION.read_text() if SUCCESSION.is_file() else ""
+    ratified_sha = ""
+    row = re.search(
+        r"Custos 4\.0[^\n]*?\b([0-9a-f]{64})\b", succession_text)
+    if row:
+        ratified_sha = row.group(1)
+    check(
+        "kernel bytes match the ratified digest (SUCCESSION.md)",
+        bool(ratified_sha) and kernel_sha == ratified_sha,
+        f"sha256 {kernel_sha}"
+        + ("" if kernel_sha == ratified_sha
+           else f" != ratified {ratified_sha or 'NOT FOUND'}"),
+    )
 
     kernel_text = kernel_bytes.decode("utf-8")
 
     # 2. §15 predecessor pin vs SUCCESSION.md
     kernel_pins = PRED_PIN_RE.findall(kernel_text)
-    succession_text = SUCCESSION.read_text() if SUCCESSION.is_file() else ""
-    succession_pins = PRED_PIN_RE.findall(succession_text)
+    succession_pins = [p for p in PRED_PIN_RE.findall(succession_text)
+                       if p != ratified_sha]
     shared = set(kernel_pins) & set(succession_pins)
     check(
         "predecessor pin agreement (kernel §15 vs SUCCESSION.md)",

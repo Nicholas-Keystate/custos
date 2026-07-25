@@ -1,5 +1,15 @@
-# Custos 4.0 — kernel, assembled draft v1 
-
+# Custos 4.0 — kernel, assembled draft v1 (spine-inverted)
+# Round: reviews/rounds/40-drafting-2026-07-22/
+# Status: ASSEMBLED DRAFT — the three reviewed blocks re-seated
+# into the medium-first architecture ruled 2026-07-22 (the SR/GR
+# conviction; transformation law ripened and survived user review;
+# consumption/federation split ratified). Section 6 carries the
+# three ratified amendment texts verbatim (6.2, 6.3, 6.5); the
+# conservativity gate covers the 52-span finding-codomain
+# signature of section 6 only.
+# NOTE: this header is scaffolding and is stripped at
+# ratification; the ratified bytes begin at the first heading.
+# Predecessor block files retained unedited as review record.
 
 ---
 
@@ -23,7 +33,10 @@ provenance to governance provenance: law, evidence, and judgment
 as committed bytes under one identifier, every judgment
 recomputable by any verifier holding the logs. Ambient
 verifiability, carried from key state to judgment. KERI detects;
-a GARD appraises. 
+a GARD appraises. The boundary between those two verbs is the
+boundary of this document: everything below it belongs to the
+substrate and is cited, never restated; everything above it is
+specified here.
 
 The GARD's defining obligation is replay: a conforming domain
 MUST make every judgment it issues recomputable,
