@@ -23,10 +23,8 @@ Usage: python3 ops/census-41.py [--expect-digest SHA256]
 """
 import sys, re, hashlib
 
-import pathlib
-_ROOT = pathlib.Path(__file__).resolve().parent.parent
-KERNEL = str(_ROOT / 'spec' / 'custos-4.0-kernel-draft.md')
-CANDIDATE = str(_ROOT / 'spec' / 'custos-4.1.md')
+KERNEL = 'staged-repos/custos/spec/custos-4.0-kernel-draft.md'
+CANDIDATE = 'weave/custos-4.1-candidate-v2.md'
 
 def classify(line, idx, kern_lines):
     s = line.strip()
@@ -163,7 +161,7 @@ def verify_additions_census(cand_text):
         errs.append('additions: appendix lacks the Chapter 1 seed digest pin')
     else:
         pinned = m.group(1)
-        seed_path = str(_ROOT / 'spec' / 'custos-4.1-chapter1-seed.md')
+        seed_path = 'weave/41-taxonomy-chapter-draft.md'
         if not os.path.exists(seed_path):
             errs.append(f'additions: seed file {seed_path} not found for byte-exact check')
         else:

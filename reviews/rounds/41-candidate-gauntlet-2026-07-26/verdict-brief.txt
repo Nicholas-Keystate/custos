@@ -1,0 +1,88 @@
+ROUND: 41-candidate-gauntlet-2026-07-26 — VERDICT LEG (round 2).
+Fresh grader (nt=0); no continuity with the first reviewer assumed.
+
+READ FIRST, IN ORDER:
+1. AGENTS.md at the workspace root (bedrock).
+2. reviews/rounds/41-candidate-gauntlet-2026-07-26/doc-under-review-r2.md
+   — THE GRADED TEXT (sha256 4832bfe7ce7718decb9df39e189dffcbddf008712b333dacd79426314da158aa).
+   r1 bytes (doc-under-review.md, d1df2afc…) are superseded; read
+   them only to verify a repair's delta.
+3. reviews/rounds/41-candidate-gauntlet-2026-07-26/sol-candidate-findings.md
+   — the r1 register: verdict REPAIRS-FIRST, five MAJORs, all
+   accepted by user ruling and repaired.
+4. reviews/rounds/41-candidate-gauntlet-2026-07-26/census-41.py —
+   the committed census generator (sha256 02331f65…), the repair
+   for finding 1. Run it yourself:
+   cd <workspace> && python3 ops/census-41.py
+   (the ops/ copy and the round copy are byte-identical; verify.)
+5. staged-repos/custos/spec/custos-4.0-kernel-draft.md — ratified
+   predecessor (9cefdc5d…7315).
+
+THE FIVE REPAIRS (grade each COMPLETE / PARTIAL / MISSING /
+OVER-APPLIED, with r2 line cites):
+
+R1 (census inaccuracy): the appendix's census is now GENERATED —
+the committed script recomputes both censuses against final bytes
+under the predeclared byte-identity rule and fails loudly on any
+unclaimed line. Current output: 1,546 predecessor nonblank lines,
+181 deltas, eight groups (…118 meld; 3 gauntlet-repairs), zero
+unexplained. The appendix states the generated totals, names the
+generator, declares the staleness rule (census re-run after every
+edit), and group 7's prose subgroups are explicitly demoted to
+description with the generator's assignment the census of record.
+VERIFY BY RUNNING THE SCRIPT — a census repair graded on prose
+alone would repeat the original defect.
+
+R2 (identical-GELs contradiction): the definitions section's
+Constitution entry now states identity over the closed triple
+(evidence bundle, law head, appraisal position), declares the GEL
+alone insufficient, and cites Chapter 1's second axiom.
+
+R3 (GEL bootstrap): §17 gains "The bootstrap." — initial track
+placement and initial ilk table are clauses of the
+inception-sealed founding law (the genesis knot), readable before
+any GEL event is consumed; adopted domains ground the same
+commitments at their confessed lesser grade; migration is
+admitted under the grammar previously in force; underivable
+commitments refuse (missing rule, not missing evidence), the
+refusal naming the underivable commitment.
+
+R4 (vector families): the §17 vectors paragraph now enumerates
+the five previously-uncovered refusal paths: genesis-underivable
+track/table, unlawful migration, unknown-ilk
+evidence-vs-underivable-grammar refusal boundary,
+reservation-vs-recognition, premature compact-form use.
+
+R5 (abstract economic assurance): the economics paragraph now
+carries the evidence grade in a following sentence — the economy
+is "the design's claim, stated at the design's grade," its
+deployment-scale record a committed unfinished deliverable no
+clause presumes discharged. The user-sacrosanct sentences are
+byte-unchanged (verify).
+
+PART B — fresh sweep of the five repair compositions ONLY (new
+prose = new attack surface). Named seams: (a) R3's bootstrap —
+does "the event that changes the grammar is admitted under the
+grammar it changes" hold for the degenerate first-migration case,
+and does the adopted-domain clause create an underivable state
+the refusal rule doesn't cover? (b) R1's staleness rule — is
+"re-run after every edit" enforceable as stated, or does it need
+a ceremony-gate formulation (census green at ceremony bytes)?
+(c) R5 — does the added sentence contradict the §14/§15-era
+openness confessions or align with them? (d) the census's G7/G8
+group boundary — is assigning the three repaired predecessor
+lines to G8 sound when the repair also ADDED no-counterpart text
+the census cannot see (additions are outside the delta rule)?
+
+PART C — VERDICT, closed menu: FIT-FOR-CEREMONY / REPAIRS-FIRST /
+REARCHITECT. If FIT: enumerate the ceremony checklist (verifier
+update comparing the 4.1 digest against a SUCCESSION.md successor
+row; the row itself; anchor events at the gAID; census green at
+ceremony bytes; ceremony facts detached) and any non-blocking
+conditions traveling to it. State the single strongest reversal
+consideration.
+
+LAWS: findings-not-edits; read-only EXCEPT running the committed
+census script (execution is verification, not editing);
+user-sacrosanct spans byte-fixed; cite lines; fixture-pending
+over assertion.

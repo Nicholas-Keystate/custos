@@ -100,13 +100,14 @@ def main():
         f"shared pin(s): {', '.join(sorted(shared)) or 'NONE'}",
     )
 
-    # 3. README abstract is a byte-true EXCERPT of the kernel's:
-    # whatever the README quotes must be a contiguous span of the
-    # kernel abstract's bytes (whitespace-normalized). Trimming is
-    # lawful; paraphrase is not.
-    m = re.search(r"\*\*Abstract\*\* — (.+?)(?:\n\n)", kernel_text, re.S)
+    # 3. README abstract is a byte-true EXCERPT of the edition of
+    # record (4.1): whatever the README quotes must be a contiguous
+    # span of 4.1's abstract bytes (whitespace-normalized). Trimming
+    # is lawful; paraphrase is not.
+    e41_text = EDITION_41.read_text() if EDITION_41.is_file() else ""
+    m = re.search(r"## Abstract\n\n(.+?)(?:\n\n##? )", e41_text, re.S)
     ok3 = False
-    detail3 = "kernel abstract not found"
+    detail3 = "4.1 abstract not found"
     if m and README.is_file():
         kernel_abstract = re.sub(r"\s+", " ", m.group(1)).strip()
         readme_text = README.read_text()
@@ -115,8 +116,8 @@ def main():
             quoted = re.sub(r"^> ?", "", bq.group(1), flags=re.M)
             quoted = re.sub(r"\s+", " ", quoted).strip()
             ok3 = bool(quoted) and quoted in kernel_abstract
-            detail3 = ("README abstract is a byte-true excerpt of the kernel"
-                       if ok3 else "README abstract paraphrases the kernel")
+            detail3 = ("README abstract is a byte-true excerpt of the 4.1 edition"
+                       if ok3 else "README abstract paraphrases the 4.1 edition")
         else:
             detail3 = "README abstract block not found"
     check("README abstract excerpt discipline", ok3, detail3)

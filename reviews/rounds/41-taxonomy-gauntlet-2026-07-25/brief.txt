@@ -1,0 +1,131 @@
+ROUND: 41-taxonomy-gauntlet-2026-07-25 — first adversarial review of
+the Custos 4.1 taxonomy chapter draft ("Chapter 1: What a Governed
+Domain Is").
+
+READ FIRST, IN ORDER, BEFORE ANY REASONING:
+1. AGENTS.md at the workspace root (bedrock — binding laws).
+2. reviews/rounds/41-taxonomy-gauntlet-2026-07-25/doc-under-review.md
+   (the chapter under review, sha256 02012c4ce59a01ab...).
+3. staged-repos/custos/spec/custos-4.0-kernel-draft.md (the RATIFIED
+   4.0 kernel — the law in force; the chapter enters a 4.1 candidate
+   by succession and must not contradict ratified doctrine except
+   where a supersession is DECLARED below).
+4. threads/gel-wire-grammar.md (the ruling trail for every doctrine
+   the chapter carries — user rulings are cited there with dates).
+
+YOUR ROLE: adversarial reviewer of ONE artifact's soundness. QA
+register. Read-only: claims needing a fixture are marked
+UNVERIFIED/fixture-pending, never settled by assertion. Findings
+carry file:line cites. This is a negative-control review: a chapter
+that survives with zero findings is a review that proves nothing —
+prefer checking over trusting, and check the ratified kernel's own
+bytes for every doctrine claim.
+
+WHAT THE CHAPTER IS: the ontology/taxonomy chapter intended to open
+the 4.1 candidate. Its thesis: a governed domain is typed by seven
+primitives (five nouns: log, fold, finding, seal, succession; two
+verbs: evaluate, enact; plus the presupposition line where KERI
+ends) under five fold axioms (ground, replay, refusal, no ambient
+order, monotone layering). Everything else in the standard must be
+a named composition of the seven (§1.7 makes this normative).
+
+EVERY SENTENCE IS NEWLY COMPOSED. Fresh-attack-surface law applies:
+recompositions of supreme text are where fresh MAJORs live. The
+orchestrator names the likeliest seams below; find the ones not
+named.
+
+DECLARED SUPERSESSIONS (attack their soundness, not their
+legitimacy — each is user-ruled, provenance in the thread file):
+S1. VERB PAIR: ratified "KERI detects; a GARD appraises" →
+    "KERI detects; a GARD adjudicates" (§1.0). Test: does
+    "adjudicates" overclaim anywhere the ratified tier table
+    grants prevention-grade tier-wise? Does it underclaim the
+    constructor plane? Check kernel §2.4.1-equivalent grants.
+S2. TESTIMONY POLARITY: ratified negative pole ("replayable rather
+    than testimonial", kernel line ~306) now coexists with a
+    positive use ("Her computed answer testifies", §1.1; "an
+    enactment's echo testifies... receipted that testimony",
+    §1.4 axiom 2). The intended distinction: the RECORD testifying
+    (replay-receipted echo) is lawful; the JUDGE testifying
+    (unreplayable say-so) is banned. Test: do the chapter's bytes
+    actually carry that distinction, or does a cold reader find a
+    contradiction? Does axiom 2's new wording hold against the
+    ratified kernel's testimonial sites?
+
+PINNED QUESTIONS (answer each explicitly, with cites):
+Q1. §1.1 stranger story vs the ratified codomain: the story has a
+    binary shape (page answers → finding with citations; page
+    silent → refusal). The ratified codomain is FOUR-valued
+    (affirmed / defeated(citation) / pending(typed-requirement) /
+    self-convicted(proof)). Does the story silently collapse
+    defeated and self-convicted into "the page answers"? Is a
+    minimal case lawfully allowed to under-represent the codomain,
+    or does §1.7's own gate convict it?
+Q2. §1.5's "category error" claim: "A more capable Gever is a
+    category error." Check this against the ratified kernel's
+    engine-independence clause (§11.5-equivalent) and the openness
+    clause (§14-equivalent). Is the claim derivable from ratified
+    law, or is it NEW law wearing a definition's clothes? If new,
+    is it sound?
+Q3. §1.6 color: "Color is not an attribute the fold reports; it is
+    the operating identity of the fold itself." The ratified kernel
+    has no color doctrine — this is the chapter's largest fresh
+    mint (user coinage, provenance on record). Attack the identity
+    claim: is "Constitution and color are one computed state read
+    twice" well-defined when the Constitution is the Gever's
+    OUTPUT while color is defined as the fold-PLUS-LAW? Is there a
+    type confusion between the fold (function), its law (input),
+    and its output (state)?
+Q4. §1.4 axiom 5 ("no fold writes into any log") vs §1.2
+    succession ("the fold's law changing by enactment"): a cold
+    reader may ask how law changes if no fold writes. The chapter's
+    answer is the two-verb split (constructors write). Is that
+    answer REACHABLE from the bytes as ordered, or does the reader
+    hit the apparent contradiction before §1.3 resolves it?
+Q5. §1.0's "Everything beyond that line we aim to provide a
+    foundation for here": grade the register ("we aim" =
+    aspiration in supreme text?) and the scope (does "everything
+    beyond that line" overclaim what a typing chapter provides?).
+    USER-GATE: this is user prose — propose repairs only, do not
+    treat as FIX-class.
+Q6. §1.7's gate as normative self-law: "A section that requires an
+    eighth primitive has discovered one of two defects." Is the
+    dichotomy exhaustive? (Candidate third case: a section needs no
+    new primitive but needs a new AXIOM — does the gate cover the
+    axiom set, or only the noun/verb census?) If not exhaustive,
+    propose the minimal repair.
+Q7. Check the five-axiom floor against the ratified kernel for
+    OMISSIONS: is there ratified fold-binding law the floor drops
+    (e.g. the monotone tier order's no-backward-edge, the
+    first-seen discipline, warranty obligations)? An axiom floor
+    that silently drops ratified obligations is a MAJOR.
+Q8. The seal noun (§1.2) states three kinds + one deferred. Check
+    against ratified S-16 lineage: does "the covenant seal commits
+    a subject to a predicate over its successors" match the
+    ratified definition (subject bound to the gard's covenant SET,
+    standing law)? Predicate-over-successors vs
+    subject-to-covenant-set — same commitment or a drift?
+
+DELIVERABLES (single response, no files):
+1. Findings register T41-01..T41-nn: severity
+   (BLOCKER/MAJOR/MINOR/NOTE), doc-under-review line cite, kernel
+   cite where doctrine is implicated, the defect stated plainly,
+   and a proposed repair SHAPE (not drafted text) per finding.
+2. Explicit answers to Q1-Q8 (may cross-reference findings).
+3. The two declared supersessions each ruled: SOUND / SOUND-WITH-
+   REPAIRS / UNSOUND, with grounds.
+4. Verdict from the closed menu: FIT-FOR-CANDIDATE /
+   REPAIRS-FIRST / REARCHITECT. No diplomatic middle.
+5. Reversal condition: the single strongest consideration that
+   would reverse your verdict.
+6. The shape (not code) of the discriminating fixture for the
+   chapter's highest-stakes untested claim.
+
+LAWS BINDING THIS REVIEW: findings-not-edits (you propose, the
+orchestrator repairs under user ruling); ruled user prose spans are
+USER-GATE (repair proposals only); the two banked user lines ("Her
+computed answer testifies", "the replay is the receipt of performed
+governance, an enactment echo's testimony" as spliced) are
+byte-sacrosanct — attack their CONSEQUENCES, not their wording;
+internal codes (S-16, F33, T41) never appear in your proposed
+repair shapes' prose — dereference fully.

@@ -1,0 +1,63 @@
+ROUND: 41-candidate-gauntlet-2026-07-26 — LEG 4 (final grading).
+Fresh grader (nt=0).
+
+READ FIRST:
+1. AGENTS.md (bedrock).
+2. doc-under-review-r4.md in this round dir — THE GRADED TEXT
+   (sha256 ff8b9e7a6e95239dcd1111340f4969720e526857f1746f116b42b5b405b72b05).
+   r1/r2/r3 superseded.
+3. sol-candidate-verdict-final.md — the r3 register: R-B and R-C
+   COMPLETE; one blocking finding (structure verifier
+   under-discriminating: keyword-match headings, unparsed
+   disposition rows) + two smaller defects (--update docstring
+   lie; exactly-one classifier ambiguity).
+4. census-41-r4.py in this round dir == ops/census-41.py (verify;
+   sha256 2def3bc7cf90…). RUN both modes + at least one negative
+   (--expect-digest with a wrong value must exit nonzero).
+
+THE r3-REQUIRED REPAIRS (grade COMPLETE/PARTIAL/MISSING):
+
+R-A2 (structure verifier discrimination): verify_structure_census
+now (i) parses all fifteen disposition rows from the appendix
+table by regex over the actual table syntax; (ii) requires each
+row's predecessor title to match the kernel heading byte-exactly;
+(iii) requires each row's disposition target to equal
+predecessor+1 AND the candidate heading at that number to match
+the predecessor title byte-exactly (full identity, no keyword
+matching); (iv) fails on missing rows, extra rows, absent
+sections, renamed sections, and false targets. SOL's four r3
+mutations plus three additional (falsified table title, deleted
+row, falsified group total) were run before this dispatch: all
+seven mutations exit nonzero, original bytes exit zero. Confirm
+by your own mutation battery (in-memory or /tmp scratch; do NOT
+modify workspace files — restore-after-mutate as the pre-dispatch
+battery did is also acceptable if byte-restoration is verified).
+
+R-A3 (docstring): usage text now documents --expect-digest only;
+--update removed; the first-match assignment rule is predeclared
+in the docstring.
+
+R-A4 (exactly-one prose): the appendix now states the guarantee
+as what it is — assignment by the generator's predeclared
+first-match classifier order — instead of implying classifier
+mutual exclusivity.
+
+PART B — sweep the r4-recomposed prose (census preamble sentences)
+and the upgraded verifier for any residual promise/behavior gap.
+The appendix claims the generator verifies: delta census, stated
+totals (total + eight groups), structure census (fifteen rows,
+titles, targets, headings). Confirm each claim corresponds to
+executing code.
+
+PART C — VERDICT, closed menu: FIT-FOR-CEREMONY / REPAIRS-FIRST /
+REARCHITECT. If FIT: the complete ceremony checklist
+(SUCCESSION.md successor row; verify_kernel.py extended to
+compare the 4.1 digest; census verifier green with the ceremony
+digest pinned; anchor events at the gAID; ceremony facts
+detached; ratification = first conformance vector) and any
+non-blocking conditions traveling to ceremony. Single strongest
+reversal consideration.
+
+LAWS: findings-not-edits; workspace read-only except running
+committed scripts (mutation testing via scratch copies or
+verified restore); user-sacrosanct spans byte-fixed; cite lines.

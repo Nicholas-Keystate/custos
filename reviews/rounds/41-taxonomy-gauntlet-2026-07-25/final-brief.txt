@@ -1,0 +1,89 @@
+ROUND: 41-taxonomy-gauntlet-2026-07-25 — THIRD LEG (final grading
+station for this chapter). You are a FRESH grader (nt=0); assume no
+continuity with either prior reviewer.
+
+READ FIRST, IN ORDER:
+1. AGENTS.md at the workspace root (bedrock).
+2. reviews/rounds/41-taxonomy-gauntlet-2026-07-25/doc-under-review-r3.md
+   — the chapter AS REPAIRED, round 3 (sha256 48548304b99e...).
+   This is the graded text. r1 = doc-under-review.md, r2 =
+   doc-under-review-r2.md — superseded; consult only to verify a
+   repair's delta.
+3. sol-findings.md (r1 register, T41-01..11) and sol-verdict-r2.md
+   (r2 verdict: REPAIRS-FIRST on three items) — both fully
+   disposed; the r2 blockers were repaired under user rulings
+   described below.
+4. staged-repos/custos/spec/custos-4.0-kernel-draft.md — ratified
+   law (sha256 9cefdc5d5842...).
+5. threads/gel-wire-grammar.md — the ruling trail; specifically
+   the COLOR PROVENANCE EVENT and GENERATION METHOD RULING blocks.
+
+CONTEXT FOR THE THREE r2 REPAIRS (each user-ratified):
+
+R1 — COLOR (r2's fresh MAJOR): resolved by a PROVENANCE RULING,
+not a rename. The coinage owner (the user) disavowed the ratified
+kernel's evidence-side rendering ("the way we generated 'color' in
+4.0 as it stands is frankly just not what I intended"). The
+coinage's minting site (shelf S-13 entry: "color relative to a
+COMMITTED RULE-SET at a committed position") is regime-side; the
+kernel's evidence-possession rendering (kernel 1288-99, 497-503)
+is the drift outlier. §1.6 now grounds the word to the coiner's
+sense via the participle: color belongs to the domain (fold in
+force); evidence never owns color — evidence IS COLORED BY a
+frame's judgment; frame-relativity survives as many dyers, not
+many possessions. The 4.1 candidate will supersede the kernel's
+four color sites with this provenance recorded.
+
+R2 — REPLAY IDENTITY: axiom 2 now states the kernel's exact
+closed triple (committed evidence bundle, committed law head,
+appraisal position; "no other input may influence the result"),
+with log spans typed as bundle MEMBERS, never a substitute for
+completeness. The §1.6 comparison inputs likewise now name the
+bundle + law head + position + pinned engine profile of the
+comparing lens.
+
+R3 — WALL REFERENT: §1.4's imported evaluator walls now bind via
+a committed referent (the ratified 4.0 kernel by its ratified
+digest 9cefdc5d5842...), replacing the ungrounded "bind by
+citation."
+
+YOUR TASK:
+
+PART A — grade the three r2 repairs: COMPLETE / PARTIAL /
+MISSING / OVER-APPLIED, r3 line cites. For R1 specifically,
+apply the COINAGE-FIDELITY question (new brief-design law, its
+first exercise): does §1.6's rendering match the coinage owner's
+minting site (S-13 definition, regime-side) and the user's
+ratified fold-in-force identity? Cite the minting artifact. Note
+the asymmetry: fidelity is graded against the COINER'S sites,
+with the ratified kernel's color sites known-outlier by user
+ruling — do not convict §1.6 for diverging from the kernel's
+color rendering; DO convict it if it diverges from the coiner's.
+
+PART B — fresh sweep of the r3-recomposed sentences only (the
+color participle passage, the replay triple, the wall-referent
+sentence). Named seams: (a) does "evidence is colored, by the
+judgment of a frame that folded it" hold against the kernel's
+colored-evidence WIRE machinery (kernel 497-503: colored evidence
+travels with color-computation inputs) — i.e., does the
+participle reading survive the wire object's NAME, or does
+"colored evidence" now need a gloss? (b) does the digest-cited
+wall import create a self-reference problem (the 4.1 candidate
+citing 4.0's digest while superseding parts of 4.0)? (c) is the
+engine-profile addition to §1.6's comparison inputs consistent
+with the chapter's own §1.5 boundary doctrine (interiors
+unobservable)? Find seams not named.
+
+PART C — verdict, closed menu: FIT-FOR-CANDIDATE /
+REPAIRS-FIRST / REARCHITECT. If FIT: state any conditions that
+travel with the chapter into candidate assembly (non-blocking,
+named). Plus the single strongest reversal consideration, and
+your final amendment list for the composition-manifest fixture.
+
+LAWS: findings-not-edits; banked user lines byte-sacrosanct
+("Her computed answer testifies"; "the replay is the receipt of
+performed governance..." as spliced; the §1.0 recomposition);
+read-only — unverified claims marked fixture-pending; no internal
+codes in repair-shape prose; the ratified 4.0 bytes are permanent
+and are NOT convicted by their color-outlier status (supersession
+is the 4.1 candidate's lawful act, with provenance).

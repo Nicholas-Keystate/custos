@@ -1,0 +1,102 @@
+ROUND: 41-candidate-gauntlet-2026-07-26 — FULL-DOCUMENT adversarial
+review of the Custos 4.1 candidate (v2, post-meld, incl. one
+subsequent user co-drafting edit). You are a FRESH reviewer (nt=0).
+
+READ FIRST, IN ORDER:
+1. AGENTS.md at the workspace root (bedrock).
+2. reviews/rounds/41-candidate-gauntlet-2026-07-26/doc-under-review.md
+   — THE GRADED TEXT, sha256
+   d1df2afc5674fc03e93934251a638431e1ff32a631b61bb034d460aec95850c6.
+   2,393 lines: head+abstract+introduction, Chapter 1 (§§1.0–1.7,
+   graduated in a prior three-leg round), sections 2–17, appendix
+   of record (two censuses).
+3. staged-repos/custos/spec/custos-4.0-kernel-draft.md — the
+   ratified predecessor (sha256 9cefdc5d5842…7315). Byte-immutable
+   law in force; the candidate supersedes it with provenance.
+4. weave/41-input-manifest.md (sha256 b56f842a…) — the committed
+   input register incl. Amendment 1 (two-census D-3 law) and the
+   C-1..C-11 rulings in force.
+5. weave/41-meld-report.md — the meld's censuses and judgment
+   calls (context; its digest predates one further user edit).
+6. threads/gel-wire-grammar.md — ruling trail (color provenance,
+   verb ruling, testimony polarity, generation method, taxonomy
+   arc).
+
+STANDING CONTEXT:
+- This candidate was produced by CONSUME-AND-REGENERATE: the 4.0
+  kernel consumed as committed input, successor computed whole,
+  every delta accounted in the in-file appendix. Grade the
+  accounting as first-class normative content.
+- Chapter 1 graduated FIT-FOR-CANDIDATE in its own three-leg round
+  with five traveling conditions; those conditions were discharged
+  during assembly. Verify the discharge, do not re-litigate the
+  chapter's graduated doctrine.
+- Supersessions are DECLARED with provenance (attack soundness,
+  not legitimacy): detects/adjudicates verb; regime-side color
+  (coiner-disavowed 4.0 rendering); scaffolding-header cure.
+- USER-SACROSANCT spans (byte-exact; attack consequences, never
+  wording): "Her computed answer testifies."; "held to account,
+  by the same committed judgments"; "the replay is the receipt of
+  performed governance"; Chapter 1 §1.0's recomposition; plus any
+  head/abstract prose (the post-meld edit is the user's).
+
+PART A — SEAM AUDIT (the regeneration's fresh surfaces):
+A1. Head/abstract/introduction: stack-position claim sound? Any
+    promise beyond the evidence (the 4.0 outside-review's
+    'rhetoric calibrated beyond artifacts' failure mode)?
+A2. §2 Scope ↔ Chapter 1: does the recomposed scope compose
+    without restating or contradicting the chapter? Any orphaned
+    reference to content that moved?
+A3. §4 Definitions: the shortened-and-cited definitions — is any
+    normative content LOST relative to the kernel's §3 (the
+    genesis knot's SHALL spans, lens, edict, charter)? Is any
+    citing entry circular (defining by citing a chapter that
+    cites back)?
+B4. Renumbering integrity: sections 5–17 vs kernel 4–16 — sweep
+    cross-references; find any stale number the meld missed.
+A5. §17 GEL grammar (wholly new): grade against the C-6/C-7
+    rulings and the kernel's §3 GEL definition — consistency of
+    the two tracks with no-manufactured-duplicity; the genus
+    enactment's born-governed claim; the compact-form gate's
+    ordered dependencies; the vector families' sufficiency.
+A6. The appendix's two censuses: spot-verify BOTH against the
+    actual bytes — delta census (sample ≥5 claims) and structure
+    census (all 15 dispositions). An inaccurate census entry is a
+    MAJOR (the accounting IS the method's safety).
+A7. Digest-bearing sentences: verify EVERY digest in the document
+    against its named referent where the referent is in the
+    workspace (succession pins, manifest digest, seed digest).
+    The v1 splice defect (3.3 digest pinned as 4.0's bytes) is
+    the known failure class.
+
+PART B — DOCTRINE SWEEP (whole-document consistency):
+B1. Verb discipline: adjudicates/appraisal division per the
+    ruling — activity-sense lawful, doctrine-pair sites
+    regenerated; find any site promising office-verb force from
+    the activity word.
+B2. Color: regime-side throughout? Any surviving
+    evidence-possession phrasing beyond the appendix's quoted
+    artifacts? Participial gloss present at first wire use?
+B3. Refusal/pending separation (the prior round's BLOCKER class):
+    correct at EVERY site touching the evaluator, incl. §17's
+    refusal-adjacent prose.
+B4. Replay identity: the closed triple stated exactly and
+    consistently (Chapter 1 axiom 2, §7 finding inputs, §17
+    order/vector prose).
+B5. Register: specification register throughout; BCP 14 caps
+    only; no aspiration in supreme text; direct naming.
+
+PART C — VERDICT, closed menu: FIT-FOR-CEREMONY /
+REPAIRS-FIRST / REARCHITECT. Ceremony law reminder: ratification
+requires final-form bytes, verifier green before anchor,
+ceremony facts detached. If FIT: enumerate what the ceremony
+must contain (verifier update to compare the 4.1 digest,
+SUCCESSION.md row, anchor events) and any non-blocking
+conditions. Also state: the single strongest reversal
+consideration; whether the composition-manifest fixture spec
+(sealed in the Chapter-1 round's final verdict) needs amendment
+for the full document.
+
+LAWS: findings-not-edits; read-only; unverifiable claims marked
+fixture-pending, never settled by assertion; cite line numbers
+for every finding; no internal codes in proposed repair prose.

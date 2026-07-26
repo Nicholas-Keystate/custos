@@ -1,0 +1,92 @@
+ROUND: 41-taxonomy-gauntlet-2026-07-25 — VERDICT LEG (round 2).
+You are a FRESH grader; do not assume continuity with the first
+reviewer.
+
+READ FIRST, IN ORDER:
+1. AGENTS.md at the workspace root (bedrock).
+2. reviews/rounds/41-taxonomy-gauntlet-2026-07-25/doc-under-review-r2.md
+   — the chapter AS REPAIRED (sha256 9102a3d6cc47bd06...). This is
+   the text under grading. The superseded r1 bytes are
+   doc-under-review.md — read them ONLY to verify a repair changed
+   what it claims to have changed, never as the graded text.
+3. reviews/rounds/41-taxonomy-gauntlet-2026-07-25/sol-findings.md —
+   the first-round findings register (T41-01..T41-11, verdict
+   REPAIRS-FIRST). All findings were ACCEPTED by user ruling
+   ("SOL's critiques were surgical, accepted") and repairs applied.
+4. staged-repos/custos/spec/custos-4.0-kernel-draft.md — the
+   ratified law in force.
+
+YOUR TASK, three parts:
+
+PART A — repair audit. For each first-round finding T41-01..T41-11,
+grade the applied repair: COMPLETE / PARTIAL / MISSING /
+OVER-APPLIED. OVER-APPLIED means the repair weakened a claim the
+finding never required weakened — check for it explicitly. Cite
+r2 lines. The orchestrator's repair map:
+- T41-01+T41-02: §1.1 stranger story now walks all four codomain
+  values and separates refusal as an operational fact outside the
+  codomain; §1.3 Evaluate rewritten to split pending (evidence
+  short under a committed rule) from refusal (no committed rule
+  makes the invocation evaluable).
+- T41-03: axiom 2 (Replay) now defines the committed input tuple
+  (GEL span + cited spans + law head + position); "identical GELs"
+  replaced by "identical committed tuples"; the witness-receipt
+  disclaimer added per the S2 supersession repair.
+- T41-04: §1.4 close now types the five axioms as a floor-not-
+  whole-house and imports the ratified evaluator walls by citation
+  (transition system, no backward edges, canonical evidence
+  ordering, defeat-vs-duplicity currents, first-seen survival,
+  receipts for grounds), with "a fold satisfying the five axioms
+  alone is not yet a conforming evaluator."
+- T41-05: "category error" sentence replaced by the public-type
+  rule: the standard never enlarges the Gever's public type;
+  interior capability growth lawful because unobservable at the
+  boundary.
+- T41-06: §1.6 retyped — color = the configured evaluator (fold in
+  force); Constitution = that color's computed state ("the color
+  is the instrument, the Constitution its reading"); clause-set
+  comparison replaced by semantic comparison over complete
+  committed inputs, flagged fixture-work.
+- T41-07: covenant seal recommitted to the domain's covenant set /
+  standing law; lineage-only admissibility + digest-seal
+  preference restored.
+- T41-08: succession definition now names the constructor's act
+  up front ("the fold never writes, it reads the successor law
+  the enactment left").
+- T41-09: §1.7 gate now tests two closures (primitive closure +
+  law closure) with the failure-naming obligation.
+- T41-10 (USER-GATE): the user's sentence replaced by "Everything
+  beyond that line — consequence made committed, computed, and
+  replayable — is what this document founds", plus the office
+  sentence bounding "adjudicates" (the S1 repair). Grade register
+  and scope.
+- T41-11: §1.7 now types the presupposition as ground, not a
+  primitive ("five nouns and two verbs, standing on the
+  presupposition...").
+
+PART B — fresh sweep of the RECOMPOSED sentences only. Every
+repair above is newly composed supreme-adjacent text; the
+fresh-attack-surface law says new MAJORs live there. Likeliest
+seams the orchestrator names: (a) the §1.1 story is now longer —
+does the four-value walk stay minimal-case readable or has it
+become a codomain lecture (comprehension-gradient defect)?
+(b) axiom 2's tuple — does it match the kernel's input identity
+exactly (evidence bundle, law head, appraisal position) or
+invent a variant? (c) §1.4's imported-walls list — is it
+accurate to the kernel's own enumeration, neither dropping nor
+inventing a wall? (d) the §1.0 office sentence — does it hold
+the evaluator/constructor split without new overclaim? Find the
+seams not named.
+
+PART C — verdict from the closed menu: FIT-FOR-CANDIDATE /
+REPAIRS-FIRST / REARCHITECT. Plus: the single strongest
+consideration that would reverse your verdict, and whether the
+first round's fixture shape (the composition-manifest fixture)
+needs amendment given the repairs.
+
+LAWS: findings-not-edits; user prose and the two banked user
+lines byte-sacrosanct ("Her computed answer testifies"; "the
+replay is the receipt of performed governance..." as spliced);
+read-only — unverifiable claims marked fixture-pending, never
+settled by assertion; no internal codes in proposed repair
+shapes' prose.

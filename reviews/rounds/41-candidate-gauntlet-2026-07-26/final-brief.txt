@@ -1,0 +1,65 @@
+ROUND: 41-candidate-gauntlet-2026-07-26 — FINAL LEG (round 3).
+Fresh grader (nt=0).
+
+READ FIRST:
+1. AGENTS.md (bedrock).
+2. doc-under-review-r3.md in this round dir — THE GRADED TEXT
+   (sha256 a021af360b13821ef1a4f56bdc3e210fae18b7e43a504af281de095a430a71ce).
+   r1 (d1df2afc…) and r2 (4832bfe7…) superseded; delta-verify only.
+3. sol-candidate-findings.md (r1: five MAJORs) and
+   sol-candidate-verdict-r2.md (r2: R2/R4/R5 COMPLETE; R1/R3
+   PARTIAL with three required repairs).
+4. census-41-r3.py in this round dir == ops/census-41.py (verify
+   byte-identity; sha256 23c20b514f5b…). RUN IT — both modes:
+     python3 ops/census-41.py
+     python3 ops/census-41.py --expect-digest <r3 digest above>
+   and one negative: --expect-digest with any wrong value MUST
+   exit nonzero.
+
+THE THREE r2-REQUIRED REPAIRS (grade COMPLETE/PARTIAL/MISSING):
+
+R-A (census verifier): the script now verifies (i) the delta
+census with exactly-one assignment and zero unexplained, (ii)
+the appendix's stated total and all eight group counts parsed
+from the appendix text and compared against recomputation, (iii)
+the structure census (predecessor sections 1-15 located at
+candidate sections 2-16 by heading match, §17 present, structure
+census section present), and (iv) an optional pinned ceremony
+digest (--expect-digest) that fails on mismatch. The appendix
+prose no longer claims more than the script does, and the
+staleness rule is replaced by the ceremony-gate formulation
+(verifier green at the exact anchored bytes, digest pinned,
+before any anchor).
+
+R-B (founding-law referent): §17's refusal rule and vector
+family now name "the applicable committed founding-law referent"
+— inception-sealed for born-governed, later-anchored at
+confessed grade for adopted — replacing the genesis-only
+wording.
+
+R-C (readable-from-GEL contradiction): the two-tracks paragraph
+now says placement is readable from the domain's committed
+record — the founding-law referent for initial placement, the
+GEL for every migration since — reconciling with the bootstrap.
+
+PART B — sweep ONLY the r3-recomposed sentences and the upgraded
+script. Named seams: (a) does the script's structure-census
+verification actually discriminate (would it fail on a missing
+or renamed section?) — reason over the code, and if you can,
+test by running against a temp-copied mutated candidate in /tmp
+(do NOT modify workspace files); (b) does the appendix's new
+verifier description match the script's actual behavior exactly
+(the r2 defect class); (c) any residual site where §17 still
+implies GEL-only derivability.
+
+PART C — VERDICT, closed menu: FIT-FOR-CEREMONY / REPAIRS-FIRST
+/ REARCHITECT. If FIT: the full ceremony checklist (SUCCESSION.md
+successor row; verify_kernel.py extended to compare the 4.1
+digest; census verifier green with pinned ceremony digest;
+anchor events; ceremony facts detached; ratification = first
+conformance vector) plus non-blocking conditions. Single
+strongest reversal consideration.
+
+LAWS: findings-not-edits; read-only in the workspace (running
+committed scripts and creating /tmp scratch copies is lawful
+verification); user-sacrosanct spans byte-fixed; cite lines.
