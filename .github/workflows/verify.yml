@@ -1,0 +1,41 @@
+name: verify
+
+# The clean-checkout invariant: every tool in tools/ runs green
+# from a fresh clone of the published bytes. No workspace, no
+# private tree, no path surgery. If this workflow is red, the
+# repository's own integrity claims are unproven — fix the tool
+# or the bytes, never the workflow.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Kernel and edition digest verification
+        run: python3 tools/verify_kernel.py
+
+      - name: Census verification at the ratified 4.1 digest
+        run: >
+          python3 tools/census-41.py --expect-digest
+          ff8b9e7a6e95239dcd1111340f4969720e526857f1746f116b42b5b405b72b05
+
+      - name: Round manifests verify byte-exact
+        run: |
+          set -e
+          for d in reviews/rounds/*/; do
+            if [ -f "$d/MANIFEST.txt" ]; then
+              echo "== $d"
+              (cd "$d" && shasum -a 256 -c MANIFEST.txt)
+            fi
+          done
