@@ -1,15 +1,37 @@
-# Succession record — Custos 3.3 → Custos 4.0
+# Succession record — Custos lineage
 
-The detached record the kernel's succession clause (§15) requires:
-predecessor digest, successor digest, and the lineage a stranger
-can verify without trusting this repository.
+The detached record the succession clauses (4.0 §15; 4.1 §16)
+require: predecessor digest, successor digest, and the lineage a
+stranger can verify without trusting this repository.
 
 ## The editions
 
 | Edition | Status | SHA-256 |
 |---|---|---|
-| Custos 3.3 | Superseded whole at the effectuation coordinate below | `18b0469e731db24f6bca45525828e4417751929306ea21e09977088e08a20ceb` |
-| Custos 4.0 | **RATIFIED AND EFFECTIVE** | `9cefdc5d584289ea8391d8069bca26ea38aa82a34f9ae973d80e4d1b7773f315` |
+| Custos 3.3 | Superseded whole (sn 172/173) | `18b0469e731db24f6bca45525828e4417751929306ea21e09977088e08a20ceb` |
+| Custos 4.0 | Superseded whole at the 4.1 effectuation coordinate below | `9cefdc5d584289ea8391d8069bca26ea38aa82a34f9ae973d80e4d1b7773f315` |
+| Custos 4.1 | **RATIFIED AND EFFECTIVE** | `ff8b9e7a6e95239dcd1111340f4969720e526857f1746f116b42b5b405b72b05` |
+
+## Custos 4.0 → 4.1 succession
+
+| Fact | Value |
+|---|---|
+| Successor document | `spec/custos-4.1.md` |
+| Succession object SAID | `EGwpzI-F2n01GhqAcaBT6vNX-QkiaUWopEOqctz7-nGC` |
+| Evidence manifest SAID | `EG13EeYUS3TE1Cu7NKjRTk5QAyRzyWM5jrd-VP5qSMJG` |
+| Lineage id | `EI9t4PJYR4kBlGb1l1yDq0RRgCHy9qjeDAOtefG_sDWc` |
+| Ratification act | `EDjRvjkfOYhOBRfb5G-A7EbhS17drux9vHLjuiJOSsnB`, anchored at KEL sn 187 |
+| Effectuation act | `EPMCq7-QRtSd3t_D-GEgCmw6W9wJZNAW0O2ogRDEYQk3`, anchored at KEL sn 188 |
+| Prospectivity | 4.1 binds positions at and after sn 188, none before |
+| Succession class | REGENERATION: predecessor consumed whole as committed input, successor computed around the gauntleted taxonomy chapter; every delta accounted by the committed census verifier, green at the ceremony bytes immediately before anchoring |
+| Method of record | consume-and-regenerate; two-census accounting (delta + structure) in the successor's own appendix of record |
+| Predecessor lineage | 3.3→4.0 ratified sn 181 / effective sn 182; 3.2→3.3 at sn 172/173; 3.1→3.2 at sn 170/171 |
+
+The 4.0 digest above is also pinned inside 4.1's own head and
+section 16 — the pins must agree, and `tools/verify_kernel.py`
+checks that they do, for both editions.
+
+# Prior succession — Custos 3.3 → Custos 4.0
 
 The 3.3 digest above is also pinned inside the kernel's own §15 —
 the two pins must agree, and `tools/verify_kernel.py` checks that

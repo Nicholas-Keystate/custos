@@ -25,6 +25,7 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 KERNEL = ROOT / "spec" / "custos-4.0-kernel-draft.md"
+EDITION_41 = ROOT / "spec" / "custos-4.1.md"
 SUCCESSION = ROOT / "SUCCESSION.md"
 README = ROOT / "README.md"
 GATE_CENSUS = ROOT / "tools" / "gate40-census.json"
@@ -38,6 +39,34 @@ def check(name, ok, detail=""):
     print(f"[{'PASS' if ok else 'FAIL'}] {name}" + (f" — {detail}" if detail else ""))
 
 def main():
+    succession_text = SUCCESSION.read_text() if SUCCESSION.is_file() else ""
+
+    # 0. Custos 4.1 (edition of record): bytes match the ratified
+    # digest in SUCCESSION.md's 4.1 row, and 4.1's own predecessor
+    # pin equals the 4.0 row's digest.
+    row41 = re.search(r"Custos 4\.1[^\n]*?\b([0-9a-f]{64})\b", succession_text)
+    ratified41 = row41.group(1) if row41 else ""
+    if EDITION_41.is_file():
+        e41 = EDITION_41.read_bytes()
+        sha41 = hashlib.sha256(e41).hexdigest()
+        check(
+            "4.1 bytes match the ratified digest (SUCCESSION.md)",
+            bool(ratified41) and sha41 == ratified41,
+            f"sha256 {sha41}"
+            + ("" if sha41 == ratified41
+               else f" != ratified {ratified41 or 'NOT FOUND'}"),
+        )
+        pins41 = PRED_PIN_RE.findall(e41.decode("utf-8"))
+        check(
+            "4.1 predecessor pin equals the 4.0 ratified digest",
+            "9cefdc5d584289ea8391d8069bca26ea38aa82a34f9ae973d80e4d1b7773f315" in pins41,
+            "4.0 digest pinned in 4.1's own bytes"
+            if "9cefdc5d584289ea8391d8069bca26ea38aa82a34f9ae973d80e4d1b7773f315" in pins41
+            else "4.0 digest NOT found in 4.1",
+        )
+    else:
+        check("4.1 edition file present", False, str(EDITION_41))
+
     # 1. kernel digest vs the ratified digest in SUCCESSION.md
     if not KERNEL.is_file():
         check("kernel file present", False, str(KERNEL))
@@ -45,7 +74,6 @@ def main():
     kernel_bytes = KERNEL.read_bytes()
     kernel_sha = hashlib.sha256(kernel_bytes).hexdigest()
 
-    succession_text = SUCCESSION.read_text() if SUCCESSION.is_file() else ""
     ratified_sha = ""
     row = re.search(
         r"Custos 4\.0[^\n]*?\b([0-9a-f]{64})\b", succession_text)
