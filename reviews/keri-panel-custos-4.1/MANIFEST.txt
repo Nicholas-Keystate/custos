@@ -1,0 +1,8 @@
+b922af4d697e18c3c5d9f24d74d57cfb727e9f301c2e8e95cb70771d0130a32e  dao-l2-outside-lens-custos-4.1.md
+8ee3e154317688532be43bc2bddff0fd19d309f3b7c57c90ef990c8d96a194bd  first-principles-skeptic-custos-4.1.md
+342d3eef321fdf7e3774ce691f28fb8baf5fb84e78ea73d868ab55b54e8ffe6f  governance-interop-lifecycle-architect-custos-4.1.md
+7def76c01402c54bdcd336f9093eabfed985bfdb889ea3ac3b04c056f7c96f29  keri-review-panel-custos-4.1.md
+97a7e610d6a5bfc218f3b1d7c7ddd085a8d5105b87e08c7245d39df52828e9e9  kr-relation-algebra-theorist-custos-4.1.md
+3eb46bd1d34dd804fe53ef5587f8cebb9b92e9f0c69346790b29bd25e720aa46  protocol-security-verifier-realist-custos-4.1.md
+c673f1d04cbe78df5248e4f23936afa97f69035b24d0a5d8a4bddd53bf3a7789  README.md
+c0fadf89eadbfd29a020dca2f1ba27e36e56974fa8af3cfb68ecdfb9fe0b082d  spec-precision-language-designer-custos-4.1.md
