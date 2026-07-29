@@ -130,15 +130,25 @@ key and no position relative to ordering.
 >   canonical order defined here. Two evaluations of the same
 >   triple SHALL emit the same requirement set down to the byte.
 >
->   Deduplication precedes ordering, and its key is the whole
->   element: two elements agreeing on subject identifier,
->   requirement kind, and citing-clause list are one element.
+>   Deduplication precedes ordering. Its key is stated over named
+>   fields, never as "the element": two elements agreeing at every
+>   field of the key are one element.
 >
 >   Elements are ordered by (subject identifier, requirement kind,
 >   citing-clause list), compared in that precedence, ascending at
 >   every component, and the first component that distinguishes
 >   two elements decides between them. Subject identifier and
 >   requirement kind each compare under the byte comparison rule.
+>
+>   [OPEN — see #27. Section 7.2 requires every element to carry a
+>   **species**, which is a fourth field this key does not name.
+>   Whether the species enters the dedup key and the sort key, or
+>   is excluded and a merge rule commits which element survives a
+>   collision, is not settled by this seed and is not the drafting
+>   authority's to decide silently: two blind implementations
+>   resolved it in opposite directions. The key above is total over
+>   the three fields section 7.3 names, and becomes total over the
+>   element only when #27 is ruled.]
 >
 >   Within an element, the citing-clause list is itself ordered by
 >   its members under the byte comparison rule. Two citing-clause
@@ -154,11 +164,23 @@ a key, because a dedup key narrower than the element would let two
 evaluators emit sets of different cardinality from one bundle —
 a byte divergence upstream of any ordering question.
 
+**Scope.** This repair settles the three things finding #3 names:
+the direction, the comparison basis, and the semantics of the list
+component. It does **not** settle which fields the key ranges
+over, because section 7.2's species field makes that a separate
+and harder question — one that #27 exhibits as an executed
+divergence between two blind implementations rather than as a
+reading of the text. An earlier draft of this seed asserted a key
+over "the whole element" naming three fields; that was wrong on
+the bytes, since the element carries four. The assertion is
+withdrawn and the question is handed to #27 rather than answered
+here.
+
 ## Notes for the drafting authority
 
-Three things surfaced in drafting that the findings did not name,
-and that a ruling should settle before this seed is declared
-final.
+Four things surfaced in drafting that finding #2 and finding #3
+did not name, and that a ruling should settle before this seed is
+declared final.
 
 1. **The totality claim rests on an assumption about subcode
    assignment.** "Two defeats agreeing at all three components are
@@ -191,12 +213,30 @@ final.
    the drift surface is still open and the next ordering clause
    drifts the same way.
 
+4. **The requirement element has a field section 7.3 does not
+   name.** Section 7.2 (L1007) requires a pending finding to carry
+   the **species** of each requirement element, so the element has
+   four fields where section 7.3's canonical-order parenthetical
+   names three. Repair 2 therefore cannot state a key over "the
+   element" at all — an earlier draft of this seed did, and was
+   wrong on the bytes. Finding #27 shows this is not a drafting
+   nicety: two blind implementations resolved the species question
+   in opposite directions and emitted different pending findings
+   from one input, one naming a single cure path and the other
+   naming two. **Until #27 is ruled, the order in repair 2 is
+   total over three fields and not over the element**, and the
+   byte-identity SHALL at L1038 remains unsatisfiable for the
+   colliding case regardless of what this seed says about
+   direction. Ruling #27 is a precondition for repair 2 being
+   sufficient, not merely adjacent to it.
+
 ## Record
 
 | Fact | Value |
 |---|---|
 | Predecessor edition | Custos 4.1, sha256 `ff8b9e7a6e95239dcd1111340f4969720e526857f1746f116b42b5b405b72b05` |
-| Findings discharged | #2 (canonical selection), #3 (required-payload ordering) |
+| Findings discharged | #2 (canonical selection), #3 (required-payload ordering — direction, basis, list semantics only) |
+| Precondition, not discharged | #27 (species in the dedup and sort key) — repair 2 is insufficient until this is ruled |
 | Findings coupled, not discharged | #9 (conformance predicate), #11 (ordering-semantics declaration) |
 | Status | Unpinned draft; enters the 4.2 candidate by succession |
 | Ratified bytes altered | None |
