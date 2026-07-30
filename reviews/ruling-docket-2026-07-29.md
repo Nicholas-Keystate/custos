@@ -17,6 +17,13 @@ the ratifying authority owns the ruling.
 
 Nothing here proposes an edit to ratified text.
 
+**Second batch appended 2026-07-30.** Six further rulings, R13–R18,
+were added a day after this docket was assembled, from findings the
+parsimony review round filed on 2026-07-30 (#32, #33, #35, #38, #39,
+#44). Three are BLOCKING. R11 also gains a named sub-question (#41)
+rather than being assumed to cover it. R1–R12 are unchanged; the
+second batch begins after R12 and the summary table carries both.
+
 ---
 
 ## Why a batch
@@ -25,6 +32,11 @@ Drafting is not the bottleneck. Of twenty-three actionable open
 issues, thirteen are ruling-blocked, and they include every
 BLOCKING finding on the tracker. No amount of further review moves
 any of them.
+
+*Updated 2026-07-30:* the tracker has since grown. Of forty-four
+open issues, twenty are ruling-blocked, and the ratio held —
+further review produced six more rulings and closed none. That is
+the argument for batching restated as evidence.
 
 The thirteen are also not independent. **Five rulings unblock the
 other eight**, so the ordering below is not arbitrary:
@@ -539,6 +551,36 @@ rather than paraphrases. Any change to L29 is a three-artifact edit
 that must move together, and the verifier is the guard that proves
 it happened.
 
+*Correction, 2026-07-30:* the coupling is looser than stated above.
+Check 3 is an **excerpt** discipline, not a byte-identity one — its
+own comment reads "Trimming is lawful; paraphrase is not", and it
+passes when the README's quoted span is a contiguous substring of
+the edition's abstract. So the README may lawfully quote a shorter
+span and stay green, which lowers the cost of B. The three-artifact
+framing overstates it.
+
+### Sub-question 11a — what does a compound result return when one component refuses? (#41)
+
+Named here rather than assumed covered. §7.5 (L1184–1195) mandates
+a product former over components, defined only over findings, while
+refusal is expressly not a codomain value. Nothing states the
+product's value when one component refuses, and both readings
+conform: refuse the whole invocation, discarding components already
+computed; or return a product with a refused coordinate, which is
+an object outside what §7.1 says the evaluator returns.
+
+This is reachable in ordinary use — a compound standing question
+routinely contains an unsatisfied slot (pending) and an
+uncomposable one (refusal) at once. Whichever way R11 goes, this
+needs an explicit answer, and the ruled text sits inside §7.5's
+quoted amendment block, which is less free than ordinary ratified
+prose.
+
+**Recommendation:** decide it with R11 in the same sitting. If R11
+takes A (scope the claim), the natural companion is that a refusing
+component refuses the invocation, and the partial components are
+not returned — but that should be stated, not inferred.
+
 ---
 
 ## R12 — Is "predicate congruence" worth renaming?
@@ -578,6 +620,428 @@ rather than raising it again.
 
 ---
 
+# Second batch — appended 2026-07-30
+
+Six rulings from the parsimony review round of 2026-07-30, which
+closed a day after this docket was assembled. Three are BLOCKING.
+They are ruling-blocked for the same reason the first twelve are:
+in each, two readings survive and choosing between them from the
+text would be legislating.
+
+Two carry over into the first batch's ordering:
+
+| Rule first | Because it decides |
+|---|---|
+| **R2 — #28** does the affirmation discipline bind `defeated` | largely dissolves R14 (#33); rule R2 first |
+| **R10 — #6** antinomy payload and bearer | shares its subject matter with R13 (#32); rule them together |
+
+The other four are independent of the first batch and of each
+other.
+
+---
+
+## R13 — What does "bearing" mean at the registry and governance tiers?
+
+**Issue:** #32 · **Severity:** BLOCKING · **Read with R10**
+
+### The question
+
+"Bearing" gates every edge into `self-convicted` (L1062, L1065,
+L1066), terminality (L1085), and §13.1's recourse trigger (L1824).
+It is given a decision procedure at exactly one tier — the key
+tier, where §7.1 (L957–959) defers to the substrate's
+superseding-recovery rules. The four-valued scheme is instantiated
+at all three tiers (L961–965). Nothing states how a verifier
+decides bearing at T2 or T3, including for the Gever — the
+evaluator this standard exists to specify. "Bearing" is not among
+§4's defined terms.
+
+### Why it must be answered
+
+`self-convicted` is terminal and unrehabilitatable (L1087–1089).
+Two verifiers who resolve bearing differently reach permanently
+different terminal states from identical committed evidence, and no
+later evidence reconciles them. That is the most expensive class of
+divergence the standard admits.
+
+The natural reading — bearing is a matter for the domain's own law
+— makes it worse rather than better, because it collides with a
+second rule. If law is silent on *bearing*, axiom 3 says refuse. If
+law is silent on the *violated predicate*, §7.4 says consume as
+evidence and do not refuse. **From inside the fold the two are
+indistinguishable**: in both, committed law fails to speak to the
+pair in front of you. The dispositions are opposites. A blind
+implementation hit exactly this and pinned a refusal it was not
+confident in.
+
+Both available moves violate a ruled span, which is what makes this
+BLOCKING rather than a clarification request.
+
+### Options
+
+**A — Bearing is substrate-deferred at every tier.** Extend §7.1's
+key-tier procedure downward: a pair bears unless a committed
+superseding rule reconciles it, at T2 and T3 as at T1. Cost: the
+governance tier has no analogue of superseding recovery, so the
+rule would have to say what plays that role, or say that nothing
+does and every governance-tier pair therefore bears.
+
+**B — Bearing is a committed predicate of the domain's law.** The
+domain names it; a fold that cannot locate it refuses. Cost: a
+stated rule distinguishing law-silent-on-bearing (refuse) from
+law-silent-on-the-violated-predicate (consume), which is the
+distinction currently unavailable from inside the fold. Without
+that, B does not close the finding.
+
+**C — Bearing is definitional, not evaluative.** Add it to §4 with
+a procedure that makes it decidable from committed bytes at every
+tier, so no per-domain latitude arises.
+
+### Recommendation
+
+**B, and only with its second half.** A is cheapest but pushes the
+problem into an analogue the governance tier does not have. C is
+the largest act. B matches §1.4's framing that the predicates a
+domain's law evaluates are what that domain chose — but B is not a
+repair unless the refuse/consume boundary is drawn in the same
+ruling, because that boundary, not the definition, is what the
+blind implementation could not resolve.
+
+Rule with R10: both concern what reaches `self-convicted` and what
+it must carry, and rulings that disagree would be worse than either
+alone.
+
+---
+
+## R14 — Where does a finding go when evidence falsifies the cited defeat?
+
+**Issue:** #33 · **Severity:** BLOCKING · **Sequence after R2**
+
+### The question
+
+A finding is `defeated(merit, M)`. At the same law head and
+position, the bundle grows to include evidence that clause `M`'s
+own enactment failed cryptographic verification, or was made by an
+actor lacking the invoked power. Where does the finding go?
+
+### Why it must be answered
+
+Every destination is closed by ratified text. Staying
+`defeated(merit, M)` cites a defeat the committed bundle falsifies,
+against the Ground Axiom. `affirmed` is a forbidden edge and
+contradicts rather than refines the smaller bundle's appraisal.
+`pending` is forbidden from `defeated`. `self-convicted` requires a
+bearing contradictory pair from the *subject's* own bytes, and the
+defeater's invalidity is not the subject's contradiction. An act is
+the table's own escape hatch, but no act occurred — only evidence
+arrived.
+
+The case is not hypothetical: two of the four ratified defeater
+classes are undercutter-shaped (L1129–1132) — `crypto` and
+`authority` — and both can apply to the defeating clause's own
+enactment.
+
+§7.3's answer to reinstatement is that it happens as an act at a
+new position, which is coherent and is scoped to match (L1104–1106,
+monotonicity at a fixed law head and position). But an act changes
+the law head and so escapes that scope. Evidence does not. The
+answer covers rehabilitation by act and leaves invalidity
+established by evidence alone with nowhere to go.
+
+### Options
+
+**A — Defeat is indefeasible by evidence.** A defeater's own
+invalidity is reachable only through an act. Cost: one sentence,
+plus the admission that this is a substantial expressiveness limit
+a reader will not infer. State it explicitly or it will be
+rediscovered.
+
+**B — The requirement space includes the defeater's own validity
+checks.** Then the affirmation discipline must bind `defeated` too,
+not only `affirmed` — which is precisely R2/#28's repair, and this
+finding becomes a consequence of it rather than an independent
+defect.
+
+**C — Name a lawful destination** for evidence-established
+defeater invalidity, which means opening the forbidden table.
+
+### Recommendation
+
+**Rule R2 first, then revisit.** Under R2/B (full discharge), this
+largely dissolves into option B here: short-circuiting to
+`defeated` with the defeater's own validity unexamined would no
+longer be reachable, so the trap state would not be manufactured in
+the first place. If R2 goes the other way, R14 needs its own
+ruling, and A is then the cheapest honest answer.
+
+Worth deciding alongside: whether undercutters are a distinct
+category. `crypto` and `authority` attack applicability rather than
+content, and the literature holds such attacks succeed irrespective
+of priority, while this document adjudicates all defeat by class
+rank — modelling them as high-ranked rebuttals. If that is
+intended, the divergence is worth stating on the record.
+`self-convicted` already looks like one undercutter promoted to its
+own value.
+
+---
+
+## R15 — How is GEL span membership derived under track one?
+
+**Issue:** #35 · **Severity:** BLOCKING
+
+### The question
+
+Under §17's track one, GEL events use the substrate's registry
+event forms under their existing ilks, so a governance event and a
+credential issuance are the same bytes in the same form, anchored
+the same way — and §11 types the same domain as producing both.
+§17 commits a canonical *order* for folding GEL events (L2203–2207)
+and no rule for *membership*. Which anchored spans are the GEL?
+
+### Why it must be answered
+
+The bootstrap commits exactly two things: track choice and, for
+track two, the initial ilk table (L2232–2235). That is track
+*placement*, and §17's own must-reject vector list confirms the
+reading by naming "both-track placement without committed placement
+law". §4's genesis knot seals only the founding law's SAID.
+Nothing designates a governance registry.
+
+Three plausible inventions were exhibited — the first `vcp` after
+the inception seal, the registry named in C, the registry whose
+`ri` appears in founding law — yielding three different
+Constitutions from identical committed bytes, each well-formed,
+with no diagnostic. §7.3's byte-identity SHALL is violated and
+§17's bootstrap refusal does not fire, because placement *is*
+derivable and only membership is not.
+
+Note the shape of the gap: §1.4 axiom 4 says "No ambient order".
+There is no matching "no ambient membership".
+
+### Options
+
+**A — Founding law commits the governance registry's identifier**,
+at the same grade §17 gives track choice, with a must-reject
+boundary vector for a stream whose governance registry cannot be
+derived. Cost: one clause plus one vector.
+
+**B — Founding law commits a span-selection predicate** rather than
+an identifier, admitting more than one governance registry. More
+expressive, larger surface, and the predicate's own evaluation
+becomes a fold input.
+
+**C — An ambient rule** — for example, the first registry incepted
+under the gAID is the GEL. Cheapest to write and the worst fit: it
+is exactly the ambient derivation axiom 4's sibling would forbid,
+and it silently breaks for any domain that incepts a credential
+registry first.
+
+### Recommendation
+
+**A.** It matches the grade §17 already assigns to track choice,
+it is derivable before the first governed event is admitted (which
+is what the bootstrap requires), and it leaves B available later
+without rework. C should be rejected on the record so it is not
+rediscovered as the obvious shortcut.
+
+Consider ruling in the same sitting whether an axiom naming
+"no ambient membership" belongs beside axiom 4, since the absence
+of that axiom is what let the gap through drafting.
+
+---
+
+## R16 — Define colored evidence, or remove it?
+
+**Issue:** #38 · **Severity:** MAJOR
+
+### The question
+
+§6 says four object forms carry every crossing this document makes
+and lists colored evidence as one. The term occurs three times in
+2471 lines — §2's specifies-list and twice in §6, its intro and its
+own bullet. No normative span requires producing, consuming, or
+verifying it. §6's object-typing clause types the edict, the
+warranty and requirement elements, and types neither colored
+evidence nor the cone. Its component "committed view echo" occurs
+once and is defined nowhere.
+
+### Why it must be answered
+
+An implementer told the crossing space is carried by four object
+forms must build a form whose components are undefined, whose
+typing clause omits it, and for which no fixture, vector, or
+consuming clause exists. Two implementers build two different
+objects, or neither builds it, and §2's "this document specifies"
+list is false at its fourth item. By §1.7's own gate, a construct
+with no stated composition is a defect in this document's terms.
+
+This also blocks half of #37: the comprehension-gate drafting pass
+cannot state colored evidence's composition while its components
+are undefined.
+
+### Options
+
+**A — Define it.** Give "committed view echo" a definition, type
+colored evidence under §6's object-typing clause, and state its
+composition from the seven primitives. Cost: real design, because
+the object has never been exercised.
+
+**B — Remove it** from §2's specifies-list and from §6's four
+object forms, reinstating it when a crossing is exhibited that
+genuinely requires transporting a colorless base plus a view echo
+plus a lens citation as one object.
+
+### Recommendation
+
+**B, unless a consumer exists.** The steelman for A is real —
+naming the object makes the participial doctrine concrete and
+pre-commits a wire shape a later multi-lens or confidentiality
+profile will need. But a form with no emitter, no consumer, no
+typing and no fixture is a promise the document cannot keep, and
+"four object forms carry every crossing" is falsified today by its
+own §6. If the drafting authority knows of a consuming case, A; if
+the honest answer is "not yet", B costs nothing and can be undone.
+
+---
+
+## R17 — The covenant seal: decidable test, or re-type it?
+
+**Issue:** #39 · **Severity:** MAJOR
+
+### The question
+
+§9 makes the covenant seal admissible "only where the substrate's
+law makes lineage the invariant", and says verification "is neither
+byte equality nor coordinate lookup" — the verifier evaluates
+whether the successor satisfies the committed clause. Neither is
+decidable from the text.
+
+### Why it must be answered
+
+The substrate's seal grammar ships digest, Merkle-root,
+source-event, key-event, latest-establishment, backer and typed
+seals, and draws no distinction between a "lineage invariant" and a
+"byte-identity invariant" as substrate law. So the admissibility
+side-condition resolves to nothing checkable while its violation
+carries defect force — a rule found by nobody and assertable by
+anybody.
+
+And no clause language, satisfaction relation, or successor
+relation is given, so two frames holding the same seal and the same
+candidate successor can lawfully reach opposite verdicts — inside a
+section asserting "Two disciplines bind all three kinds", and
+against §5's "their agreement is cryptographic rather than
+negotiated".
+
+Separately: §9 requires a seal to name its kind, and the substrate
+ships exactly that facility in the typed seal, whose `t` field is
+"the versioned type of the seal". §9 acknowledges the typed seal
+without adopting it or reserving a `t` value. This adjudicates the
+prior 4.0 review's KN-14 — the absorption is nominal, not real. The
+carriage reduces to a typed seal with a reserved `t`; the one
+genuine irreducible remainder is the verification procedure, which
+is the part left undesigned.
+
+### Options
+
+**A — Make it decidable.** Replace the admissibility side-condition
+with a checkable test (or drop it along with its defect force),
+state the carriage as a typed seal with a reserved `t` value, and
+give clause-satisfaction a committed language. Cost: the committed
+language is a real design surface.
+
+**B — Re-type the seal.** Make it a frame-local commitment whose
+verification returns a *finding* rather than a medium-grade seal
+verdict. This is honest about what it can deliver and removes the
+conflict with §5, at the cost of weakening what the covenant seal
+was introduced to do.
+
+### Recommendation
+
+**No recommendation — this one is genuinely open.** A preserves the
+construct and owes a language nobody has drafted; B preserves
+decidability and demotes a construct the document leans on in §16's
+succession story ("the seal a successor plants is checkable against
+this document's covenant set — that is what the covenant seal is
+for"). The choice turns on whether covenant satisfaction is
+intended to be medium-grade, and that is exactly the sort of intent
+the text cannot settle.
+
+Whichever way it goes, the carriage half is separable and cheap:
+reserving a `t` value for the covenant seal is worth doing under
+either branch.
+
+---
+
+## R18 — Mandate a blinding factor, or confess the leak?
+
+**Issue:** #44 · **Severity:** MAJOR
+
+### The question
+
+This document designs commit-now/disclose-later in several places —
+an edict's identity is its bare SAID, digest seals commit bytes
+that need not travel, §10 opens contest windows measured in log
+positions, §6 contemplates undisclosed cone spans — and never
+requires a blinding factor. A case-insensitive search for
+`entropy`, `nonce`, `uuid`, `salt` or `blinding` across all 2471
+lines returns zero matches.
+
+### Why it must be answered
+
+The substrate is explicit that a SAID conceals only when the
+content carries entropy: without the `u` field "an adversary may be
+able to reconstruct the block contents merely from the SAID of the
+block and the Schema of the block using a rainbow or dictionary
+attack".
+
+Governance content is near the worst case. The seat roster is
+public in the GEL, act kinds come from a closed §17 ilk table, and
+the coordinate is public — so the search space is roster ×
+act-kind × coordinate, trivially small against a Blake3-256 digest.
+
+Concretely: a domain commits a 40-position contest window on seat
+revocations. A revocation edict is anchored and, per §9's anchor
+grade, lands in an establishment event — maximally visible and
+non-erasable. Its SAID is public immediately while the pre-image is
+withheld. The target grinds the space, recovers the content, and
+spends the full contest window acting on it while the frame
+believes the act is committed-but-undisclosed.
+
+Two conforming implementations — one blinding, one not — both
+satisfy §6's typing SHALL, so the divergence is silent uncommitted
+latitude under §14's own interpretive-latitude duty.
+
+### Options
+
+**A — Mandate a blinding factor** on any object whose SAID is
+committed before its content is disclosed. The typing clause does
+not forbid a `u` field today, so this is an omission rather than a
+structural bar. Cost: one ruled span; interacts with #48, since a
+`u` field on a bare SAD is exactly the shape.
+
+**B — Confess the leak** and scope the commit-now/disclose-later
+claims to content whose disclosure is not adverse. Cheaper, and
+consistent with the document's confessed authenticity-first
+ranking, but it leaves contest windows advertising their own
+subjects.
+
+### Recommendation
+
+**A, scoped to the withheld case.** Most governance evidence is
+meant to be public and needs nothing. The finding bites only where
+the design has *already chosen* to withhold — contest windows,
+undisclosed spans, seals over untraveled bytes — and in exactly
+those places the hash is being asked to do concealment work it
+cannot do unaided. A ruled span scoped to that case is small and
+does not disturb the public baseline.
+
+Note the existing `confidentiality-and-anchored-delivery.md`
+companion is informative and therefore cannot discharge a normative
+gap, however well it describes the terrain.
+
+---
+
 ## Summary table
 
 | # | Ruling | Issue | Sev | Re-ruling | Recommendation | Blocked by |
@@ -594,18 +1058,49 @@ rather than raising it again.
 | R10 | Antinomy payload, bearer, reachability | #6 | BLOCKING | yes | Own payload; reachability follows R1 | R1 |
 | R11 | Refusals: scope or commit a record? | #10 | MAJOR | no | Scope the claim | — |
 | R12 | Rename "predicate congruence"? | #5 | OBSERVATION | no | Leave it; close the thread | — |
+| **R13** | "Bearing" at the registry and governance tiers | #32 | BLOCKING | no | Committed predicate **plus** the refuse/consume boundary | Rule with R10 |
+| **R14** | Where a finding goes when evidence falsifies the defeat | #33 | BLOCKING | no | Revisit after R2; else defeat is evidence-indefeasible | R2 |
+| **R15** | GEL span membership under track one | #35 | BLOCKING | no | Founding law commits the registry identifier | — |
+| **R16** | Define colored evidence, or remove it? | #38 | MAJOR | no | Remove unless a consumer exists | — |
+| **R17** | Covenant seal: decidable test, or re-type it? | #39 | MAJOR | no | *No recommendation — genuinely open* | — |
+| **R18** | Mandate a blinding factor, or confess the leak? | #44 | MAJOR | no | Mandate, scoped to the withheld case | — |
+| **11a** | Compound result when one component refuses | #41 | MAJOR | no | Decide with R11 | R11 |
 
-Twelve rulings over thirteen issues — R8 covers #23 and #4 together.
+Eighteen rulings and one sub-question over twenty issues — R8
+covers #23 and #4 together; R13–R18 and 11a are the second batch,
+appended 2026-07-30.
+
+Both batches together: **six BLOCKING** (R1, R2, R3, R6, R8, R10)
+in the first, **three more** (R13, R14, R15) in the second.
 
 ## What is not in this docket
 
-Nine open issues need no ruling and are drafting or program work:
-#8 (warranty framing — aligning three sites to a grade the abstract
-already ratifies), #11 (the ordering-semantics declaration), #12
-(Spec-Up-T), #13 (projection vs ToIP's PR model), #14 (second
-implementation), #15 (conformance vectors), #16 (warranty dispute
-economics), #17 (deferred surfaces), #18 (working group), #19
-(divergent-verdicts section).
+These open issues need no ruling and are drafting or program work:
+#11 (the ordering-semantics declaration), #12 (Spec-Up-T), #13
+(projection vs ToIP's PR model), #14 (second implementation), #15
+(conformance vectors), #16 (warranty dispute economics), #17
+(deferred surfaces), #18 (working group), #19 (divergent-verdicts
+section), #34 (upstream ask: application-defined TEL event types),
+#36 (whether track two buys anything at the fold boundary), #37
+(run §1.7's comprehension gate across the introducing sections),
+#40, #42, #45, #46, #47, #48 (editorial repairs, seeded by PR #49).
+
+**#8 moved.** It was listed here as drafting work — "aligning three
+sites to a grade the abstract already ratifies". Re-checked against
+the ratified bytes on 2026-07-30: all three sites already carry the
+observational condition ("from the same committed inputs", "for
+every verifier holding the pair", "by any verifier that
+recomputes"), so the finding as filed does not hold and the
+residual is one cross-reference per site. But the issue's
+*escalation* question is a genuine ruling and is not covered
+anywhere in this docket: **are §12.4's mutual convictability and
+§13.2's cross-frame duplicity floor intended as guaranteed
+properties, or as observer-conditional ones?** The bytes read as
+observer-conditional, which is the survivability-correct posture,
+but intent is the ratifying authority's to state. Docket it if the
+answer is not obvious to the authority; it is left off the numbered
+list because it may be a two-word confirmation rather than a
+decision.
 
 Of those, #15 is the one worth starting before any ruling lands.
 The discriminating inputs for R2, R3, R9 and #2 are already
