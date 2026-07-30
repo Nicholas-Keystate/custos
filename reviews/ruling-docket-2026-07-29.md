@@ -1042,6 +1042,199 @@ gap, however well it describes the terrain.
 
 ---
 
+# Third batch — appended 2026-07-30 (upstream answer)
+
+One ruling, and one amendment to a second-batch ruling. Both are
+consequences of the answer to the upstream ask filed as #34, given
+by the keripy maintainer on WebOfTrust/keripy discussion #1566 and
+verified against keripy `8e67f2e6a` the same day. The answer and
+its verification are recorded at
+`reviews/rounds/41-parsimony-2026-07-30/upstream-answer-1566.md`.
+
+The ask was whether keripy would grow an extension point for
+application-defined transaction event types. **The answer is no**
+— defining one's own type is permitted at the specification layer
+and unsupported at the reference layer, and the adoption cost is
+the application's to carry, indefinitely.
+
+But the same answer disclosed an extension surface that §17's two
+tracks do not describe, and that changes what R19 and R15 are
+choosing between. It does not close any existing ruling.
+
+---
+
+## R19 — Does track two survive the upstream answer?
+
+**Issue:** #36 · **Severity:** MAJOR · **Re-ruling:** no
+
+**Status change.** #36 was triaged as program work — "the next
+action is an experiment: exhibit a discriminating case from §17's
+own vector families, or the finding stands." It is on this
+docket's own "what is not in this docket" list. That triage was
+correct when the upstream question was open, because a positive
+upstream answer would have dissolved the finding without a
+decision. The answer is negative, and a third option has appeared,
+so #36 is now a fork between named alternatives with permanent
+consequences. That is a ruling.
+
+### The question
+
+§17 commits two lawful event-form tracks (L2213–2230) whose fold
+results §17's own equivalence vectors require to be byte-identical
+(L2288–2290). Should the standard keep both, keep one, or keep one
+described differently?
+
+### What the upstream answer changed
+
+Two things, in opposite directions.
+
+**Against track two.** #36's filing says: "if application-defined
+transaction event types become registrable, track two stops being
+exotic." They will not become registrable. Minting governance ilks
+means carrying a fork of the registry layer and buying adoption
+indefinitely — a permanent cost, not a transitional one. The
+contingency the finding named has resolved against track two.
+
+**Against track one *as §17 describes it*.** §17 frames track one
+as reuse of the substrate's forms "with governance semantics
+carried entirely by the committed law that interprets them"
+(L2218–2219) — which the parsimony round fairly attacked as
+parsing everywhere and meaning nothing anywhere. That framing
+turns out to understate the substrate. The v2 blindable registry's
+attribute block carries a pair — `td`, a SAID, and `ts`, a **state
+string whose vocabulary the substrate does not constrain**. `ts`
+is a `Labeler` (keripy `structing.py:80`, `coring.py:3342`), a
+generic textual field value; `td` casts to `Noncer`
+(`structing.py:291`), so any digest fits and it need not address
+an ACDC. The maintainer confirmed both readings explicitly and
+cited their own planned use of the pair to anchor an IPEX Grant
+message SAID rather than a credential.
+
+So a governance act's **kind** can travel in `ts` and its
+**content** in `td`, using `rip` + `bup` unchanged, with no minted
+ilk, no forked registry layer, and **no CESR genus reservation**.
+
+### Options
+
+**A — Collapse to track one, and amend track one's description**
+to name the `(td, ts)` surface. One track, one conformance
+surface. §17's ilk table, the track-choice bootstrap commitment,
+the both-track must-reject vector, and the genus paragraph all
+lose their subject. Largest deletion, and the option the upstream
+answer most supports.
+
+**B — Keep both tracks, unchanged.** Preserves optionality against
+a future in which governance ilks become ordinary. Pays the
+doubled conformance surface indefinitely, on a bet the maintainer
+has now declined to underwrite.
+
+**C — Keep both, and demote track two** to a confessed frontier
+under §15 rather than a co-equal lawful track — enacted,
+unexercised, and not owed vectors until someone needs it. Keeps
+the door open at a fraction of B's cost; costs the standard a
+second track that no conformance suite exercises, which §17's own
+"a guard that has never been shown failing is not yet a guard"
+(L2303–2306) argues against.
+
+### What the ruling must not assume
+
+The `(td, ts)` surface is **not free**, and A should not be ruled
+as though it were:
+
+1. **Legibility is disclosure-gated, not public-by-default.** The
+   maintainer plans to deprecate `upd`, the unblinded update that
+   carries `td`/`ts` in the event body (`serdering.py:531`),
+   leaving only `bup`, which carries a blind (`b`, the BAB's SAID
+   — `messaging.py:72`). A governance-blind consumer sees a digest
+   until the unblinded attribute block is attached. Commitment is
+   intact; visibility is a disclosure act. §17 would have to say
+   so, and §14's travel posture would have to account for it.
+   (This is simultaneously a **privacy gain** — weigh it against
+   R18 and the round-B correlation findings, which want less in
+   the clear, not more.)
+2. **There is no v2 registry fold upstream.** `rip`/`bup`/`upd`
+   exist only as message builders (`src/keri/acdc/messaging.py`);
+   the `issued`/`revoked` state machine in `vdr/eventing.py` is
+   the **v1** registry. A Gever collides with no incumbent — which
+   is a genuine opportunity — but it also means the path is
+   unexercised upstream, and "the substrate already does this"
+   would be an overclaim in ratified text.
+3. **The ilk set is closed *and* moving.** `upd` is slated for
+   deprecation and `xfr` for addition (see #52). Binding Custos to
+   a specific v2 ilk's field list inherits that motion.
+
+### Recommendation
+
+**A, with the qualification in point 1 written into the amended
+track description rather than left to the companion.** The
+standard should not carry a second wire realization whose only
+distinguishable consumer is the one the first already serves, on a
+bet the substrate's maintainer has declined. C is the honest
+fallback if the ratifying authority wants the door open; B is not
+recommended.
+
+Rule R19 **before** the #45 and #47 repairs in PR #49 land — see
+the amendment below.
+
+### Consequences to sequence
+
+- **PR #49 carries `Closes #45` and `Closes #47`.** Under option A
+  the genus paragraph loses its subject entirely, so #45's
+  repair — a clause forbidding emission under an unrecognized
+  genus — would be a normative addition to text about to be
+  deleted, and #47's compact-form gate list, whose second ordered
+  gate is "the governed ilk-table seats of track two"
+  (L2274–2284), would name a gate that no longer exists. Both
+  repairs are still *correct* under B and C. Neither is wrong
+  under A; both are wasted motion. Either rule R19 first, or land
+  #49 and accept that A reopens both.
+- The genus question was never put to the maintainer and remains
+  open independent of this ruling (#45).
+
+---
+
+## R15 — amendment: the upstream answer adds a fourth option
+
+**Issue:** #35 · unchanged severity (BLOCKING)
+
+R15 asks how GEL span membership is derived under track one, and
+offers A (founding law commits the registry identifier), B
+(founding law commits a span-selection predicate), C (an ambient
+rule, rejected on the record).
+
+The `(td, ts)` surface adds:
+
+**D — Membership by committed state vocabulary.** The GEL is the
+set of gAID-anchored registry events whose state string is in the
+domain's committed governance vocabulary. This is a concrete
+instance of B, and it is the instance that makes B cheap: the
+predicate becomes a field comparison rather than a dereference of
+opaque content, so B's stated cost — "the predicate's own
+evaluation becomes a fold input" — shrinks to reading a `Labeler`.
+
+**But it does not dominate A**, for two reasons. First, under a
+deprecated `upd` the state string sits in the blinded attribute
+block, so the predicate needs the unblinded BAB — membership
+becomes disclosure-dependent, which is a much worse property for
+a *membership* rule than for a content rule, since a verifier
+holding a partial disclosure would compute a *shorter* GEL without
+error. Second, D still permits a domain to place governance events
+in more than one registry, which is B's expressiveness and B's
+surface.
+
+**The recommendation stands at A.** D is recorded so it is not
+rediscovered as the obvious shortcut once R19 lands, and because
+A and D compose: founding law names the registry (A), and the
+state vocabulary types the events within it. If R19 rules A, rule
+R15 in the same sitting — they are now one design.
+
+The note under R15 about an axiom naming "no ambient membership"
+is unaffected and, if anything, strengthened: D is exactly the
+kind of rule that looks ambient-free because it reads a field,
+while depending on a disclosure the axioms never mention.
+
+---
+
 ## Summary table
 
 | # | Ruling | Issue | Sev | Re-ruling | Recommendation | Blocked by |
@@ -1065,13 +1258,23 @@ gap, however well it describes the terrain.
 | **R17** | Covenant seal: decidable test, or re-type it? | #39 | MAJOR | no | *No recommendation — genuinely open* | — |
 | **R18** | Mandate a blinding factor, or confess the leak? | #44 | MAJOR | no | Mandate, scoped to the withheld case | — |
 | **11a** | Compound result when one component refuses | #41 | MAJOR | no | Decide with R11 | R11 |
+| **R19** | Does track two survive the upstream answer? | #36 | MAJOR | no | Collapse to one track, amended | Rule before PR #49 |
+| **R15a** | Membership by committed state vocabulary | #35 | — | no | Recorded, not adopted; rule with R19 | R19 |
 
-Eighteen rulings and one sub-question over twenty issues — R8
-covers #23 and #4 together; R13–R18 and 11a are the second batch,
-appended 2026-07-30.
+Nineteen rulings and two sub-questions over twenty-one issues —
+R8 covers #23 and #4 together; R13–R18 and 11a are the second
+batch, appended 2026-07-30; R19 and R15a are the third,
+appended the same day on the upstream answer to #34.
 
-Both batches together: **six BLOCKING** (R1, R2, R3, R6, R8, R10)
-in the first, **three more** (R13, R14, R15) in the second.
+All batches together: **six BLOCKING** (R1, R2, R3, R6, R8, R10)
+in the first, **three more** (R13, R14, R15) in the second, none
+in the third.
+
+**Ordering note added with the third batch.** R19 is the only
+ruling on this docket that gates work already in flight: PR #49
+carries `Closes #45` and `Closes #47`, and one resolution of R19
+removes the text both repairs amend. It is MAJOR, not BLOCKING,
+but it is the most *schedulable* item here.
 
 ## What is not in this docket
 
@@ -1080,10 +1283,20 @@ These open issues need no ruling and are drafting or program work:
 (projection vs ToIP's PR model), #14 (second implementation), #15
 (conformance vectors), #16 (warranty dispute economics), #17
 (deferred surfaces), #18 (working group), #19 (divergent-verdicts
-section), #34 (upstream ask: application-defined TEL event types),
-#36 (whether track two buys anything at the fold boundary), #37
+section), #37
 (run §1.7's comprehension gate across the introducing sections),
 #40, #42, #45, #46, #47, #48 (editorial repairs, seeded by PR #49).
+
+**Two left this list on 2026-07-30, on the upstream answer.** #34
+(the upstream ask) is **closed** — asked and answered on
+WebOfTrust/keripy discussion #1566; the answer is recorded at
+`reviews/rounds/41-parsimony-2026-07-30/upstream-answer-1566.md`.
+#36 (whether track two buys anything) **became a ruling**, R19,
+because the answer resolved its contingency and disclosed a third
+option; it is no longer an experiment awaiting a discriminating
+case. Two new issues were filed from the same answer — #52 (`xfr`,
+registry control transfer) and #53 (the bound blinded attribute
+block) — and both are program work, not rulings, for now.
 
 **#8 moved.** It was listed here as drafting work — "aligning three
 sites to a grade the abstract already ratifies". Re-checked against
