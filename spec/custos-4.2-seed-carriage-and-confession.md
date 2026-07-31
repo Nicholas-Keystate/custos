@@ -4,8 +4,13 @@
 > declared final. Enters the candidate by succession; the ratified
 > Custos 4.1 bytes (sha256 ff8b9e7a6e95239dcd1111340f4969720e5268
 > 57f1746f116b42b5b405b72b05) are untouched by this file.
-> Discharges findings #40, #45, #46, #47 and #48 only; every other
-> span of the sections it touches stands as ratified. Offered to
+> Discharges findings #46 and #48, and part of #40, only; every
+> other span of the sections it touches stands as ratified.
+> Repairs for #45 and #47 were drafted here and **withdrawn to
+> their issues on 2026-07-31**, because ruling R19 — whether §17
+> keeps both event-form tracks — may delete the text they amend,
+> and R19 is itself blocked on #55. See "What was withdrawn, and
+> why". Offered to
 > the drafting authority, which owns the wording — a contributor
 > supplies the repair shape, and where the shape is a scoping, the
 > scope itself, because a boundary named in prose is not yet a
@@ -15,28 +20,31 @@
 
 ## What this seed carries
 
-Five repairs across four sections, sharing one defect shape: in
+Three repairs across three sections, sharing one defect shape: in
 each, the document states as **settled** or as **total** something
-its own other sections leave open or partial. None of the five
-requires a design choice. Each is discharged by scoping a claim to
-what the document already supports elsewhere.
+its own other sections leave open or partial. None requires a
+design choice. Each is discharged by scoping a claim to what the
+document already supports elsewhere.
+
+Two further repairs of the same shape were drafted here and have
+been withdrawn to their issues; the last section of this file says
+why, and the withdrawal is about sequencing rather than about
+whether they are right.
 
 | Finding | Section | The claim that overreaches |
 |---|---|---|
 | #40 | §6, §14 | the conviction-kind family is total over rejections it does not cover |
-| #45 | §17 | a reserved genus may be emitted before it is recognized |
 | #46 | §14 | "the encoding layer is closed" in both directions |
-| #47 | §17 | the compact-form gate list is complete |
 | #48 | §6 | the existing toolchain consumes the edict, full stop |
 
-Three of the five (#46, #47, #48) sit on the wire, and each was
+Two of the three (#46, #48) sit on the wire, and each was
 found by re-anchoring the ratified text against the current CESR
 specification and the reference implementation rather than against
 the document's own account of them. That is the register these
 repairs are written in: where the substrate is the authority, the
 substrate's own words fix the scope.
 
-None of the five is contested. Where a broader attack on the same
+None of the three is contested. Where a broader attack on the same
 span was raised and refuted in the review that produced these, the
 refutation is noted with the repair, so the drafting authority can
 see what is *not* being proposed.
@@ -98,55 +106,6 @@ codomain value, defeater class and conviction kind — is more than
 a sentence, and it is the seam where this meets the conformance
 vector work. It should travel with the vectors, not with this
 seed. Finding #40 is not fully discharged until it does.
-
----
-
-## Repair 2 — no emission under an unrecognized genus (#45)
-
-### Ratified span, cited and not edited
-
-§17 (L2262–2272) makes a genus reservation an enactment, with
-steward recognition "a distinct, later, bilateral event — a
-federation-shaped recognition, not a precondition", and closes by
-calling the document's own reservation "enacted, unrecognized, and
-honest about the difference".
-
-### The defect
-
-Reservation-by-enactment is sound bookkeeping and is not in
-question. Emission is the exposure. CESR states that the protocol
-genus and version table is "the only table that all protocols MUST
-share (i.e., has identical values)". If two domains lawfully
-reserve the same three Base64 characters, or the stewards later
-allocate them elsewhere, streams already emitted are archived
-forever and mis-frame under a conforming parser — silently,
-because CESR is self-framing and framing is a pure function of the
-code. Governance streams are precisely the class this document
-promises will replay indefinitely.
-
-### What is *not* proposed
-
-A broader attack on this paragraph was raised and **refuted** in
-the same review: §17's derive-or-refuse bootstrap, its must-reject
-boundary vector for "a grammar migration not admitted under the
-grammar previously in force" (L2290–2295), and the reference
-implementation's fail-loud rejection of an unallocated genus mean
-the design is already fail-closed and enters nothing into the
-shared table. The paragraph is the openness clause working as
-intended. Only emission is at issue.
-
-### Replacement — appended to the Genus paragraph after L2272
-
-> Until recognition, a domain SHALL NOT emit CESR streams under an
-> unrecognized governance genus on any interoperable surface:
-> governance events travel in the recognized KERI/ACDC genus, and
-> the reservation travels as committed evidence of its own
-> enactment, never as a wire claim.
-
-This is consistent with §14's travel posture (L2034–2041), which
-already forbids this document travelling as an allocation request.
-The clause closes fully, and can simply be struck, on steward
-recognition of the reservation.
 
 ---
 
@@ -216,57 +175,6 @@ in-memory representation, never in the serialization.
 
 ---
 
-## Repair 4 — the compact-form gate list (#47)
-
-### Ratified span, cited and not edited
-
-§17 (L2276–2281):
-
-> is a committed deliverable gated, in order, on: the
-> bundle-commitment rule (a committed preimage recipe by which one
-> digest addresses a receipt together with its attachments; owed
-> because the substrate's receipt form does not make its
-> identifier field self-addressing), the governed ilk-table seats
-> of track two, and conformance vectors exercising both
-> presentation orders.
-
-### The defect
-
-The gate's diagnosis is right — the KERI specification confirms a
-receipt's `d` addresses "the key event being receipted, not the
-receipt message itself", so a bundle-commitment recipe is genuinely
-owed. But the recipe as gated is under-determined twice, and an
-implementation can stand every listed gate and still compute a
-different digest.
-
-**Domain.** Attachments are count-code-framed CESR material, and
-the text and binary domains are two lossless encodings with
-different bytes. The reference implementation asserts exactly this
-relation in its own composability predicate: the same primitive,
-two distinct byte strings related by Base64.
-
-**Counter-table version.** Framing is table-dependent, and v1 and
-v2 reassign the letter space across every code the compact form
-would touch — the same receipt couple is `-C` under one table and
-`-M` under the other, with `-A` and `-G` likewise reassigned.
-
-### Replacement — §17 L2276–2281
-
-> is a committed deliverable gated, in order, on: the
-> bundle-commitment rule (a committed preimage recipe by which one
-> digest addresses a receipt together with its attachments —
-> naming the domain, text or binary, over which the preimage is
-> taken, and the counter-table genus and version under which its
-> framing is read; owed because the substrate's receipt form does
-> not make its identifier field self-addressing), the governed
-> ilk-table seats of track two, and conformance vectors exercising
-> both presentation orders.
-
-Adding to the gate list of an already-undischarged deliverable
-commits nothing new. It makes an existing gate satisfiable.
-
----
-
 ## Repair 5 — the edict's carriage claim, scoped to rest (#48)
 
 ### Ratified span, cited and not edited
@@ -325,6 +233,36 @@ authority prefers to decide it now, finding #48 should be moved to
 the ruling docket instead of taking this repair.
 
 ---
+
+## What was withdrawn, and why
+
+Repairs for **#45** (no emission under an unrecognized genus) and
+**#47** (the compact-form gate's missing preimage domain and
+framing version) were drafted in this file and removed from it on
+2026-07-31. Both are back on their issues, and neither is
+withdrawn as wrong.
+
+Ruling **R19** asks whether §17 keeps both event-form tracks. Its
+recommended outcome collapses to one, which deletes the genus
+paragraph #45 amends and removes the second item of the ordered
+gate list #47 extends. Under R19's other outcomes both repairs are
+correct as drafted. So the exposure is not error; it is a second
+pass over the same spans, and #47's own additions would have to be
+rewritten into a restated list rather than appended to the
+existing one.
+
+The original plan was to rule R19 first. That is no longer
+available on any near horizon: **#55** blocks R19 outright, because
+the collapse recommendation rests on the substrate not *rejecting*
+the `(td, ts)` form, which is a weaker claim than the form carrying
+an edict, a warranty, a requirement element or a covenant seal —
+and nobody has exhibited a Custos enactment in it. **#56** should
+also precede the ruling, since retaining `upd` upstream removes the
+collapse option's only substantial cost.
+
+What stays here has no dependence on §17's track structure at all.
+#46 in particular is the repair that matters most in this file, for
+the reason repair 3 gives.
 
 ## What this seed does not touch
 
