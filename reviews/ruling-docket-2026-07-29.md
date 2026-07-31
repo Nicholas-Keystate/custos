@@ -1176,6 +1176,35 @@ recommended.
 Rule R19 **before** the #45 and #47 repairs in PR #49 land — see
 the amendment below.
 
+### Blocked — added 2026-07-31
+
+**#55 blocks this ruling.** The recommendation above rests on the
+substrate's *permissiveness* — `ts` has no constrained vocabulary,
+`td` takes any digest — which establishes only that the substrate
+will not reject the form. It does not establish that the form
+carries an edict, a warranty, a requirement element or a covenant
+seal. Those are different claims and only the first was checked.
+Nobody has exhibited a Custos enactment in the `(td, ts)` form. If
+all of them need the layered-ACDC arrangement the maintainer
+described, option A is not the simple collapse stated above and
+this ruling changes shape. **Do not rule until #55 reports.**
+
+**#56 changes this ruling's cost, and is nearly free to resolve.**
+Point 1 above — the disclosure-gating caveat, which is option A's
+only substantial cost — exists solely because `upd` is slated for
+deprecation. #56 is an upstream ask to retain it, on the ground
+that the deprecation's rationale holds for credential state and
+inverts for a public, indefinitely replayable log. If it lands,
+the caveat largely evaporates. It costs a discussion post, so it
+should be resolved before this ruling is taken up, not after.
+
+**#54 is a feasibility note, not a blocker.** There is no v2
+registry fold upstream, so the reuse posture holds at the encoding
+layer and not the processing layer. It does not change which
+option is right; it changes what the amended text may claim. Under
+option A, §17 must not say or imply that the substrate's existing
+toolchain *processes* these events.
+
 ### Consequences to sequence
 
 - **PR #49 carries `Closes #45` and `Closes #47`.** Under option A
@@ -1258,7 +1287,7 @@ while depending on a disclosure the axioms never mention.
 | **R17** | Covenant seal: decidable test, or re-type it? | #39 | MAJOR | no | *No recommendation — genuinely open* | — |
 | **R18** | Mandate a blinding factor, or confess the leak? | #44 | MAJOR | no | Mandate, scoped to the withheld case | — |
 | **11a** | Compound result when one component refuses | #41 | MAJOR | no | Decide with R11 | R11 |
-| **R19** | Does track two survive the upstream answer? | #36 | MAJOR | no | Collapse to one track, amended | Rule before PR #49 |
+| **R19** | Does track two survive the upstream answer? | #36 | MAJOR | no | Collapse to one track, amended | **#55**; resolve #56 first |
 | **R15a** | Membership by committed state vocabulary | #35 | — | no | Recorded, not adopted; rule with R19 | R19 |
 
 Nineteen rulings and two sub-questions over twenty-one issues —
@@ -1275,6 +1304,30 @@ ruling on this docket that gates work already in flight: PR #49
 carries `Closes #45` and `Closes #47`, and one resolution of R19
 removes the text both repairs amend. It is MAJOR, not BLOCKING,
 but it is the most *schedulable* item here.
+
+**Revised 2026-07-31.** R19 is now itself blocked, and the chain
+is worth stating in one place because it is the only place on this
+docket where a ruling waits on work outside the document:
+
+```
+#56 (ask upstream to retain `upd`)   — cheap; removes R19's main cost
+#55 (does an enactment fit the form?) — blocks R19 outright
+        ↓
+      R19  →  R15a
+        ↓
+   PR #49's #45 and #47 repairs
+```
+
+So the schedulable item is no longer R19 itself but **#56**, which
+costs a discussion post, and **#55**, which is exhibition work
+needing no ruling. Neither is blocked by anything. #54 rides
+alongside as a constraint on what the amended text may claim, not
+on which option is right.
+
+This is the docket's first entry whose resolution depends on an
+adjacent community's answer rather than on this project's
+ratifying authority. Worth noting as a category: the same shape
+will recur.
 
 ## What is not in this docket
 
