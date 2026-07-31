@@ -147,8 +147,14 @@ way Custos goes.
 
 The compact-form gate (`:2274-2284`) lists "the governed ilk-table seats of
 track two" as its second ordered gate. If track two collapses, that gate
-item is void and the list must be restated. Add the dependency; do not
-draft the seed until #36 is ruled.
+item is void and the list must be restated.
+
+**Correction to this entry as first drafted.** It said "do not draft the
+seed until #36 is ruled." The seed is already drafted and open as **PR
+#49**, which carries `Closes #45` and `Closes #47`. So the advice was
+issued too late to be taken, and the live question is not whether to draft
+but whether to *land*. That is the most schedulable consequence of this
+whole answer and it was nearly missed. See the execution log.
 
 ### #35 — **untouched, and slightly sharpened.**
 
@@ -160,12 +166,31 @@ registry differing only by the state strings inside it. `rip`'s field set
 designation on, so the designation has to come from founding law exactly as
 the issue says.
 
-### The ruling docket (R1–R13)
+### The ruling docket
 
-**Unaffected.** Every docket item is an internal-semantics fork — finding
-codomain, transition system, refusal scope, requirement-set keys. None
-depends on substrate event grammar. Nothing here unblocks any of the
-thirteen.
+**No existing ruling is unblocked, but the docket grew.** As first drafted
+this entry read "R1–R13: unaffected," which was wrong twice — the docket
+ran to R18 plus sub-question 11a at the time, and the answer did not leave
+it untouched. Corrected:
+
+- **R1–R14, R16–R18, 11a — genuinely unaffected.** Each is an
+  internal-semantics fork (finding codomain, transition system, refusal
+  scope, requirement-set keys, colored evidence, the covenant seal,
+  blinding). None depends on substrate event grammar. Nothing here
+  unblocks any of them, and in particular none of the six BLOCKING
+  rulings moves.
+- **R15 (#35) — amended.** A fourth membership option is now on the
+  record as **R15a**: membership by committed state vocabulary. Recorded,
+  not adopted; it does not displace option A, because under a deprecated
+  `upd` the state string sits in the blinded block and membership becomes
+  disclosure-dependent.
+- **R19 (#36) — new.** #36 was triage category D (program work) and is now
+  a ruling, because the answer resolved its contingency and disclosed a
+  third option. It is the only docket item that gates work already in
+  flight.
+
+Both were appended to `reviews/ruling-docket-2026-07-29.md` as a third
+batch on 2026-07-30.
 
 ---
 
@@ -192,12 +217,26 @@ These were unprompted and bear on ratified text:
 3. **`upd` deprecation** — any Custos text or conformance vector that
    presumes `upd` is on a deprecation path.
 
+   **Swept 2026-07-31: clean, no issue filed.** `upd` occurs nowhere in
+   `spec/`, `companions/`, `tools/`, or any root artifact. The only
+   occurrences in the repository are review prose and this document. §17
+   speaks of ilks abstractly and names no specific v2 event type, so no
+   ratified span and no owed vector inherits the deprecation. Nothing to
+   do — recorded so the check is not repeated.
+
+   The residual is indirect and belongs to **R19**: if §17 collapses to
+   the `(td, ts)` form, the amended track description will be the first
+   ratified text to depend on a specific v2 event's field list, and *that*
+   text would inherit the deprecation. Which is an argument for describing
+   the surface (a SAID and a state string) rather than naming `bup`.
+
 ---
 
-## Follow-up ask, recommended
+## Follow-up ask — posted
 
-The genus question was never posed. Suggested narrow follow-up on the same
-thread, after the thank-you:
+The genus question was never posed in the original ask. Posted to the same
+thread on 2026-07-31 by dhh1128. **Awaiting answer; #45 stays open on it.**
+Drafted as:
 
 > That mostly answers it — the `(td, ts)` pair is a bigger extension surface
 > than I'd read it as, and an unconstrained state string plus a `td` that
@@ -214,3 +253,59 @@ thread, after the thank-you:
 > Also — is `xfr` far enough along to be worth tracking? A doubly-anchored
 > transfer of registry control is directly relevant to what I'm doing with
 > Nico, more so than the event-type question was.
+
+---
+
+## Execution log
+
+Every recommendation above, and where it went. Added 2026-07-31 because
+the document as first written was a list of recommendations with no record
+of which had been acted on — which is the failure mode a provenance
+artifact exists to prevent.
+
+| Recommendation | Status | Where |
+|---|---|---|
+| Close #34, recording the answer | **done** 2026-07-30 | issue #34 comment + closed |
+| #36: promote to a ruling | **done** | docket **R19**; issue #36 comment |
+| #35: record the fourth option | **done** | docket **R15a**; issue #35 comment |
+| #45: note the two consequences | **done** | issue #45 comment |
+| #47: note the gate dependency | **done** | issue #47 comment |
+| File `xfr` | **done** | issue **#52** |
+| File BBAB | **done** | issue **#53** |
+| Sweep Custos text for `upd` | **done** 2026-07-31 | clean; no issue filed (see above) |
+| Ask the genus question | **done** 2026-07-31 | posted to discussion #1566 by dhh1128 |
+| Revise `why-a-gel-and-not-a-tel.md` | **done** | it argued for an ask that has now been answered, and carried §17's understatement of track one |
+| Commit the round and this answer | **done** | `75f46bf`, `eaeeef1`, `197be3b` on `docket/rulings-2026-07-29` (PR #31) |
+
+### Open, and owned by someone else
+
+These are not oversights. Each needs a decision this document has no
+standing to make.
+
+1. **PR #49 — land, split, or hold.** It carries `Closes #45` and
+   `Closes #47`, and R19's recommended option removes the text both
+   repairs amend. The sequencing note is posted on the PR recommending a
+   **split** — land #46, #48 and the #40 partial now (none depends on
+   §17's track structure), hold #45 and #47 for R19. **Not executed.**
+   Splitting a PR is a drafting act, and `CONTRIBUTING.md` gives the
+   drafting authority the wording.
+2. **R19 and R15a await ruling.** Recommendations on the docket carry no
+   force. Until R19 is ruled, §17's two tracks stand as ratified text and
+   nothing about the `(td, ts)` form is committed.
+3. **#45 awaits Sam.** The genus question is posted and unanswered. Two
+   exits remain: steward recognition, or R19 removing the paragraph's
+   subject.
+4. **#52 and #53 are evaluation passes, unscheduled.** #53 in particular
+   carries a marked-speculative claim (that the BBAB may discharge §7.4
+   and §13 work) that no vector exercises. It should not be relied on
+   until someone tries to express a recourse scenario with it.
+
+### Known limitation of this document
+
+Its verification column is a snapshot of keripy `8e67f2e6a` taken
+2026-07-30. Two of the rows it depends on most — the `upd` deprecation and
+`xfr` — are **roadmap, not code**, sourced from one maintainer's message
+rather than from bytes. Per `CONTRIBUTING.md`'s speculation rule, any
+Custos text that comes to rest on them must say so. R19's option A rests
+on the `upd` deprecation for its central caveat about disclosure-gating,
+which is the single largest unverified dependency in this whole analysis.
