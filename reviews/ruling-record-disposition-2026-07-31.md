@@ -245,6 +245,24 @@ thesis is that commitments are pinned. **Merging PR #31 fixes it.**
 
 ## 3. Next actions
 
+> **Status, end of 2026-07-31.** Sections 3.0 through 3.3 are
+> **done** and are kept as the record of what was decided and why.
+> Do not re-execute them. What remains open is 3.4 (the station
+> obligations, not yet started) and 3.5 (the second sitting, which
+> is the ratifying authority's move, not ours).
+>
+> Executed: #21 and #5 closed; a disposition comment on every ruled
+> finding; the maintainer's two dossier questions answered on #1;
+> #57 opened for the carriage-encoding round; PR #26 updated to the
+> four-field order; PR #49 split; and seven seed PRs opened —
+> **#58** (R1, R6), **#59** (R2), **#60** (R4, R7, R9), **#61**
+> (R8), **#62** (R5), **#63** (R11), and **#64** (R10, draft, held
+> on #32 and carrying a marked `[BLANK]` — it must not merge until
+> #32 is ruled).
+>
+> The live work queue is the repo's `tick` ledger (`tick ls`), not
+> this section.
+
 ### 3.0 Immediate
 
 1. **Merge PR #31.** It is the record's cited subject (§2.10).
