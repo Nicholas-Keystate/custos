@@ -334,7 +334,9 @@ written today are no longer "record both readings" — they assert
 one. This is the highest-value unblocked work on the board.
 
 **R5's carriage-encoding group round** is chartered by the
-authority, not by us, but two of its named inputs are unruled:
+authority, not by us — tracked at **#57**, which carries its five
+decisions, its inputs and their state, and the interim grade
+discipline. Two of its named inputs are unruled:
 R5 lists "genus composition with the ilk-table seats" among the
 several decisions it defers — and under R19/A the ilk-table seats
 do not exist. **R19 is an input to the group round.** Worth saying

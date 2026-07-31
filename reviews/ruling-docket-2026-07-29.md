@@ -1573,11 +1573,16 @@ record's covering sentence inherited it. PR #50 is the program-work
 half of R20's recommended option and is already in flight; the
 ruling is still owed.
 
-**Three issues were filed 2026-07-31** out of the R19 feasibility
-work and are program work, not rulings: #54 (no v2 registry fold
+**Four issues were filed 2026-07-31** and none is a ruling. Three
+come out of the R19 feasibility work: #54 (no v2 registry fold
 upstream), #55 (nobody has exhibited an enactment in the `(td, ts)`
 form), and #56 (ask upstream to retain `upd`). #55 blocks R19 and
-#56 should precede it; see the chain above.
+#56 should precede it; see the chain above. The fourth, #57, tracks
+the **carriage-encoding group design round** R5 chartered — its
+inputs, their state, and what gates it. R19 is among them: R5 names
+"genus composition with the ilk-table seats" as one of the round's
+five decisions, and under R19's recommended option those seats do
+not exist.
 
 Of those, #15 is the one worth starting before any ruling lands.
 The discriminating inputs for R2, R3, R9 and #2 are already
