@@ -1,0 +1,5 @@
+# Local task-ledger store (the `tick` tool). The ledger itself lives
+# on an orphan branch; these are the working-tree cache and its lock,
+# and neither is ever part of the published bytes.
+.tick/
+.tick.lock
