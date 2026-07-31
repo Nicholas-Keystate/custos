@@ -4,11 +4,14 @@
 > declared final. Enters the candidate by succession; the ratified
 > Custos 4.1 bytes (sha256 ff8b9e7a6e95239dcd1111340f4969720e5268
 > 57f1746f116b42b5b405b72b05) are untouched by this file.
-> Discharges findings #2 and #3 only; every other span of section
-> 7.3 stands as ratified. Offered to the drafting authority, which
-> owns the wording — a contributor supplies the repair shape and,
-> where the shape is a total order, the order itself, because an
-> order stated in prose is not yet a repair.
+> Discharges findings #2, #3 and #27 only; every other span of
+> section 7.3 stands as ratified. Executed under rulings R2 and R3
+> of the ruling record of 2026-07-30 (sha256 45a6d7208f0faca82946f
+> 2bfacb04799994b5cf2c9afdef53f24def9d8cf8552). Offered to the
+> drafting authority, which owns the wording — a contributor
+> supplies the repair shape and, where the shape is a total order,
+> the order itself, because an order stated in prose is not yet a
+> repair.
 
 ---
 
@@ -135,20 +138,22 @@ key and no position relative to ordering.
 >   field of the key are one element.
 >
 >   Elements are ordered by (subject identifier, requirement kind,
->   citing-clause list), compared in that precedence, ascending at
->   every component, and the first component that distinguishes
->   two elements decides between them. Subject identifier and
->   requirement kind each compare under the byte comparison rule.
+>   citing-clause list, species), compared in that precedence,
+>   ascending at every component, and the first component that
+>   distinguishes two elements decides between them. Subject
+>   identifier and requirement kind each compare under the byte
+>   comparison rule.
 >
->   [OPEN — see #27. Section 7.2 requires every element to carry a
->   **species**, which is a fourth field this key does not name.
->   Whether the species enters the dedup key and the sort key, or
->   is excluded and a merge rule commits which element survives a
->   collision, is not settled by this seed and is not the drafting
->   authority's to decide silently: two blind implementations
->   resolved it in opposite directions. The key above is total over
->   the three fields section 7.3 names, and becomes total over the
->   element only when #27 is ruled.]
+>   **Species** is the fourth field, and it enters both keys. It
+>   is the discharge species section 7.2 requires every element to
+>   carry, taken at its position in that section's own committed
+>   enumeration, lowest position first: **absent**, **window-open**,
+>   **unresolved-conflict**, **expired/abandoned**. It compares by
+>   that position and never by the bytes of its name, so the order
+>   does not move if a species is renamed. Two elements agreeing at
+>   subject identifier, requirement kind and citing-clause list but
+>   differing in species are two elements, not one, and both
+>   survive deduplication.
 >
 >   Within an element, the citing-clause list is itself ordered by
 >   its members under the byte comparison rule. Two citing-clause
@@ -164,17 +169,42 @@ a key, because a dedup key narrower than the element would let two
 evaluators emit sets of different cardinality from one bundle —
 a byte divergence upstream of any ordering question.
 
-**Scope.** This repair settles the three things finding #3 names:
+Species is that argument's own conclusion, and finding #27 is the
+executed case. Section 7.2 makes species a mandatory field, so an
+element carries four; a key over three is narrower than the
+element, and two elements differing only in species collide.
+Ruling R3 settles which way that resolves: the key sees everything
+the element commits. The alternative — collapsing the two into one
+and committing a merge rule to name the survivor — was rejected in
+the ruling as incomplete and lossy, because a party told that the
+cure is "the missing evidence arrives" and never told that a
+recovery window is open has been given a materially different
+instruction from the same record. Species exists to carry the cure
+path; a key that cannot see it discards what section 7.2 is for.
+
+Species compares by enumerated position rather than by name bytes
+for the same reason defeater-class rank does. A rank read off the
+spelling of a class would sort `absent` before `window-open` by
+accident of the alphabet rather than by anything the document
+committed, and it would move under a rename.
+
+**Scope.** This repair settles the three things finding #3 names —
 the direction, the comparison basis, and the semantics of the list
-component. It does **not** settle which fields the key ranges
-over, because section 7.2's species field makes that a separate
-and harder question — one that #27 exhibits as an executed
-divergence between two blind implementations rather than as a
-reading of the text. An earlier draft of this seed asserted a key
-over "the whole element" naming three fields; that was wrong on
-the bytes, since the element carries four. The assertion is
-withdrawn and the question is handed to #27 rather than answered
-here.
+component — and, under ruling R3, the field set that finding #27
+exhibits. The order is now total over the element rather than over
+three of its four fields, so the byte-identity SHALL at L1038 is
+satisfiable for the colliding case.
+
+The drafting history is worth keeping, because the seed was wrong
+here twice in opposite directions. An earlier draft asserted a key
+over "the whole element" while naming only three fields, which was
+wrong on the bytes. The correction withdrew the claim and handed
+the field set to #27 rather than answering it, on the ground that
+both readings were forced by different SHALLs and a contributor
+choosing between them would be legislating. R3 has now chosen, and
+the ruling reaches the same conclusion the withdrawn draft reached
+by accident — from section 7.2's mandatory-field SHALL rather than
+from the totality requirement alone.
 
 ## Notes for the drafting authority
 
@@ -213,30 +243,45 @@ declared final.
    the drift surface is still open and the next ordering clause
    drifts the same way.
 
-4. **The requirement element has a field section 7.3 does not
-   name.** Section 7.2 (L1007) requires a pending finding to carry
-   the **species** of each requirement element, so the element has
-   four fields where section 7.3's canonical-order parenthetical
-   names three. Repair 2 therefore cannot state a key over "the
-   element" at all — an earlier draft of this seed did, and was
-   wrong on the bytes. Finding #27 shows this is not a drafting
-   nicety: two blind implementations resolved the species question
-   in opposite directions and emitted different pending findings
-   from one input, one naming a single cure path and the other
-   naming two. **Until #27 is ruled, the order in repair 2 is
-   total over three fields and not over the element**, and the
-   byte-identity SHALL at L1038 remains unsatisfiable for the
-   colliding case regardless of what this seed says about
-   direction. Ruling #27 is a precondition for repair 2 being
-   sufficient, not merely adjacent to it.
+4. **Species is ruled in, and this seed is now the ordering
+   repair's first half only.** Note 4 formerly recorded #27 as an
+   open precondition. R3 ruled it: species enters the dedup key
+   and the canonical order as the final sort tiebreak. What
+   replaces the open question is a sequencing constraint from the
+   same ruling record.
+
+   R4 keeps the canonical-ordering wall and rewords it as **the
+   ambient-order declaration's constitutional hook**, with site
+   rules descending from the declaration rather than standing
+   beside it. So the two clauses in this seed are the *first half*
+   of the ordering repair, and finding #11's declaration is the
+   second. If the candidate lands this seed and stops, the drift
+   surface note 3 describes is still open: the sites are correct
+   and nothing above them says why. When the declaration is
+   drafted, both clauses here should be re-derived from it, and
+   the byte comparison rule at the head of this seed is the
+   fragment it subsumes.
+
+5. **Species compares by position, which is a commitment this
+   seed makes and the ruling does not.** R3 says species enters
+   both keys and is the final tiebreak. It does not say how two
+   species compare. This seed reads it off section 7.2's own
+   committed enumeration, by position, for parity with
+   defeater-class rank and to survive a rename. The alternative —
+   byte comparison over the species name — is stateable and
+   deterministic, so it is not wrong; it is arbitrary, and it
+   makes the sort order a function of spelling. Worth confirming,
+   since it is the one place this seed goes past what was ruled.
 
 ## Record
 
 | Fact | Value |
 |---|---|
 | Predecessor edition | Custos 4.1, sha256 `ff8b9e7a6e95239dcd1111340f4969720e526857f1746f116b42b5b405b72b05` |
-| Findings discharged | #2 (canonical selection), #3 (required-payload ordering — direction, basis, list semantics only) |
-| Precondition, not discharged | #27 (species in the dedup and sort key) — repair 2 is insufficient until this is ruled |
-| Findings coupled, not discharged | #9 (conformance predicate), #11 (ordering-semantics declaration) |
+| Executed under | Ruling record 2026-07-30, sha256 `45a6d7208f0faca82946f2bfacb04799994b5cf2c9afdef53f24def9d8cf8552` — R2, R3 |
+| Findings discharged | #2 (canonical selection), #3 (required-payload ordering), #27 (species in both keys) |
+| Ruling that gave repair 1 its object | R2 — full discharge binds every terminal value, so the set canonical selection ranges over is always computed |
+| Second half, not in this seed | #11 (the ambient-order declaration, R4's wall-6 hook) — these clauses descend from it once it exists |
+| Findings coupled, not discharged | #9 (conformance predicate) |
 | Status | Unpinned draft; enters the 4.2 candidate by succession |
 | Ratified bytes altered | None |
