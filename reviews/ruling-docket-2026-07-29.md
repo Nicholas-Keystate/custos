@@ -17,6 +17,20 @@ the ratifying authority owns the ruling.
 
 Nothing here proposes an edit to ratified text.
 
+**Status, 2026-07-31 — answered in part.** The ratifying authority
+answered R1–R12 on 2026-07-30 in
+`reviews/ruling-record-2026-07-30.md`, sha256
+`45a6d7208f0faca82946f2bfacb04799994b5cf2c9afdef53f24def9d8cf8552`.
+Eleven rulings and one dissolution; both digests the record stands
+on verify. **R13–R19, 11a and R15a are unruled**, and three of them
+are BLOCKING. Triage of the answer — coverage, consistency, and the
+work it releases — is at
+`reviews/ruling-record-disposition-2026-07-31.md`. Two dependencies
+the answer created are recorded against their entries below: R10 was
+ruled without R13, which the second batch asked be ruled with it,
+and R1's closed triple contains "the GEL span", which is the member
+R15 says is underivable.
+
 **Second batch appended 2026-07-30.** Six further rulings, R13–R18,
 were added a day after this docket was assembled, from findings the
 parsimony review round filed on 2026-07-30 (#32, #33, #35, #38, #39,
@@ -43,7 +57,7 @@ other eight**, so the ordering below is not arbitrary:
 
 | Rule first | Because it decides |
 |---|---|
-| **R1 — #7** position-indexed vs state-machine findings | R3 (#24) outright; constrains R4 (#6) |
+| **R1 — #7** position-indexed vs state-machine findings | R6 (#24) outright; constrains R10 (#6) |
 | **R2 — #28** does the affirmation discipline bind `defeated` | whether #2's canonical-selection repair means anything |
 | **R3 — #27** species in the requirement-set key | whether #3's repair is sufficient |
 | **R4 — #20** which wall enumeration is canonical | may dissolve R7 (#21) entirely |
@@ -109,9 +123,21 @@ the case-1 framing in #1 (two views, same law, one having seen
 less; `affirmed` vs `pending`, trivially resolved). B requires
 opening a fixed wall to add an edge.
 
-A is also the keystone. Under A, R3 (#24) resolves for free, and
-R4's hardest sub-question (can antinomy be discovered after
+A is also the keystone. Under A, R6 (#24) resolves for free, and
+R10's hardest sub-question (can antinomy be discovered after
 affirmation?) becomes answerable without a new edge.
+
+*Corrected 2026-07-31:* the two cross-references above and the row
+in the ordering table read "R3" and "R4" until today. The issue
+numbers were always right; the ruling numbers were stale from an
+earlier draft. #24 is **R6** and #6 is **R10**. The ruling record
+navigated it correctly and nothing downstream relied on the error.
+
+*Dependency discovered by the ruling record, 2026-07-31:* R1 is
+now ruled A, and its closed triple names "the GEL span" as a member
+of E — following axiom 2's own sentence. **That is the member R15
+(#35) says is underivable.** R1 stands; R15 is load-bearing under
+it, which is not the direction this docket anticipated.
 
 ---
 
@@ -711,6 +737,16 @@ Rule with R10: both concern what reaches `self-convicted` and what
 it must carry, and rulings that disagree would be worse than either
 alone.
 
+**That did not happen — noted 2026-07-31.** R10 was ruled on
+2026-07-30 and R13 was not. The consequence is concrete rather than
+procedural: R10's antinomy circuit is the payload for the second
+disjunct of the `pending → self-convicted` edge at L1062, and
+**"bearing" is the gate on that edge** — the term this finding says
+is undefined above the key tier. So the ruled constructor now hangs
+on an unruled admission condition, and a repair drafted from R10
+alone would have to leave the gate blank. R13 is not merely
+outstanding; it is the completion of a ruling already issued.
+
 ---
 
 ## R14 — Where does a finding go when evidence falsifies the cited defeat?
@@ -773,6 +809,23 @@ largely dissolves into option B here: short-circuiting to
 longer be reachable, so the trap state would not be manufactured in
 the first place. If R2 goes the other way, R14 needs its own
 ruling, and A is then the cheapest honest answer.
+
+**Correction, 2026-07-31 — the recommendation above was too
+optimistic, and R2 has now been ruled B.** R2/B dissolves only half
+of this. It forecloses the *short-circuit* case: a `defeated`
+returned while an enumerated check sat unexamined. It says nothing
+about the *later-arrival* case, which is the one this finding
+actually describes — the defeater's validity check was examined and
+passed against the bundle as it then stood, and evidence falsifying
+clause `M`'s own enactment arrives afterward. There the trap is
+still built. R1/A makes the growth a new finding rather than a
+mutation, but L1103's "refines and never contradicts" at a fixed law
+head still closes the `affirmed` exit, `pending` is still forbidden
+from `defeated`, and `self-convicted` still requires the *subject's*
+contradiction. **#33 needs its own ruling**, and the choice is the
+one stated above: A (defeat is indefeasible by evidence, confessed
+as an expressiveness limit) or C (name a lawful destination).
+Option B is now spent — R2 took it, and it did not reach.
 
 Worth deciding alongside: whether undercutters are a distinct
 category. `crypto` and `authority` attack applicability rather than
@@ -1264,6 +1317,120 @@ while depending on a disclosure the axioms never mention.
 
 ---
 
+# Fourth batch — appended 2026-07-31, on the ruling record
+
+One ruling and one sub-question, both of which this docket should
+have carried already and did not. Neither comes from new review
+work; both were exposed by reading the ruling record against the
+tracker.
+
+---
+
+## R20 — What pins the specifications the fold's decision procedures live in?
+
+**Issue:** #43 · **Severity:** BLOCKING · **Re-ruling:** no
+
+### Why it is on the docket at all
+
+This is a docket defect, not a new finding. #43 was filed on
+2026-07-30, is BLOCKING, and appears **neither** in this docket's
+numbered list **nor** in its "what is not in this docket" list. It
+fell between the two. The docket's own opening claim — that the
+ruling-blocked set "include[s] every BLOCKING finding on the
+tracker" — was false from the moment #43 was filed, and the ruling
+record's covering sentence inherited the error.
+
+### The question
+
+§7.3 (L1033–1038) makes a finding a function of exactly three
+inputs and forbids any other input from influencing it. But two
+decision *procedures* the fold executes are defined outside those
+inputs: KERI's superseding-recovery calculus decides
+`self-convicted` and the window-open species (§7.1, §7.2), and the
+dossier specification's threshold-operator semantics decide which
+slots a pending requirement set enumerates (§8, §12.2). §3 says
+those revisions are pinned "in the engagement companion under this
+document's own pin" (L575) — and that companion does not exist. The
+dossier specification is not in §3's substrate of record at all, so
+even a working pin would not reach it.
+
+The result is intra-implementation drift: one conforming engine, one
+pinned checkout, replaying the same committed triple later against a
+changed substrate revision, returning a different cure species or a
+different unfilled-slot enumeration — in violation of a ruled
+`SHALL`. Neither the §2 nor the §14 confession reaches it; both
+confess *cross*-implementation debt.
+
+**R1 sharpens this rather than softening it.** R1/A rules the
+finding an immutable function of a closed triple. A decision
+procedure that can change under the engine's feet is then a hidden
+fourth input to a function the ruling has just declared closed.
+
+### Options
+
+**A — The Constitution commits the digests.** Founding law commits
+the substrate and carriage specification revisions it folds under,
+making semantics-version a governed object under §11's own
+criterion. Cost: governance-grade weight on an upstream artifact's
+revision, and a domain must re-enact to move.
+
+**B — The enactment pins the companion.** The ratification
+enactment pins the engagement companion's digest, the companion is
+written, and the dossier specification is admitted into §3's
+substrate of record. Cost: three acts, one of which (PR #50) is
+already in flight — and the pin then sits at document grade rather
+than at the grade of the law that folds under it.
+
+### Recommendation
+
+**B, with one qualification.** B is what the ratified text already
+promises — the promise is simply undischarged — so it repairs by
+completion rather than by new commitment, and PR #50 has started
+it. The qualification: B pins the revisions *for this edition*,
+which leaves a domain that folds under a later revision with no
+lawful way to say so. If the ratifying authority expects that to
+happen, A is the durable answer and B is a bridge to it. Worth
+deciding which, because the answer determines whether the companion
+is a stopgap or the mechanism.
+
+Either way the fold must be able to name the revision it folded
+under, or §12.4's false-warranty discipline can convict an honest
+warrantor whose only difference from the replayer is a substrate
+bump.
+
+---
+
+## Sub-question 8a — are §12.4 and §13.2 guaranteed, or observer-conditional? (#8)
+
+**Issue:** #8 · **Severity:** MAJOR (escalation half)
+
+Named here rather than left in prose at the foot of this docket,
+where it has sat since 2026-07-30 with an explicit "docket it if the
+answer is not obvious to the authority" — which is not a place a
+question can be answered from.
+
+#8's filed claim is falsified by the ratified bytes: all three sites
+carry the observational condition. The residual is one
+cross-reference per site. But the escalation question is untouched
+by that and by the ruling record: **are §12.4's mutual
+convictability and §13.2's cross-frame duplicity floor intended as
+guaranteed properties, or as observer-conditional ones?**
+
+The bytes read observer-conditional, which is the
+survivability-correct posture. The quantifier restrictions ("for
+every verifier holding the pair", "by any verifier that
+recomputes") say the conviction holds for whoever re-folds; they do
+not say that set may not be empty. That it may be empty is stated
+only at L37–43, in the abstract.
+
+**Recommendation: confirm observer-conditional**, and add the
+cross-reference from each of the three sites to L37–43. It may be a
+two-word answer. It is on the numbered list now because a two-word
+answer that never gets asked is indistinguishable from an open
+question.
+
+---
+
 ## Summary table
 
 | # | Ruling | Issue | Sev | Re-ruling | Recommendation | Blocked by |
@@ -1289,15 +1456,42 @@ while depending on a disclosure the axioms never mention.
 | **11a** | Compound result when one component refuses | #41 | MAJOR | no | Decide with R11 | R11 |
 | **R19** | Does track two survive the upstream answer? | #36 | MAJOR | no | Collapse to one track, amended | **#55**; resolve #56 first |
 | **R15a** | Membership by committed state vocabulary | #35 | — | no | Recorded, not adopted; rule with R19 | R19 |
+| **R20** | What pins the fold's external decision procedures? | #43 | BLOCKING | no | Enactment pins the companion; decide if it is a bridge | — |
+| **8a** | §12.4 and §13.2: guaranteed or observer-conditional? | #8 | MAJOR | no | Confirm observer-conditional | — |
 
-Nineteen rulings and two sub-questions over twenty-one issues —
+Twenty rulings and three sub-questions over twenty-three issues —
 R8 covers #23 and #4 together; R13–R18 and 11a are the second
-batch, appended 2026-07-30; R19 and R15a are the third,
-appended the same day on the upstream answer to #34.
+batch, appended 2026-07-30; R19 and R15a are the third, appended
+the same day on the upstream answer to #34; R20 and 8a are the
+fourth, appended 2026-07-31 on reading the ruling record against
+the tracker.
 
-All batches together: **six BLOCKING** (R1, R2, R3, R6, R8, R10)
-in the first, **three more** (R13, R14, R15) in the second, none
-in the third.
+All batches together: **ten BLOCKING** — six in the first (R1, R2,
+R3, R6, R8, R10), three in the second (R13, R14, R15), none in the
+third, and one in the fourth (R20).
+
+## Ruled and unruled — status at 2026-07-31
+
+`reviews/ruling-record-2026-07-30.md` (sha256 `45a6d720…`) answers
+the first batch and nothing else.
+
+| | Rulings | State |
+|---|---|---|
+| **Ruled** | R1, R2, R3, R4, R5, R6, R8, R9, R10, R11, R12 | eleven rulings; each owes a 4.2 repair |
+| **Dissolved** | R7 | by R4; #21 closeable |
+| **Unruled** | R13, R14, R15, R16, R17, R18, R19, R20, 11a, 8a, R15a | **four BLOCKING**: R13, R14, R15, R20 |
+
+Two of the unruled are not merely outstanding:
+
+- **R13** completes R10, which is already ruled (see the note under
+  R13).
+- **R15** is load-bearing under R1, which is already ruled (see the
+  note under R1).
+
+R19 is separately blocked on #55 and should follow #56; see the
+chain above. **R20 and 8a have no blockers and no dependencies** —
+along with R16, R17 and R18 they are the batch a second sitting can
+take in one pass.
 
 **Ordering note added with the third batch.** R19 is the only
 ruling on this docket that gates work already in flight: PR #49
@@ -1363,10 +1557,27 @@ anywhere in this docket: **are §12.4's mutual convictability and
 §13.2's cross-frame duplicity floor intended as guaranteed
 properties, or as observer-conditional ones?** The bytes read as
 observer-conditional, which is the survivability-correct posture,
-but intent is the ratifying authority's to state. Docket it if the
-answer is not obvious to the authority; it is left off the numbered
-list because it may be a two-word confirmation rather than a
-decision.
+but intent is the ratifying authority's to state.
+
+*Resolved 2026-07-31:* it is now on the numbered list as **8a**. It
+was left off on the ground that it "may be a two-word confirmation
+rather than a decision" — which is not a reason to leave a question
+where nobody is obliged to answer it.
+
+**#43 was on neither list, and now is.** It is BLOCKING, was filed
+2026-07-30, and appears in this docket's numbered list only as of
+today, as **R20**. That is a docket defect: the opening claim that
+the ruling-blocked set includes every BLOCKING finding on the
+tracker was false from the moment #43 was filed, and the ruling
+record's covering sentence inherited it. PR #50 is the program-work
+half of R20's recommended option and is already in flight; the
+ruling is still owed.
+
+**Three issues were filed 2026-07-31** out of the R19 feasibility
+work and are program work, not rulings: #54 (no v2 registry fold
+upstream), #55 (nobody has exhibited an enactment in the `(td, ts)`
+form), and #56 (ask upstream to retain `upd`). #55 blocks R19 and
+#56 should precede it; see the chain above.
 
 Of those, #15 is the one worth starting before any ruling lands.
 The discriminating inputs for R2, R3, R9 and #2 are already

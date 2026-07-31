@@ -43,8 +43,10 @@ The second batch (R13–R18, sub-question 11a) and the third batch
 | **R17** | #39 | MAJOR | — | unruled (docket carries no recommendation) |
 | **R18** | #44 | MAJOR | — | unruled |
 | **11a** | #41 | MAJOR | — | unruled |
-| **R19** | #36 | MAJOR | — | unruled — **gates PR #49** |
+| **R19** | #36 | MAJOR | — | unruled — blocked on #55, follows #56 |
 | **R15a** | #35 | — | — | unruled |
+| **R20** | #43 | **BLOCKING** | — | unruled — **added to the docket today** |
+| **8a** | #8 | MAJOR | — | unruled — added to the docket today |
 
 Two rulings arrive outside the docket's own framing and say so
 (R9, R10). Both departures are improvements and are argued from
@@ -62,6 +64,12 @@ now has its ruling."* On the tracker as it stands that is not so:
 - **#43** — BLOCKING, **never docketed at all**. It is absent from
   the docket's numbered list *and* from its "what is not in this
   docket" list. That is our accounting gap, not the authority's.
+  Fixed 2026-07-31: it is now **R20**, with the same two options
+  its filing proposed and a recommendation of B (the enactment pins
+  the companion), qualified by whether B is the mechanism or a
+  bridge to A. R1/A sharpens it — a decision procedure that can
+  change under the engine's feet is a hidden fourth input to a
+  function the ruling has just declared closed.
 - **#29** — BLOCKING, correctly dispositioned rather than ruled
   ("reviewed next as an ordinary finding repair under R4's own-text
   provenance"; PR #30 carries it). No objection; noting it because
@@ -340,9 +348,16 @@ the covering claim. The asks, in priority order:
 1. **R13 (#32), R14 (#33), R15 (#35)** — three BLOCKING findings,
    unruled. R13 is the one that must move first: R10 is already
    ruled and is under-determined without it (§2.1).
-2. **R19 (#36)** — MAJOR but the most *schedulable* item on the
-   docket: it gates PR #49's two held repairs and it is an input to
-   R5's group round.
+2. **R19 (#36)** — *not* schedulable after all. The feasibility
+   work filed later the same day establishes that #55 blocks it
+   outright (nobody has exhibited a Custos enactment in the
+   `(td, ts)` form, so the recommendation rests on the substrate's
+   permissiveness rather than on the form carrying an edict, a
+   warranty, a requirement element or a covenant seal) and that #56
+   should precede it (retaining `upd` upstream removes option A's
+   only substantial cost). It still gates PR #49's two held repairs
+   and is still an input to R5's group round — which now makes
+   **#55 and #56** the schedulable items, not R19.
 3. **R15 (#35)** — additionally, R1 presupposes it (§2.2). Rule it
    with R19 per the R15a amendment; they are now one design.
 4. **R14 (#33)** — flag our own correction: R2/B does not dissolve
@@ -350,10 +365,11 @@ the covering claim. The asks, in priority order:
 5. **R16, R17, R18, 11a** — MAJOR, independent, no blockers. R17
    carries no recommendation by design; it is the one item on the
    docket that is pure intent.
-6. **#43** — BLOCKING, never docketed; and **#8's escalation
-   question** — are §12.4's mutual convictability and §13.2's
-   cross-frame duplicity floor guaranteed, or observer-conditional?
-   Both need a home.
+6. **R20 (#43)** and **8a (#8)** — both now on the docket, both
+   with no blockers and no dependencies. R20 is the fourth BLOCKING
+   item outstanding; 8a may be a two-word confirmation. Together
+   with R16, R17 and R18 they are what a second sitting can take in
+   one pass.
 7. **Four clarifications on the record itself**, each a sentence:
    R9's scope over wall 6 (§2.4); admission sets and "refusal
    class" in R5's predicate (§2.5); whether the no-fold-tier-selection
