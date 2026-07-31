@@ -194,9 +194,21 @@ batch on 2026-07-30.
 
 ---
 
-## New work Sam volunteered, worth filing
+## Capabilities disclosed, and the work they generate
 
-These were unprompted and bear on ratified text:
+**The heading here first read "New work Sam volunteered," which was
+ambiguous and wrong in both readings.** Nothing below is work the
+maintainer volunteered *to do for Custos*. `xfr` and the `upd` deprecation
+are keripy roadmap items that upstream will build for upstream reasons
+(SEDI, asset transfer); the BBAB is already shipped. What was volunteered
+is *information*. The work these generate for this repository is
+**reaction** — deciding how the Gever treats a capability someone else
+owns — and that is #52 and #53.
+
+The genuinely new *Custos* work is in the section after this one, and it
+is larger than the reaction work.
+
+These bear on ratified text:
 
 1. **`xfr` — registry control transfer.** A substrate event that moves
    control of a registry from the `rip` issuer to a new controller,
@@ -229,6 +241,112 @@ These were unprompted and bear on ratified text:
    ratified text to depend on a specific v2 event's field list, and *that*
    text would inherit the deprecation. Which is an argument for describing
    the surface (a SAID and a state string) rather than naming `bup`.
+
+---
+
+## Custos feasibility work this answer generates
+
+Filed 2026-07-31, a day after the rest, when an audit asked what work the
+answer creates that nobody is tracking. Both had been *stated* in this
+document and neither had been *filed* — the first as a one-line
+observation under the verification table, the second not at all.
+
+**#54 — the ACDC v2 registry has no fold upstream.** `rip`/`bup`/`upd`
+exist as message builders and CESR structures; there is no v2 `Tever`, so
+no state accumulation, anchor verification, escrow or replay. The reuse
+posture holds at the encoding layer and not at the processing layer. Not
+a defect in ratified text — 4.1 names no protocol version — but it becomes
+load-bearing the moment R19 rules toward the v2 form. Two-sided: the
+opportunity (no incumbent fold to contradict, and the v1 Tever's
+`issued`/`revoked` codomain would have fought the design anyway) is as
+real as the cost. #14 and #15 both inherit it: a v2 GEL fixture cannot be
+produced by driving keripy alone.
+
+**#55 — nobody has shown a Custos enactment fits the `(td, ts)` form.**
+This is the one that undercuts a recommendation this repository has
+already made. R19 recommends collapsing to that form on the strength of
+the substrate's *permissiveness* — `ts` has no vocabulary, `td` takes any
+digest — which establishes only that the substrate will not reject it. It
+does not establish that the form carries an edict, a warranty, a
+requirement element, or a covenant seal. Those are different claims and
+only the first was checked. If everything needs the layered-ACDC
+arrangement the maintainer described, the collapsed track is not the
+simple thing R19 sells, and the ratifying authority should not be asked
+to rule until that is known.
+
+**#55 blocks R19.** The docket has been updated to say so. It is also the
+experiment #36 originally asked for, re-pointed: #36 wanted a
+discriminating case between the two existing tracks, and the better
+question is now whether the track we would collapse *to* holds the
+payload.
+
+---
+
+## Upstream work nobody is doing, that Custos needs
+
+The framing "upstream will build this" is wrong, and worth correcting
+because it licenses waiting. keripy's maintainer group is the community,
+and this project's author is in it. "It's a free country" is not a
+deferral to someone else; it is a statement that whoever needs the
+capability builds it. Custos is the party that needs it.
+
+**Checked 2026-07-31, so this is not speculation about the queue:**
+keripy has 25 open pull requests and none touches a v2 registry fold.
+The nearest adjacent open issues are #1479 (`Baser.cloneMsg` is v1-only)
+and #1558 (this project's own `Tever.verifyAnchor` single-seal question).
+Recent commit traffic under `src/keri/acdc/` and `src/keri/vdr/` is IPEX
+verbs, edge operators and Serder conventions. **Nobody is building the
+processing layer.**
+
+Three pieces, very different in size and leverage:
+
+1. **Argue against the `upd` deprecation.** Cheapest by far — a
+   discussion post — and the highest leverage for this standard. R19's
+   entire central caveat exists *because* `upd` is slated for removal: it
+   is the unblinded update that carries `td`/`ts` in the event body, and
+   without it the state string retreats into the blinded block and
+   governance legibility becomes a disclosure act. The upstream rationale
+   for deprecating it ("a blindable update can be unblinded by merely
+   attaching the unblinded attribute block") is sound for credential
+   state, where blinding is the default and disclosure is the exception.
+   **A public governance log inverts that.** That is a real, specific,
+   community-facing argument that nobody but this project is positioned
+   to make, and if it lands, R19 option A gets materially cleaner.
+
+2. **Write the v2 registry processing layer** — the substance of #54, and
+   the one worth thinking about structurally rather than just doing. The
+   v1 `Tever` **fuses** two concerns: verifying that an event is anchored,
+   ordered and escrowed correctly, and interpreting what its state
+   *means* (`issued`/`revoked`). A v2 processing layer written with that
+   seam open — anchoring, escrow and ordering generic over an
+   application-supplied state interpretation — would give Custos exactly
+   the substrate half it needs while leaving the Gever to supply the
+   governance half.
+
+   Note what that would also be: **it is the extension point the ask in
+   #34 requested, arriving by a different door.** Sam declined to build a
+   registry of application-defined *event types*. But the need underneath
+   that ask was never really new ilks; it was anchoring, ordering and
+   replay for events whose meaning the application owns. A generic
+   processing layer supplies that without any new ilk, any new genus, or
+   any coordination — which is consistent with everything he said, and
+   with "as they say its a free country."
+
+3. **`xfr`.** Described upstream with a design constraint already stated
+   (doubly anchored, `rip` issuer to new controller) and no implementation
+   behind it. Medium-sized, and directly relevant to the governance
+   authority-transfer question in #52.
+
+**Sequencing.** 1 before 2 — the argument is nearly free and it changes
+what 2 has to accomplish. And 2 should wait on #55, because if a Custos
+enactment does not fit the `(td, ts)` form at all, the processing layer
+is being written against the wrong shape.
+
+These are recorded here rather than filed as issues on this tracker
+because they are keripy work, and `CONTRIBUTING.md` is explicit that
+reviews of adjacent communities' work "travel as questions to them, never
+as defect reports about them." They belong in keripy's tracker, opened by
+a community member, on their own merits.
 
 ---
 
