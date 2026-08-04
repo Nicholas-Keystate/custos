@@ -98,6 +98,20 @@ not merely under-specified but unrepresentable.
 >   discharged requirement space. Membership is flat: that space
 >   is a finite enumeration committed at the finding's birth, and
 >   no transitive closure is taken over it.
+>
+>   **Role dispatch.** A conviction that bears dispatches by the
+>   convict's role with respect to the question. The two roles are
+>   exhaustive over bearing convictions and no third is defined:
+>
+>   | Role of the convict | Test | Edge fired | Resulting value |
+>   |---|---|---|---|
+>   | Subject | the conviction strikes the question's own subject — for an antinomy, the frame whose committed clauses the circuit exhibits as jointly unsatisfiable, that frame being the question's law head | `→ self-convicted` | self-convicted, with the proof object and its kind |
+>   | Ground | the conviction strikes a party whose artifact the finding cites, the question's own subject untouched | taint succession | pending, species unresolved-conflict |
+>
+>   A conviction that does not bear is not a conviction for this
+>   question: it is ordinary evidence, and the evaluator consumes
+>   it. Nothing in this table admits refusal — refusal answers law
+>   running out on the question, never on this gate.
 
 **Ground for the circuit.** A pair cannot express the decisive
 case. Three grounded derivations may be pairwise consistent and
@@ -266,6 +280,7 @@ name.
 | Finding addressed | #6 (the second trigger's unconstructible payload) |
 | **Formerly blocked by** | **#32 — discharged by R13; the admission clause is the pertinence branch's clause-membership case** |
 | Admission condition, source | §7.4 L1171–1174 (conviction, already ratified) + R13's discharged-space membership (pertinence) |
+| Role dispatch | Carried as a table in the replacement clause — subject-pertinence fires `→ self-convicted`, ground-pertinence fires R6's taint succession |
 | Companion seed | `spec/custos-4.2-seed-bearing.md` — R13's definition itself; read and land together |
 | Re-ruling | Yes — section 7.3's transition system is a section 15 fixed wall |
 | Reachability | Dissolved by R1; no new edge required |
