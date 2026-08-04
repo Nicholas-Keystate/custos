@@ -146,7 +146,8 @@ the ruling requires no silence at the edges.
 `78946e4` on 2026-08-04, `spec/spec-body.md` §"Superseding Rules
 for Recovery at a given location, SN": A0–A2 at :1806–:1810,
 B1–B3 at :1815–:1819 under the B stem at :1813, C at :1821, C1 at
-:1823, the latest-seen constraint at :1825. Finding #43 verified the same coordinates at `71cb54e`.*
+:1823, the latest-seen constraint at :1825. Finding #43 verified
+the same coordinates at `71cb54e`.*
 
 - **A0–A2** — a rotation may supersede an interaction at the same
   sequence number where that interaction is not before another
