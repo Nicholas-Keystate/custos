@@ -10,6 +10,11 @@ any divergence. But this one carries a load the others do not, and
 the load is stated plainly below before the table, because a
 reader who takes the table for more than it is will be misled.
 
+Since first drafting, ruling R20 of supplement 2 has answered two
+of the questions this file could only record — the dossier
+specification's standing in §3, and what happens when the
+substrate moves. Both are folded in below.
+
 ## What this companion can and cannot do
 
 The ratified edition's fold reaches outside its own bytes in two
@@ -67,18 +72,34 @@ git clone https://github.com/trustoverip/kswg-cesr-specification
 git -C kswg-cesr-specification show 7a6adca:spec/spec-body.md | sha256sum
 ```
 
-## The dossier specification is not in §3's substrate of record
+## The dossier specification, and its admission to §3
 
 §3 names KERI, ACDC and CESR, with keripy as the reference
 implementation. It does not name the dossier specification. Yet
 §8 and §12.2 dereference that specification's threshold-operator
 semantics to decide requirement-set contents, which §7.3's
-byte-identity rule ranges over.
+byte-identity rule ranges over. The row is carried above because
+the dependency is real: the artifact is load-bearing and
+unreachable by any pin the ratified text authorizes.
 
-The row is carried above because the dependency is real. Making
-it lawful is an edit to the ratified text and therefore a matter
-for succession, not for this file. Recorded here so the successor
-edition has it.
+**This has since been ruled.** R20 of supplement 2 of 2026-08-01
+(sha256 `7c5f6491976bd5fb12dcbab4c1520002f9f5a1cdf9bf94dc2f0964bb
+1aea2670`) admits the dossier specification to §3's substrate of
+record, as the edition-layer half of a ruling whose principle is
+that nothing the fold consumes may be underivable from committed
+bytes. The admission is an edit to ratified text and therefore
+still travels by succession — it lands in the 4.2 candidate, not
+here — but it is now authorized rather than merely observed, and
+this companion no longer records it as an open question.
+
+The other half of R20, the domain layer, is where the real
+machinery goes: the Constitution commits the revision digests of
+every external specification whose semantics its fold consumes,
+with the enumeration worded as a functional-dependency
+declaration. That is a change to the standard's own text and is
+seeded separately, in
+`spec/custos-4.2-seed-semantics-pinning.md`. This companion
+carries the observations; it does not carry the rule.
 
 ## A caution about the carriage specification's stability
 
@@ -93,6 +114,36 @@ is offered for the narrower point it does support: the surface
 this edition folds under was under active revision weeks before
 ratification, and the ratified bytes record no revision at all.
 
+## The clock this companion keeps
+
+R20 settles a question this file raised and could not answer:
+what happens when the substrate moves.
+
+The companion revs on its own clock. The ratified edition never
+chases upstream. A new revision of KERI, ACDC, CESR or the
+dossier specification does not silently become the law this
+document folds under; it becomes law when an enactment says so,
+at a committed coordinate, and replay before and after that
+coordinate is deterministic on either side. Under R20's domain
+layer a substrate upgrade is a **migration enactment** — which
+means the move itself is replayable, and the question "which
+semantics were in force at this position" has an answer computed
+from committed bytes rather than inferred from a date.
+
+The confession R20 attaches is worth repeating here, because it
+is the honest reading of the table above: pinning does not
+pretend upstream stasis. It makes *when we move* a committed,
+visible act. The three artifacts that moved after 4.1's
+ratification are not a scandal under this discipline; they are
+exactly the thing the discipline exists to make legible.
+
+R20 also confesses a granularity debt rather than dressing it as
+design. The whole-file digests in the table are coarser than the
+dependency they stand for — what the fold actually consumes is a
+predicate set, not a file. Where a consumed rule set later exists
+as its own SAID-addressed artifact, re-pinning coarse to fine is
+an ordinary migration enactment and needs no re-ruling.
+
 ## Status of this companion
 
 Written 2026-07-30, after the 4.1 ratification, to give a named
@@ -100,7 +151,12 @@ but absent artifact a body. Two things remain outstanding and
 neither is discharged here:
 
 1. **The digest of this file is not pinned by any enactment.**
-   Until it is, this is a record and not a commitment.
+   Until it is, this is a record and not a commitment. R20 rules
+   that it *is to be* pinned by the ratification enactment,
+   repairing L575's citation of a then-nonexistent artifact — so
+   this item now has a ruled destination and a known vehicle,
+   which it did not have on 2026-07-30. It is still undischarged
+   until the enactment happens.
 2. **The notation register of §14 does not exist.** §14 says each
    ratified name "resolves one hop to its minting artifact through
    the notation register — a companion artifact whose digest the
