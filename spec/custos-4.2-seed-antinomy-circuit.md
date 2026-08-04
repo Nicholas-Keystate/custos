@@ -1,19 +1,21 @@
 # Custos 4.2 seed — the antinomy circuit
 
-> DRAFT, AND HELD — repair seed for the 4.2 candidate, **not ready
-> to merge**. Unpinned until declared final. Enters the candidate
-> by succession; the ratified Custos 4.1 bytes (sha256 ff8b9e7a6e9
-> 5239dcd1111340f4969720e526857f1746f116b42b5b405b72b05) are
-> untouched by this file. Executed under ruling R10 of the ruling
-> record of 2026-07-30 (sha256 45a6d7208f0faca82946f2bfacb0479999
-> 4b5cf2c9afdef53f24def9d8cf8552).
+> DRAFT — repair seed for the 4.2 candidate. Unpinned until
+> declared final. Enters the candidate by succession; the ratified
+> Custos 4.1 bytes (sha256 ff8b9e7a6e95239dcd1111340f4969720e5268
+> 57f1746f116b42b5b405b72b05) are untouched by this file. Executed
+> under ruling R10 of the ruling record of 2026-07-30 (sha256
+> 45a6d7208f0faca82946f2bfacb04799994b5cf2c9afdef53f24def9d8cf855
+> 2), completed by ruling R13 of supplement 2 of 2026-08-01
+> (sha256 7c5f6491976bd5fb12dcbab4c1520002f9f5a1cdf9bf94dc2f0964bb
+> 1aea2670).
 >
-> **Held on finding #32, which is BLOCKING and unruled.** The
-> repair below states a payload for an edge whose admission
-> condition — "bearing" — has a decision procedure at exactly one
-> tier, and this constructor lives at another. The blank is marked
-> in the replacement text and is the reason this seed is not
-> offered for merge. See "Why this is held".
+> **The hold is discharged.** This seed was held on finding #32,
+> which gated the constructor's admission condition. R13 rules
+> that bearing decomposes into conviction and pertinence, both
+> decidable from the closed triple. The blank the earlier draft
+> carried is now filled from that ruling, and the seed is offered
+> for merge. See "How the hold was discharged".
 
 ---
 
@@ -84,13 +86,18 @@ not merely under-specified but unrepresentable.
 >   whose law it convicts, and travels to other frames as evidence
 >   about that GARD rather than as conviction of it.
 >
->   [BLANK — see #32. The `pending → self-convicted` edge is gated
->   on the pair or the evidence *bearing*, and "bearing" has a
->   committed decision procedure only at the key tier (section 7.1,
->   L957–959). An antinomy is sited in committed law at the
->   governance tier, where nothing states how a verifier decides
->   bearing. This clause cannot state the admission condition for
->   the constructor it defines until #32 is ruled.]
+>   **Admission.** An antinomy circuit is admitted to this cell
+>   when the conviction is grounded and the circuit bears on the
+>   question. The conviction is grounded when every clause whose
+>   enactment signature the circuit carries is committed in the
+>   frame whose law the circuit convicts — section 7.4's
+>   law-relative rule supplying the force, the violated predicate
+>   being the joint satisfiability of that frame's own committed
+>   clauses. The circuit bears on the question when a clause that
+>   produced a member of the circuit is named in the finding's
+>   discharged requirement space. Membership is flat: that space
+>   is a finite enumeration committed at the finding's birth, and
+>   no transitive closure is taken over it.
 
 **Ground for the circuit.** A pair cannot express the decisive
 case. Three grounded derivations may be pairwise consistent and
@@ -122,44 +129,85 @@ forbidden table is not opened. That was the sub-question the
 docket said mattered most, and position-indexing answers it
 without touching a wall.
 
-## Why this is held
+## How the hold was discharged
 
-Finding #32 is BLOCKING and unruled, and it is not adjacent to
-this repair — it is inside it.
-
+Finding #32 was not adjacent to this repair — it was inside it.
 "Bearing" gates every edge into `self-convicted` (L1062, L1065,
 L1066), gates terminality (L1085), and triggers section 13.1's
-recourse (L1824). It is given a decision procedure at exactly one
-tier: the key tier, where section 7.1 defers to the substrate's
-superseding-recovery rules. The four-valued scheme is instantiated
-at all three tiers, and nothing says how a verifier decides bearing
-at T2 or T3 — including for the Gever, the evaluator this standard
-exists to specify.
+recourse (L1824), and the ratified text gives it a decision
+procedure at exactly one tier: the key tier, where L957–959 defers
+to the substrate's own superseding-recovery rules. An antinomy is
+a T3 object by construction, so the earlier draft defined a
+constructor for a transition whose admission condition, at the
+tier where the constructor lives, was undefined.
 
-An antinomy is a T3 object by construction. So this seed defines a
-constructor for a transition whose admission condition, at the tier
-where the constructor lives, is undefined. Writing the clause with
-that blank filled in by a drafter would be legislating the exact
-question the docket asked be ruled alongside R10.
+R13 rules that bearing is not primitive. It decomposes into two
+questions with separate committed homes, and both are decidable
+from the closed triple.
 
-The docket asked for R10 and R13 to be ruled together, "because
-rulings that disagree would be worse than either alone". R10
-landed alone. This seed is the shape of the consequence: the
-payload is stateable and the gate is not.
+**Conviction** — is this pair conviction-grade at all? At the
+governance tier the answer was already ratified, in section 7.4's
+law-relative rule (L1171–1174):
 
-Two smaller couplings run the same way. R10's "law-relative and
-reflexive" force is a commitment in the same territory as #32's
-refuse/consume boundary — the distinction between law being silent
-on *bearing* (axiom 3 says refuse) and law being silent on the
-*violated predicate* (section 7.4 says consume as evidence, do not
-refuse), which from inside the fold are indistinguishable. And
-`self-convicted` is terminal and unrehabilitatable, so two
-verifiers resolving bearing differently reach permanently
-different terminal states from identical committed evidence.
+> Registry-tier and governance-tier duplicity are law-relative —
+> they convict only within frames that committed the violated
+> predicate, and a frame that never committed the predicate SHALL
+> consume them as evidence, never as conviction.
 
-**This seed should be reviewed now and merged after #32.** The
-circuit is ruled and its shape does not depend on the ruling; the
-clause around it does.
+For an antinomy the violated predicate is the joint satisfiability
+of the frame's own committed clauses, and the circuit carries the
+enactment signature of every clause that produced a member of the
+set. So the frame that committed those clauses is exactly the
+frame within which the circuit convicts, and no other frame is
+asked to treat it as conviction. This is R10's "law-relative and
+reflexive" force, arriving from a rule the ratified text already
+carries rather than from a new commitment.
+
+**Pertinence** — does the conviction touch *this* finding? R13
+answers by flat membership in a finite enumeration committed at
+the finding's birth: the evidence bundle's citation enumeration
+under R1's closure, or the discharged requirement space under R2's
+enumeration. For antinomy specifically the ruling names the
+second branch — a producing clause of the circuit is in the
+discharged space — and that is the branch the admission clause
+above states. No transitivity is taken, because the bundle is
+closed by citation and everything the finding leans on is in the
+list flatly.
+
+The reflexivity R10 asserted now has a home in R13's role
+refinement. R13 fires the edge into `self-convicted` on conviction
+together with *subject*-pertinence, and reserves *ground*-
+pertinence — a cited third party convicted — for R6's taint
+succession. An antinomy convicts the frame whose law the circuit
+exhibits as unsatisfiable, and that frame is the question's own
+law head, not a third party cited within it. The subject of an
+antinomy conviction is therefore the frame itself, which is what
+makes the edge the right destination and what makes the force
+reflexive: a frame cannot escape a contradiction in its own law by
+declining to recognize the conviction.
+
+**The refuse/consume boundary #32 raised is dispositioned, not
+deferred.** #32 observed that law being silent on *bearing* (where
+axiom 3 says refuse) and law being silent on the *violated
+predicate* (where section 7.4 says consume as evidence) are
+indistinguishable from inside the fold. R13 rules that these were
+one silence with one disposition: no committed predicate means no
+conviction, so the pair is ordinary evidence and the evaluator
+consumes it. Axiom 3's refusal guards law running out on the
+*question*, never on this gate. The two indistinguishable silences
+the blind implementation reported are the same silence, and it has
+an answer.
+
+What remains true from the earlier draft is the reason the hold
+was right: `self-convicted` is terminal and unrehabilitatable, so
+two verifiers resolving bearing differently would reach
+permanently different terminal states from identical committed
+evidence. That is what a ruled, one-sentence definition of bearing
+prevents, and it is why R13's definition belongs in ratified 4.2
+text rather than in this seed. This seed consumes that definition;
+it does not restate it. The definition's own seed is
+`spec/custos-4.2-seed-bearing.md`, and the two should be read
+together and land together.
 
 ## Notes for the drafting authority
 
@@ -184,7 +232,15 @@ name.
    sufficiency is the consuming frame's judgment. Leaving it
    unstated repeats the pattern finding #39 identifies for the
    covenant seal, where a verification procedure was named and
-   never given.
+   never given. #39 has since been ruled (R17, supplement 2), and
+   the shape of that ruling is worth borrowing: it split one
+   undecidable "verification" into layers by epistemic grade and
+   replaced an undecidable admissibility condition with a
+   decidable test the section already carried. The same move is
+   available here — carriage of the circuit and the presence of
+   each derivation's cited spans are checkable by any consumer,
+   and joint unsatisfiability is the layer that may honestly be
+   left to the consuming frame's judgment.
 
 3. **The conformance fixture is a station obligation, not part of
    this seed.** R10 requires a cardinality-3 antinomy fixture —
@@ -206,10 +262,13 @@ name.
 |---|---|
 | Predecessor edition | Custos 4.1, sha256 `ff8b9e7a6e95239dcd1111340f4969720e526857f1746f116b42b5b405b72b05` |
 | Executed under | Ruling record 2026-07-30, sha256 `45a6d7208f0faca82946f2bfacb04799994b5cf2c9afdef53f24def9d8cf8552` — R10 |
+| Completed by | Supplement 2, 2026-08-01, sha256 `7c5f6491976bd5fb12dcbab4c1520002f9f5a1cdf9bf94dc2f0964bb1aea2670` — R13 |
 | Finding addressed | #6 (the second trigger's unconstructible payload) |
-| **Blocked by** | **#32 (bearing at the registry and governance tiers) — BLOCKING, unruled** |
+| **Formerly blocked by** | **#32 — discharged by R13; the admission clause is the pertinence branch's clause-membership case** |
+| Admission condition, source | §7.4 L1171–1174 (conviction, already ratified) + R13's discharged-space membership (pertinence) |
+| Companion seed | `spec/custos-4.2-seed-bearing.md` — R13's definition itself; read and land together |
 | Re-ruling | Yes — section 7.3's transition system is a section 15 fixed wall |
 | Reachability | Dissolved by R1; no new edge required |
 | Station obligation, elsewhere | cardinality-3 antinomy fixture → #15 |
-| Status | **Held. Not offered for merge until #32 is ruled.** |
+| Status | **Offered for merge.** |
 | Ratified bytes altered | None |
