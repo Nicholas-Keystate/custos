@@ -144,27 +144,40 @@ Some things surfaced in drafting that finding #10 did not name.
    committed ex-ante. R2 now says it is. Before R2 the sentence
    would have been an overclaim.
 
-4. **Sub-question 11a is untouched by this seed and is adjacent to
-   it.** What a compound result returns when one component refuses
-   (#41) is unruled. Section 7.5's own words — "the evaluator
-   SHALL refuse the invocation" — point at refusing the whole
-   invocation, which is the natural companion to this repair. This
-   seed does not state it, because the ruled text sits inside
-   section 7.5's quoted amendment block, which is less free than
-   ordinary ratified prose, and because 11a deserves its own
-   ruling rather than arriving as an inference from an abstract's
-   rescoping.
+4. **11a is now ruled, and it extends this repair to the
+   composition grain.** This seed left #41 alone deliberately —
+   the ruled text sits inside section 7.5's quoted amendment
+   block, and 11a deserved its own ruling rather than arriving as
+   an inference from an abstract's rescoping. Supplement 2 gives
+   it one: if any component of a compound invocation refuses, the
+   invocation refuses, with its grounds named per section 9's
+   three-kind discipline; the refusal record cites the components
+   already computed, which stand as ordinary findings at their own
+   coordinates; and no product object ever contains a refused
+   coordinate.
+
+   The three statements now tell one story, which is worth stating
+   here because each is read alone. The abstract says a refusal is
+   a decision derivable from the committed triple, not a committed
+   artifact. Section 7.5 says the evaluator refuses the
+   invocation. 11a says what survives that refusal: a sibling's
+   refusal un-happens nothing, so the findings already computed
+   are facts at their coordinates, and the refusal answers about
+   the seam rather than about the subject. A stranger replaying
+   the same triple reaches the same refusal *and* the same
+   surviving findings — which is the rescoped claim above, holding
+   at the composition grain as well as at the single question.
 
 ## Record
 
 | Fact | Value |
 |---|---|
 | Predecessor edition | Custos 4.1, sha256 `ff8b9e7a6e95239dcd1111340f4969720e526857f1746f116b42b5b405b72b05` |
-| Executed under | Ruling record 2026-07-30, sha256 `45a6d7208f0faca82946f2bfacb04799994b5cf2c9afdef53f24def9d8cf8552` — R11 |
+| Executed under | Ruling record 2026-07-30, sha256 `45a6d7208f0faca82946f2bfacb04799994b5cf2c9afdef53f24def9d8cf8552` — R11; extended to the composition grain by supplement 2, 11a, sha256 `7c5f6491976bd5fb12dcbab4c1520002f9f5a1cdf9bf94dc2f0964bb1aea2670` |
 | Findings discharged | #10 (abstract's refusal claim vs the body) |
 | Re-ruling | No |
 | Coupled artifacts | `README.md`, `tools/verify_kernel.py` check 3 — move at 4.2 ratification, not before |
 | Openness question left open | Section 15's second — whether a committed refusal record exists |
-| Adjacent, not discharged | #41 (11a, compound result under refusal) |
+| Adjacent, not discharged | #41 — ruled 11a by supplement 2 and seeded separately; cited here in note 4 so the abstract, section 7.5 and the compound-product rule read as one story |
 | Status | Unpinned draft; enters the 4.2 candidate by succession |
 | Ratified bytes altered | None |
