@@ -7,7 +7,10 @@
 > Discharges finding #28 only; every other span of section 7.3
 > stands as ratified. Executed under ruling R2 of the ruling
 > record of 2026-07-30 (sha256 45a6d7208f0faca82946f2bfacb0479999
-> 4b5cf2c9afdef53f24def9d8cf8552). Offered to the drafting
+> 4b5cf2c9afdef53f24def9d8cf8552), and read against ruling R14 of
+> supplement 2 of 2026-08-01 (sha256 7c5f6491976bd5fb12dcbab4c152
+> 0002f9f5a1cdf9bf94dc2f0964bb1aea2670), whose succession re-runs
+> this discipline at the new position. Offered to the drafting
 > authority, which owns the wording.
 
 ---
@@ -105,8 +108,9 @@ an unexamined space is a surprise wearing a citation's clothes.
 
 ## What this repair unblocks
 
-Recorded because three clauses depend on it silently, and a
-candidate that lands them without this one lands them broken.
+Recorded because four clauses depend on it, three of them
+silently, and a candidate that lands them without this one lands
+them broken.
 
 - **Canonical selection has an object.** The set of
   simultaneously-available defeats is always computed, so the
@@ -119,6 +123,15 @@ candidate that lands them without this one lands them broken.
   examining a requirement space in different orders can no longer
   return different first defeats, because neither may stop at the
   first.
+- **R14's succession consumes it.** Supplement 2 rules that
+  committed evidence falsifying a cited defeat yields an ordinary
+  succession, computed fresh by full discharge at the new
+  position. That ruling names this discipline as the computation
+  it re-runs, and its reversal condition is stated over the
+  ground the prior finding cites — which is determinate only
+  because nothing was left unexamined when the prior finding was
+  computed. The dependency runs one way: R14 needs this seed;
+  this seed does not need R14.
 
 ## Notes for the drafting authority
 
@@ -141,16 +154,20 @@ Some things surfaced in drafting that finding #28 did not name.
    forecloses returning `defeated` while a check sits unexamined
    at appraisal time. It says nothing about evidence arriving
    *later* that falsifies a defeater whose validity check was
-   examined and passed against the bundle as it then stood. That
-   case — #33, BLOCKING, unruled — still has no lawful
-   destination: staying put cites a falsified defeat, `affirmed`
-   contradicts rather than refines under L1103, `pending` is
-   forbidden from `defeated`, and `self-convicted` requires the
-   subject's own contradiction.
+   examined and passed against the bundle as it then stood.
 
    The docket originally predicted that R2 would largely dissolve
    #33. It dissolves the short-circuit half. The later-arrival
-   half is the half #33 was about, and it survives.
+   half is the half #33 was about, and it survived — until
+   supplement 2, which rules it R14/C: the destination is an
+   ordinary succession, `F(E′, L, p′)` computed fresh by the
+   discipline this seed states, with the prior `defeated`
+   standing at its own coordinate and L1103's monotonicity
+   re-scoped to the knowledge order. So the gap this note was
+   written to keep open is closed, by its own ruling and its own
+   seed, not by this one. What this note now records is the
+   boundary: the two repairs compose and neither subsumes the
+   other.
 
 3. **"Enumerated check" is doing work the document defines
    loosely.** The ratified sentence says "enumerated
@@ -171,7 +188,7 @@ Some things surfaced in drafting that finding #28 did not name.
 | Executed under | Ruling record 2026-07-30, sha256 `45a6d7208f0faca82946f2bfacb04799994b5cf2c9afdef53f24def9d8cf8552` — R2 |
 | Findings discharged | #28 (the affirmation discipline binds only `affirmed`) |
 | Re-ruling | No |
-| Unblocks | #2 and #3's repairs (canonical selection acquires its object) |
-| Explicitly not discharged | #33 (evidence falsifying the cited defeat) — see note 2 |
+| Unblocks | #2 and #3's repairs (canonical selection acquires its object); R14's succession-under-re-discharge, which re-runs this discipline at the new position |
+| Explicitly not discharged | #33 (evidence falsifying the cited defeat) — ruled R14/C by supplement 2, sha256 `7c5f6491976bd5fb12dcbab4c1520002f9f5a1cdf9bf94dc2f0964bb1aea2670`, and seeded separately; see note 2 |
 | Status | Unpinned draft; enters the 4.2 candidate by succession |
 | Ratified bytes altered | None |
