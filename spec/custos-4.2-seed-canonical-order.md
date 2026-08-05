@@ -7,11 +7,17 @@
 > Discharges findings #2, #3 and #27 only; every other span of
 > section 7.3 stands as ratified. Executed under rulings R2 and R3
 > of the ruling record of 2026-07-30 (sha256 45a6d7208f0faca82946f
-> 2bfacb04799994b5cf2c9afdef53f24def9d8cf8552). Offered to the
-> drafting authority, which owns the wording — a contributor
-> supplies the repair shape and, where the shape is a total order,
-> the order itself, because an order stated in prose is not yet a
-> repair.
+> 2bfacb04799994b5cf2c9afdef53f24def9d8cf8552), and read against
+> ruling R13 of supplement 2 of 2026-08-01 (sha256 7c5f6491976bd5
+> fb12dcbab4c1520002f9f5a1cdf9bf94dc2f0964bb1aea2670), which makes
+> the requirement elements repair 2 serializes members of the
+> finding's birth-committed declaration: the serialization clause
+> below and the pertinence clause there govern one list, and an
+> element that leaves this order carries the same identity into
+> the bearing question. Offered to the drafting authority, which
+> owns the wording — a contributor supplies the repair shape and,
+> where the shape is a total order, the order itself, because an
+> order stated in prose is not yet a repair.
 
 ---
 
