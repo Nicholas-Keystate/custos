@@ -7,8 +7,19 @@
 > Discharges findings #20 and #25, and records #21 as dissolved.
 > Executed under rulings R4, R7 and R9 of the ruling record of
 > 2026-07-30 (sha256 45a6d7208f0faca82946f2bfacb04799994b5cf2c9af
-> def53f24def9d8cf8552). Offered to the drafting authority, which
-> owns the wording.
+> def53f24def9d8cf8552), as corrected by supplement 1 of
+> 2026-07-31 and grounded further by ruling R15 of supplement 2 of
+> 2026-08-01 (sha256 7c5f6491976bd5fb12dcbab4c1520002f9f5a1cdf9bf
+> 94dc2f0964bb1aea2670). Two provenance facts travel with this
+> seed, because a re-ruling has to show them. Supplement 1, E-1:
+> R9 retyped exactly one wall — first-seen survival — and the
+> record's annotation retyping the canonical-ordering wall is an
+> erratum, so item 6 below stands as R4 adjudicated it. Supplement
+> 1, C-2: item 7 enters the enumeration as the retype of an
+> existing wall rather than as a new commitment, membership
+> conserved at seven, which is why it does not owe the gauntlet
+> that a genuinely new wall would. Offered to the drafting
+> authority, which owns the wording.
 
 ---
 
@@ -128,10 +139,12 @@ the import.
 >    individual sites descend from that declaration rather than
 >    standing beside it.
 > 7. **No fold-tier selection.** The fold consumes digest-cited
->    committed spans and never adjudicates between competing
->    versions of an event. Competitors at one coordinate entering
->    the bundle convict as duplicity; they are never inputs to a
->    choice.
+>    committed spans — including the governance span, whose
+>    membership is derivable from the designation committed in
+>    founding law rather than taken by position or convention —
+>    and never adjudicates between competing versions of an
+>    event. Competitors at one coordinate entering the bundle
+>    convict as duplicity; they are never inputs to a choice.
 >
 > These seven are walls: evidence-ruled, fixture-exercised, and
 > binding. Every other mention of a wall in this document cites
@@ -221,26 +234,32 @@ Some things surfaced in drafting that the findings did not name.
    enumeration item pointing at a clause that has not been written
    is the pointer defect this seed exists to remove.
 
-2. **The ruling record annotates item 6 as retyped by R9, and I
-   could not reconcile that.** R4's adjudication marks wall 6
-   "RETYPED by R9 below" and wall 7 "REMOVED … by R9". R9's own
-   text retypes one wall — no fold-tier selection — and does not
-   touch canonical ordering. This seed reads R9 as reaching item 7
-   only, and leaves item 6 as a keep-and-rehouse. If R9 was meant
-   to reach item 6 as well, this repair is wrong there, and R5's
-   convergence argument for byte-identity is also affected, since
-   it cites the ordering wall as having removed a source of
-   semantic variance. Asked on the docket.
+2. **The record's annotation on item 6 was an erratum, and the
+   seed's reading was the right one.** R4's adjudication marks
+   wall 6 "RETYPED by R9 below" and wall 7 "REMOVED … by R9",
+   while R9's own text retypes one wall and never touches
+   canonical ordering. This seed read R9 as reaching item 7 only
+   and left item 6 as a keep-and-rehouse. Supplement 1, E-1,
+   confirms it: the annotation on wall 6 is the error, R9 retypes
+   exactly one wall, and the canonical-ordering wall stands
+   precisely as R4 adjudicated it. R5's convergence argument for
+   byte-identity is unaffected in substance, because the variance
+   source it cites as removed is the ordering wall as R4 ruled it.
+   Item 6 above is drafted against the supplement, not against the
+   record's annotations.
 
-3. **Item 7 enters the list without its own gauntlet, which is the
-   thing item 3's neighbours were denied.** The adjudication
-   excludes R1 and R2's products on the principle that new walls
-   enter through their own review. Item 7 is new text. I have
-   drafted it as a *retype* of an existing wall rather than a new
-   commitment — the wall slot was always there and only its typing
-   was wrong — but that reading should be stated in the record
-   rather than inferred, because on the page the principle and the
-   action point opposite ways.
+3. **Item 7's entry is a retype, and the record now says so.**
+   The adjudication excludes R1 and R2's products on the principle
+   that new walls enter through their own review, and item 7 is
+   new text, so on the page the principle and the action pointed
+   opposite ways. Supplement 1, C-2, resolves it as this seed
+   drafted it: the wall enters "under that same principle
+   correctly because it is not a new commitment: it is the retype
+   of an existing wall … whose stated obligation was a category
+   error", and membership is conserved — seven walls before the
+   retype, seven after, nothing entering that was not already on a
+   ratified list. A genuinely new wall still takes the gauntlet
+   road.
 
 4. **Section 1.4's deleted sentence carries a second commitment
    that must not be lost.** "A fold satisfying the five axioms
@@ -260,7 +279,7 @@ Some things surfaced in drafting that the findings did not name.
 | Fact | Value |
 |---|---|
 | Predecessor edition | Custos 4.1, sha256 `ff8b9e7a6e95239dcd1111340f4969720e526857f1746f116b42b5b405b72b05` |
-| Executed under | Ruling record 2026-07-30, sha256 `45a6d7208f0faca82946f2bfacb04799994b5cf2c9afdef53f24def9d8cf8552` — R4, R7, R9 |
+| Executed under | Ruling record 2026-07-30, sha256 `45a6d7208f0faca82946f2bfacb04799994b5cf2c9afdef53f24def9d8cf8552` — R4, R7, R9; corrected by supplement 1 (E-1, C-2); item 7 grounded further by supplement 2 R15, sha256 `7c5f6491976bd5fb12dcbab4c1520002f9f5a1cdf9bf94dc2f0964bb1aea2670` |
 | Findings discharged | #20 (enumeration congruence), #25 (first-seen survival) |
 | Finding dissolved | #21 (imported extent) — contingent on repair 1 |
 | Re-ruling | Yes, both spans |
