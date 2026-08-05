@@ -4,8 +4,14 @@
 > declared final. Enters the candidate by succession; the ratified
 > Custos 4.1 bytes (sha256 ff8b9e7a6e95239dcd1111340f4969720e5268
 > 57f1746f116b42b5b405b72b05) are untouched by this file.
-> Discharges findings #46 and #48, and part of #40, only; every
-> other span of the sections it touches stands as ratified.
+> Repairs #46 and part of #40 for the candidate, and removes one
+> contradiction on #48 without deciding it; every other span of
+> the sections it touches stands as ratified. **None of the three
+> findings closes on this seed.** All of #45–#48 are the
+> carriage-encoding round's opening docket (charter of
+> 2026-08-01, item 5; tracker #57), and the round is where their
+> design questions are settled — this file only stops the
+> ratified text from asserting what the round has not decided.
 > Repairs for #45 and #47 were drafted here and **withdrawn to
 > their issues on 2026-07-31**, because ruling R19 — whether §17
 > keeps both event-form tracks — may delete the text they amend,
@@ -96,7 +102,11 @@ clause violation are three different refusals".
 > absence of committed evidence discharges as a pending finding,
 > and refusal of an invocation is an operational fact under the
 > separation rule of section 7.5 — neither is a conviction, and
-> neither carries a kind.
+> neither carries a kind. A refusal record carries its own
+> typing instead: refusal grounds, with the seal kind named per
+> section 9's three-kind discipline, and citations to the
+> components already computed where the refusal answers about a
+> composition seam.
 
 ### Residual, flagged and deliberately not carried here
 
@@ -105,7 +115,17 @@ must-reject boundary vectors (L2289–2296) with its expected
 codomain value, defeater class and conviction kind — is more than
 a sentence, and it is the seam where this meets the conformance
 vector work. It should travel with the vectors, not with this
-seed. Finding #40 is not fully discharged until it does.
+seed. Finding #40 is not fully discharged until it does, and the
+issue stays open on that residual.
+
+The vocabulary the residual note asked for now exists. Supplement
+2's 11a rules that refusal propagates the invocation, that the
+refusal record cites the components already computed, and that its
+grounds are named per §9's three-kind discipline — so the vectors
+can state a refusal's expected value in ratified terms rather than
+inventing a field to hold it. The appended sentence above uses
+that vocabulary, which is why the annotation work can now be
+written against something.
 
 ---
 
@@ -159,6 +179,32 @@ gaps invisible.
 > which latitude it has closed by committed profile — including
 > its serialization kind and its digest derivation code — and
 > which it inherits open.
+
+### The mechanism that closes it — R20's functional-dependency
+### declaration
+
+The replacement above names what a GARD must state and leaves the
+instrument unnamed, which was a gap while no instrument existed.
+R20 supplies one. Supplement 2 rules that the Constitution commits
+the revision digests of every external specification whose
+semantics its fold consumes, and words the clause as a
+**functional-dependency declaration**: it names the predicate set
+consumed, and the digest is where those predicates currently live.
+
+Serialization kind and digest derivation code are exactly that
+shape one layer down. They are producer choices the substrate
+leaves open, and a GARD closing them is declaring which byte
+streams depend on which rule sets — the same declaration in the
+carriage direction. So the committed profile this repair requires
+is not a new device: it is R20's declaration applied where the
+bytes are produced rather than where the law is read, and the
+encoding round inherits the granularity question under the same
+ruling (charter, item 3).
+
+The pairing also fixes the reason this clause is worth repairing
+at all. A confession that names threshold defaults and escrow
+retention while omitting serialization kind and digest code is a
+declaration with the load-bearing dependencies left out.
 
 ### A related argument checked and withdrawn
 
@@ -228,9 +274,18 @@ seals bare SADs by digest routinely, and computes and verifies
 their SAIDs with no `v` field).
 
 **Deciding the carriage is a separate design act**, not an
-editorial one, and this seed does not attempt it. If the drafting
-authority prefers to decide it now, finding #48 should be moved to
-the ruling docket instead of taking this repair.
+editorial one, and this seed does not attempt it.
+
+**Where the decision now lives.** The seed originally offered to
+move #48 to the ruling docket if the drafting authority preferred
+to settle it rather than scope it. That option has been taken in a
+better form: the charter of 2026-08-01 puts bare-SAD framability
+on the carriage-encoding round's opening docket (item 5), together
+with #45, #46, #47 and #53. So the repair above and the round are
+working on one question at two layers, and the pointer is stated
+here so they do not fork — this file removes the contradiction
+between §6 and §15, and the round decides what an edict actually
+travels as. Finding #48 stays open until it does.
 
 ---
 
