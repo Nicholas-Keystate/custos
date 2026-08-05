@@ -7,7 +7,11 @@
 > Discharges findings #7 and #24 only; every other span of
 > sections 7.3 and 7.4 stands as ratified. Executed under rulings
 > R1 and R6 of the ruling record of 2026-07-30 (sha256 45a6d7208f
-> 0faca82946f2bfacb04799994b5cf2c9afdef53f24def9d8cf8552).
+> 0faca82946f2bfacb04799994b5cf2c9afdef53f24def9d8cf8552), and
+> read against rulings R13 and R15 of supplement 2 of 2026-08-01
+> (sha256 7c5f6491976bd5fb12dcbab4c1520002f9f5a1cdf9bf94dc2f0964b
+> b1aea2670), which make the closed triple load-bearing for
+> bearing and its GEL-span member derivable by designation.
 > Offered to the drafting authority, which owns the wording.
 
 ---
@@ -78,7 +82,11 @@ transition tables.**
 > - **E, the committed evidence bundle**, is a set of committed
 >   log spans closed by citation. Each span is a triple of log
 >   identifier, coordinate range, and digest: the GEL span, every
->   cited key-event span, every cited registry span. Registry
+>   cited key-event span, every cited registry span. The GEL span
+>   is the span of the governance registry the subject's founding
+>   law designates, derivable by the designation chain — knot,
+>   founding law, designation, registry — and never a registry
+>   taken by position, convention or recognition weight. Registry
 >   state is a member of E, not an ambient condition E is read
 >   against — axiom 2 already says so, and this clause states the
 >   consequence rather than the fact.
@@ -102,6 +110,11 @@ transition tables.**
 > The engine profile is not a member of the triple. It is the
 > lens-side citation whose inertness conformance tests, under the
 > reversal condition.
+>
+> A finding declares what it stands on at birth. E's citation
+> enumeration and the requirement space discharged at that
+> position are that declaration: both are closed and finite when
+> the question is asked, and nothing enters either afterward.
 
 **Ground.** The revocation case dissolves without opening a wall.
 A `rev` event is a new span, therefore a new E, therefore a new
@@ -120,6 +133,20 @@ So the repair here is not a new commitment. It is a commitment the
 axioms already forced and the text had not yet said. The finding's
 own second clause at L1072 was pointing at it: "new defeat
 evidence yields a new finding at a new position."
+
+Two clauses of the second sitting land on this one, and both make
+it carry more than it did when it was drafted. R13 decomposes
+bearing into conviction and pertinence and computes pertinence as
+flat membership in exactly the two lists closed here — E's
+citation enumeration and the discharged requirement space. A
+triple that left either open would make bearing a search rather
+than a lookup, which is why the declaration states their closure
+instead of leaving it to be read off axiom 2. R15 supplies the
+GEL span's own derivation: the founding law commits the governance
+registry's identifier at inception grade, so the member that was
+primitive in the ratified Inputs clause is now derivable, and the
+E bullet cites the designation chain rather than naming a span the
+reader is expected to already know.
 
 ## Repair 2 — what contested standing returns
 
