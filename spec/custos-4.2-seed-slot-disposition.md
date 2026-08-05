@@ -4,18 +4,18 @@
 > declared final. Enters the candidate by succession; the ratified
 > Custos 4.1 bytes (sha256 ff8b9e7a6e95239dcd1111340f4969720e5268
 > 57f1746f116b42b5b405b72b05) are untouched by this file.
-> Addresses finding #42 only; every other span of section 8 stands
-> as ratified. **Executed under no numbered ruling.** The ruling
-> docket of 2026-07-29 places #42 among the items that need no
-> ruling — drafting work, editorial repair — and this seed takes
-> it at that grade: it scopes a claim the document's own cited
-> substrate does not support, and decides nothing. Read against
-> ruling R20 of supplement 2 of 2026-08-01 (sha256 7c5f6491976bd5
-> fb12dcbab4c1520002f9f5a1cdf9bf94dc2f0964bb1aea2670), which
-> already names the dossier threshold semantics as a pinned
-> external dependency, and against R3, which makes the species of
-> a requirement element load-bearing for byte-identity. Offered to
-> the drafting authority, which owns the wording.
+> Discharges finding #42 only; every other span of section 8
+> stands as ratified. Executed under adjudication S3-1 of
+> supplement 3 of 2026-08-03 (sha256 79c7d7bd942787c57fc4e177d1fe
+> c1424ae6e709d561e81b9ff0d860b48565cc), which rules the same
+> sentence at the candidate's own numbering after the integration
+> round reached it independently. Read against ruling R20 of
+> supplement 2 of 2026-08-01 (sha256 7c5f6491976bd5fb12dcbab4c152
+> 0002f9f5a1cdf9bf94dc2f0964bb1aea2670), which already names the
+> dossier threshold semantics as a pinned external dependency, and
+> against R3, which makes the species of a requirement element
+> load-bearing for byte-identity. Offered to the drafting
+> authority, which owns the wording.
 
 ---
 
@@ -70,19 +70,28 @@ capability the second confers.
 
 **Replacement — 4.1 L1256–1262.**
 
-> The threshold *algebra* is one algebra at both ends of the
-> system: the same weighted-threshold satisfaction that governs
-> key-event signing governs evidence sufficiency, and this
-> document invents no threshold semantics of its own. The
-> *satisfaction predicate* is not shared. At the key tier a slot
-> is filled by a verified signature at a key-list offset; at the
-> evidence tier a slot is filled by a disposition computed over a
-> committed endorsement and its anchoring log, under the profiled
-> operator conventions this section cites. A verifier that can
-> evaluate a rotation therefore holds the arithmetic and not the
-> predicate, and an implementation SHALL NOT treat the substrate's
-> threshold evaluator as discharging this section's composed-
-> evidence obligation.
+> Threshold satisfaction here and at the key tier are **analogous
+> constructions**: one satisfaction shape — weights over slots,
+> summing to unity — over slot judgments of different kinds, and
+> this document invents no threshold semantics of its own. The
+> *slot judgment* is not shared, and it is this document's own
+> fold question rather than the substrate's. At the key tier a
+> slot is filled by a verified signature at a key-list offset. At
+> the evidence tier a slot is filled by a disposition computed
+> over a committed endorsement and its anchoring log — whether the
+> cited credential *stands*, which is a question of schema, issuer
+> qualification, registry state and disclosure state. A verifier
+> that can evaluate a rotation therefore holds the shape and not
+> the judgment, and an implementation SHALL NOT treat the
+> substrate's threshold evaluator as discharging this section's
+> composed-evidence obligation.
+>
+> Where the shared satisfaction predicate later exists as its own
+> committed artifact upstream, both sites SHALL cite it by digest,
+> and the analogy becomes a declared shared dependency by ordinary
+> migration enactment — the same consume-coarse-now,
+> refine-by-enactment discipline the fold-semantics pins carry. No
+> re-ruling is owed for that move.
 
 **Ground.** The repair keeps what the sentence was reaching for.
 The parenthetical's real content is *we invented no new threshold
@@ -96,6 +105,29 @@ outside demand: a claim about evidence scale that is not exercised
 is "a defect of this document, reviewable as such." No m-ary or
 threshold edge-group operator is implemented in the reference
 implementation today, so the transfer claim has never run.
+
+**The word the adjudication chose, and why it is the right one.**
+S3-1 scopes the claim to *analogous constructions* rather than
+striking it or defending identity, after the integration round's
+two legs reached opposite verdicts on this one sentence — the
+outside leg ruling it BLOCKING false generality, the same-family
+leg citing it as a model. Both readings are correct at different
+grains, and "analogous" is the word that carries the grain
+distinction: the satisfaction shape coincides, the slot judgments
+do not. The seed's earlier phrasing said the algebra transfers
+and the predicate does not, which is the same claim in vocabulary
+the candidate does not use; the ruling's word is adopted here.
+
+One factual caution for the drafting pass, offered because the
+adjudication's parenthetical could be read as settling it. The
+observation that the reference implementation evaluates both ends
+with one class describes a shape, not an exercised path: as of
+`WebOfTrust/keripy` at commit `c63726654`, no m-ary or threshold
+edge-group operator exists under `src/keri`, and the only
+edge-operator logic is the unary set. The candidate should state
+the coincidence of shape without implying that one evaluator has
+been run against both kinds of slot, which is the overclaim this
+repair exists to remove.
 
 ## Repair 2 — the pending discharge names the slot's disposition
 
@@ -180,15 +212,16 @@ choosing it.
 
 ## Notes for the drafting authority
 
-1. **The finding's suggested repair offered an alternative this
-   seed does not take.** It proposed either narrowing the sentence
-   or exercising slot-disposition evaluation in a fixture before
+1. **The finding asked for a narrowing or a fixture, and both now
+   exist.** Its suggested repair was to narrow the sentence, or to
+   exercise slot-disposition evaluation in a fixture before
    claiming the reuse. The narrowing is here. The fixture is
-   conformance-vector work under #15, and it is worth more than
-   the narrowing: a vector that runs a three-slot group with one
-   endorsed, one pending and one declined slot is the record that
-   separates an engine holding the predicate from one holding only
-   the arithmetic.
+   `V-S31-01` of the conformance vector ledger, which S3-1's own
+   station obligation assigns: an edge slot fed to a
+   signing-threshold evaluator with no standing appraisal, expected
+   to diverge from the ruled reading. That vector is what separates
+   an engine holding the slot judgment from one holding only the
+   satisfaction shape.
 
 2. **The citations in the finding have already drifted, which is
    R20's own argument arriving uninvited.** Finding #42 cited the
@@ -219,10 +252,10 @@ choosing it.
 | Fact | Value |
 |---|---|
 | Predecessor edition | Custos 4.1, sha256 `ff8b9e7a6e95239dcd1111340f4969720e526857f1746f116b42b5b405b72b05` |
-| Executed under | No numbered ruling — the docket of 2026-07-29 places #42 among the items needing none |
+| Executed under | Supplement 3, 2026-08-03, sha256 `79c7d7bd942787c57fc4e177d1fec1424ae6e709d561e81b9ff0d860b48565cc` — adjudication S3-1 |
 | Read against | R20 (dossier threshold semantics as a pinned dependency) and R3 (species in both keys), supplement 2, sha256 `7c5f6491976bd5fb12dcbab4c1520002f9f5a1cdf9bf94dc2f0964bb1aea2670` |
-| Finding addressed | #42 — the transfer claim and the unfilled-slot clause beneath it |
-| Not discharged here | the species mapping for slot dispositions; the exercising fixture (#15) |
+| Finding discharged | #42 — the transfer claim and the unfilled-slot clause beneath it; independently rediscovered by the integration round as its outside leg's A12 |
+| Not discharged here | the species mapping for slot dispositions; the translation profile (slot order, issuer qualification, revoked and undisclosed slot behavior), routed by S3-1 to the chartered encoding round, #57 |
 | Re-ruling | No — neither span is inside a section 15 wall |
 | Status | Unpinned draft; enters the 4.2 candidate by succession |
 | Ratified bytes altered | None |
