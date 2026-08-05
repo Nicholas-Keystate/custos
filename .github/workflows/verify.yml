@@ -30,6 +30,9 @@ jobs:
           python3 tools/census-41.py --expect-digest
           ff8b9e7a6e95239dcd1111340f4969720e526857f1746f116b42b5b405b72b05
 
+      - name: Conformance vector ledger integrity and coverage
+        run: python3 tools/verify_vectors.py
+
       - name: Round manifests verify byte-exact
         run: |
           set -e
