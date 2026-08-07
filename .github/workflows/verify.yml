@@ -30,6 +30,12 @@ jobs:
           python3 tools/census-41.py --expect-digest
           ff8b9e7a6e95239dcd1111340f4969720e526857f1746f116b42b5b405b72b05
 
+      - name: 4.2 succession census gate (27 checks, published bytes)
+        run: python3 tools/census-42.py
+
+      - name: 4.2 succession replay (published-bytes half; KEL seals confessed)
+        run: python3 tools/replay-42-succession.py
+
       - name: Round manifests verify byte-exact
         run: |
           set -e
