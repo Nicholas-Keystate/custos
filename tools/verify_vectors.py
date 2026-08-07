@@ -41,13 +41,13 @@ STATUSES = {"specifiable", "held"}
 # records assign, as (source id, ruling label). A ruling that
 # assigns an obligation and has no vector is the gap this check
 # exists to catch; adding a ruling here without a vector fails the
-# build, which is the intended direction of pressure.
+# build, which is the intended direction of pressure. Re-anchored
+# to the ratified 4.2 edition on 2026-08-07: the edition-owed
+# families moved from 4.1's §17 to §18, and §19's gate three added
+# a compact-form family the predecessor had no site for.
 OBLIGATIONS = [
-    ("edition-4.1", "section 17, L2208-2211"),
-    ("edition-4.1", "section 17, L2288-2289"),
-    ("edition-4.1", "section 17, L2289-2296"),
-    ("edition-4.1", "section 17, L2298-2300"),
-    ("edition-4.1", "section 17, L2300-2302"),
+    ("edition-4.2", "§18 Vectors, L3228-3254"),
+    ("edition-4.2", "§19 gate three, L3375-3400"),
     ("record-2026-07-30", "R1"),
     ("record-2026-07-30", "R2"),
     ("record-2026-07-30", "R3"),
@@ -69,6 +69,8 @@ OBLIGATIONS = [
     ("supplement-3", "S3-5"),
     ("supplement-3", "S3-7"),
     ("supplement-3", "S3-9"),
+    ("supplement-4", "E4-1"),
+    ("supplement-4", "E4-2"),
 ]
 
 results = []

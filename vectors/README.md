@@ -18,8 +18,8 @@ ledger's integrity — never an engine's conformance.
 
 ## What grade an expected value carries
 
-Ruling R5, as clarified by supplement 1 C-1, settles the conformance
-predicate: two folds agree when they agree on the full payload of
+Ruling R5, as clarified by supplement 1 C-1 and carried into the
+ratified §17, settles the conformance predicate: two folds agree when they agree on the full payload of
 every finding they return. Until the carriage encoding ratifies,
 that predicate is semantic, so every expected value in this ledger is
 stated semantically — over the finding value, the self-convicted kind
@@ -61,19 +61,49 @@ supplements. Every source is pinned by SHA-256 in the ledger and
 checked against the bytes on disk, so the corpus is bound to the
 records it was derived from rather than to their paths.
 
+`ratified_site` says where the obligation lives in `spec/custos-4.2.md`,
+and it is the field to read before building a fixture. Where it says
+"not carried", the ruling is on the record and the ratified edition
+does not yet execute it — those vectors test a successor obligation
+rather than the edition of record, and an implementer running the
+corpus against 4.2 today should expect them to have nothing to bind
+to. Eight entries are in that state, all from supplement 3: the
+aggregate-membership pair and presentation forms (S3-3), the unseated
+warrantor (S3-4), the charter floor and authentication grade (S3-5),
+and the typed observation reports (S3-7).
+
+`predecessor_site` appears on the edition-owed family, which was
+assigned by 4.1's §17 and is now carried and extended by 4.2's §18.
+
 `decides` names the tracker findings the vector settles, where it
 settles one. `status` is `specifiable` or `held`, and a held vector
 says what it is held on.
 
 ## What the corpus covers
 
-Every station obligation assigned by the ratified edition's section
-17 and by the rulings of the record and supplements 2 and 3 carries
-at least one vector. The verifier fails the build if a listed
+Every station obligation assigned by the ratified edition and by the
+rulings of the record and its four supplements carries at least one
+vector. On the edition side that is §18's vectors paragraph — the
+equivalence, boundary, refusal-boundary, recognition and order
+families, with the boundary family extended under R15 to designation
+and membership — and §19's gate three, whose equivalence,
+must-reject and vanilla-passthrough families are new in 4.2 and have
+no predecessor site. The verifier fails the build if a listed
 obligation has none, which is the pressure this file exists to
 apply: a ruling that assigns a discriminating record and never gets
 one is how the 4.1 canonical-selection contradiction survived a full
 gauntlet round and the census gate.
+
+Supplement 4's errata carry three station obligations of their own,
+and the corpus had one of them already. `V-R10-01` covers the
+cardinality-3 circuit. `V-E41-01` and `V-E41-02` are new, and the
+second is the discriminating one: it fails an engine that rejects a
+circuit-shaped payload on the strength of the payload bullet's pair
+wording. `V-E42-01` is also new, and it is not the vector that was
+already here — `V-R03-02` tests two tied defeats where one subcode is
+empty, while the erratum's boundary is the *sole* defeat with an
+empty subcode, which is where "orders last" and "lexicographic
+minimum" actually part company.
 
 Two entries are held. The equivalence vector for the two event-form
 tracks waits on R19, which waits on #55 and #56. The rotation-covenant
@@ -89,10 +119,10 @@ implementation to run differentially against the first, is separate
 work — the vectors have standalone value before either exists, and
 they can be built by different people in parallel.
 
-It is not a claim about the 4.2 candidate. Every vector here is
-derived from ratified 4.1 bytes and from rulings, both of which are
-in this repository. The candidate is assembled elsewhere, and vectors
-that need to cite it will be written when it can be cited.
+It is not a conformance verdict on any engine, and it is not the
+ceremony gate. `tools/census-42.py` verifies the succession's own
+lineage; this corpus verifies nothing and asserts what an engine
+should return.
 
 It does not presume external recognition. A genus reservation enacted
 and consumed as committed evidence is testable; recognition by an
