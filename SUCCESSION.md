@@ -10,7 +10,23 @@ stranger can verify without trusting this repository.
 |---|---|---|
 | Custos 3.3 | Superseded whole (sn 172/173) | `18b0469e731db24f6bca45525828e4417751929306ea21e09977088e08a20ceb` |
 | Custos 4.0 | Superseded whole at the 4.1 effectuation coordinate below | `9cefdc5d584289ea8391d8069bca26ea38aa82a34f9ae973d80e4d1b7773f315` |
-| Custos 4.1 | **RATIFIED AND EFFECTIVE** | `ff8b9e7a6e95239dcd1111340f4969720e526857f1746f116b42b5b405b72b05` |
+| Custos 4.1 | Superseded whole at the 4.2 effectuation coordinate below | `ff8b9e7a6e95239dcd1111340f4969720e526857f1746f116b42b5b405b72b05` |
+| Custos 4.2 | **RATIFIED AND EFFECTIVE** | `68cc5c9b7164b33dffcf7b705a0d1301fe108c647d35638fec61d52d29b2775a` |
+
+## Custos 4.1 → 4.2 succession
+
+| Fact | Value |
+|---|---|
+| Successor document | `spec/custos-4.2.md` |
+| Succession object SAID | `ELFM-UfvMCU168scRpX5rAPrUEd14LS9sOrxUuxB9uKY` |
+| Evidence manifest SAID | `EOYA5emQ3XQ53QLo544yBsZbR71V4t2u5ckRGtAp25n9` |
+| Lineage id | `EIpz2_PtwSX8PenR6AklZffFXeH_lBwmET9p2t14pBAY` |
+| Ratification act | `ECoG_MGNiAjvfTugzV58UHusku8V8cvYGlsncNroUG8a`, anchored at KEL sn 191 |
+| Effectuation act | `EK0oEYzOhacgEiLVSW4V1YutsVh8HFdf3V9oa2BAKxsK`, anchored at KEL sn 192 |
+| Prospectivity | 4.2 binds positions at and after sn 192, none before |
+| Succession class | REGENERATION: predecessor consumed whole per the frozen input manifest; successor computed around the graduated taxonomy chapter (the GEL-ur-element theorem at root); twenty-one rulings and three supplements carried; every delta accounted by a seven-census chain verified green by the committed census verifier (`tools/census-42.py`) at the ceremony bytes immediately before anchoring |
+| Method of record | consume-and-regenerate under a frozen input manifest; two-model-family adversarial collider preceding the full gauntlet; seed-station round under the graduated chapter's own law; targeted re-gauntlet with independent composite-hunk accounting (no escape) |
+| Predecessor lineage | 4.0→4.1 ratified sn 187 / effective sn 188; 3.3→4.0 at sn 181/182; 3.2→3.3 at sn 172/173; 3.1→3.2 at sn 170/171 |
 
 ## Custos 4.0 → 4.1 succession
 

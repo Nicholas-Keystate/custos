@@ -1,0 +1,33 @@
+{
+ "shape": "custos-lineage-record/1",
+ "lineage_id": "EIpz2_PtwSX8PenR6AklZffFXeH_lBwmET9p2t14pBAY",
+ "predecessor_said": "EN3yh4SS2Zor9skjZGJeY8RuOzxvmJ2I4F2lszs4q3G3",
+ "authority_aid": "EFolWr6gUggZS9im4f1pWSoKB9Ngd-T9YI0c8tlGIaHU",
+ "entries": [
+  {
+   "act": "ratification",
+   "act_said": "ECoG_MGNiAjvfTugzV58UHusku8V8cvYGlsncNroUG8a",
+   "succession_object_said": "ELFM-UfvMCU168scRpX5rAPrUEd14LS9sOrxUuxB9uKY",
+   "ratification_coordinate": {
+    "sn": 191,
+    "anchor_said": "EACWNVldou5KeYMYOq4hjOIbSoKK9-a-Fldt1VtXanr9"
+   }
+  },
+  {
+   "act": "effectiveness",
+   "act_said": "EK0oEYzOhacgEiLVSW4V1YutsVh8HFdf3V9oa2BAKxsK",
+   "succession_object_said": "ELFM-UfvMCU168scRpX5rAPrUEd14LS9sOrxUuxB9uKY",
+   "effectiveness_coordinate": {
+    "sn": 192,
+    "anchor_said": "EFZ4VITJpWp_7jR3ldNXno-IQ_Cz3KVBONezJC45v6FX"
+   }
+  }
+ ],
+ "effectiveness": {
+  "act_said": "EK0oEYzOhacgEiLVSW4V1YutsVh8HFdf3V9oa2BAKxsK",
+  "effectiveness_coordinate": {
+   "sn": 192,
+   "anchor_said": "EFZ4VITJpWp_7jR3ldNXno-IQ_Cz3KVBONezJC45v6FX"
+  }
+ }
+}

@@ -1,0 +1,71 @@
+{
+ "v": "custos-evidence-manifest-1",
+ "d": "EOYA5emQ3XQ53QLo544yBsZbR71V4t2u5ckRGtAp25n9",
+ "subject": "ratification evidence for custos-4.2 as successor to custos-4.1",
+ "reviews": {
+  "input-manifest": {
+   "said": "EAew2TKmJTrH_0I-nd9vQyKGALVj9SZhfqUAUb4XnPuf",
+   "note": "frozen input register 74bdb8a0... (Amendments 1-4; seed-PR rule; freeze user-ruled 2026-08-01)"
+  },
+  "seed-graduation": {
+   "said": "ECt6yNywKa2VYuy9glyLtjcyFv52mQ7bWZRMJaFsu3E1",
+   "note": "seed gauntlet round design (eight named attacks; 3 MINOR repaired; FIT-FOR-CANDIDATE)"
+  },
+  "regen-brief": {
+   "said": "EBMu3wKbavBAYwe-jEGBtej8UqEJHqyoSAM3kz8ZZt--",
+   "note": "regeneration brief: step-0 digest table, meld law, seam-rules, three censuses"
+  },
+  "regen-report": {
+   "said": "EL9rpqSQ6WfG43c5v8E9W3DeGvN6AKC9Zl1GGgn611gq",
+   "note": "assembly report: four verbatim splices digest-logged, 43 ruling-named substitutions, censuses"
+  },
+  "collider-brief": {
+   "said": "EH8tirZvZKYx_R7Io_fCFfAu0aH0rbcuso0BtsWO4pmO",
+   "note": "42-2 two-leg integration review brief (over-generalization audit + innovation survey)"
+  },
+  "collider-sol": {
+   "said": "EKLQRhrndZfsYyqtm-oU9No1YeR2pBhTSZYzoYxKWfbv",
+   "note": "outside-family leg (26 findings + 17 survey entries; 5 BLOCKING claims; NOT-FIT verdict adopted as pre-gauntlet returns)"
+  },
+  "collider-fable": {
+   "said": "EPPmHykAg7FGABB1cgkAL0kEUCutJjFdRx_pFPR0TM2J",
+   "note": "same-family fresh-context leg (13 findings + 9 survey entries; A-3 proof case; sweep schedule)"
+  },
+  "collider-collation": {
+   "said": "EHblJpPEA4Tel3dWjMkmAWLqf8hSziQvbsB2BoftCVZa",
+   "note": "orchestrator collation: eight convergences incl. independently identical flagship repair; divergences adjudicated S3-1/S3-2"
+  },
+  "supplement-3": {
+   "said": "EEq3jCHgCn7DcWykUASclBKLIwl_G1n8TOpbHyX9TROT",
+   "note": "the integration sitting: seven adoptions + two adjudications (user ruled the table whole)"
+  },
+  "repair-report": {
+   "said": "EDsxKwwH78vHzHyqPwDVeDhddd222S2cy0XnMLEnsVDo",
+   "note": "supplement-3 repair pass: 74 exactly-once substitutions v1->v2; provenance confession (three dispatches, orchestrator closure)"
+  },
+  "gauntlet-design": {
+   "said": "EDPqC81VUJFBVK51t9HqrIcwyD7qfsNbn5Mc73DVTzru",
+   "note": "42-3 full gauntlet design: nine named attacks + seven batteries + six vector spot-checks"
+  },
+  "gauntlet-report": {
+   "said": "EG2dyKcg1ylVs6oQs6GW35svkPUjTVy3JyBzV0hYv1X4",
+   "note": "42-3 report: DEFECTS-FOUND (1 BLOCKING GF-1/N2 = orchestrator's own S3 coverage gap, confessed; 3 MAJOR; scorecard 8/9)"
+  },
+  "station-record": {
+   "said": "EHbi7T3bPFxN6gyCBQiEOlc7nYzIGZm_lyK95w7bZ83v",
+   "note": "seed station 42-4: three hunks <25 lines, Utah sentence untouched, re-graduated by ratifying-authority read pass"
+  },
+  "regauntlet-report": {
+   "said": "EGMh_wxdf-s0qTDt-1Yg2PPsUmxVh1XOVFY0MwOJUmiG",
+   "note": "42-5 targeted re-gauntlet: REPAIRS-HOLD, all seven checks, census chain NO ESCAPE (12 composite hunks accounted)"
+  },
+  "census-verifier": {
+   "said": "EJvnEi_IywRZUZpnx5fHj-JCZ9nOVaKEtf8vLDJ1FxGs",
+   "note": "committed ceremony gate: 27 checks (lineage v1-v5, seed chain, sacrosanct, census rows, extinctions), green at ceremony bytes"
+  },
+  "seed-of-record": {
+   "said": "ECebqCxjZaXXiLYMScgaDnYxEf8ZjB10VMVun7f1Us06",
+   "note": "graduated seed v3.1 (5cef4ac8...): 42-1 graduation -> 42-4 station repairs -> user re-graduation -> RG-1 bookkeeping"
+  }
+ }
+}
