@@ -1,0 +1,25 @@
+{
+ "v": "custos-succession-object-1",
+ "d": "ELFM-UfvMCU168scRpX5rAPrUEd14LS9sOrxUuxB9uKY",
+ "predecessor_said": "EN3yh4SS2Zor9skjZGJeY8RuOzxvmJ2I4F2lszs4q3G3",
+ "predecessor_sha256": "ff8b9e7a6e95239dcd1111340f4969720e526857f1746f116b42b5b405b72b05",
+ "successor_said": "EIaMSzpsCedz_G-qtAFWX8Sm9QAnE50NBd8fqIcC0ksn",
+ "successor_sha256": "68cc5c9b7164b33dffcf7b705a0d1301fe108c647d35638fec61d52d29b2775a",
+ "authority_aid": "EFolWr6gUggZS9im4f1pWSoKB9Ngd-T9YI0c8tlGIaHU",
+ "predecessor_coordinate": {
+  "succession_object_said": "EGwpzI-F2n01GhqAcaBT6vNX-QkiaUWopEOqctz7-nGC",
+  "ratification_sn": 187,
+  "effectiveness_sn": 188,
+  "note": "custos-4.1 ratified sn 187, effective sn 188 (2026-07-26)"
+ },
+ "evidence_manifest_said": "EOYA5emQ3XQ53QLo544yBsZbR71V4t2u5ckRGtAp25n9",
+ "succession_class": "REGENERATION: consume-and-regenerate per the frozen input manifest (74bdb8a0...) - the predecessor consumed whole as committed input, successor computed around the graduated taxonomy chapter (GEL-ur-element theorem at root) as seed, carrying twenty-one rulings from the record and three supplements; every delta accounted by a SEVEN-census chain (three assembly censuses + repair census 74 rows + v3 micro-pass 8 rows + v4 seed-succession + v5 bookkeeping 12 rows), verified by the committed census verifier green at these exact bytes; the 42-5 re-gauntlet's independent composite mapping found twelve hunks v2->v4, all accounted, no escape",
+ "supersessions_with_provenance": [
+  "abstract line 21: 'Key state infrastructure ends' superseded by 'KERI ends' - the ratifying authority's own hand at the working bytes (2026-08-03), the direct-naming law applied to the sentence that names KERI; caught by digest forensics in both collider legs independently",
+  "colored evidence: removed from the object forms by IDENTIFICATION with the warranted receipt (supplement 2 R16; the manifold doctrine: color is a fold coordinate, never an object property)",
+  "'the encoding substrate' and kin: the generic register superseded by direct naming (~50 sites: CESR, ACDC, KERI, KRAM, OOBI, the u-field, the typed seal) under the register law's over-generalization conviction (user, 2026-08-03: the role written where the mechanism was consumed)",
+  "issuer non-observation 'discharged by type': superseded by the surface-obligation form (seed station 42-4, answering the outside leg's A5) - the type argument scoped to what it proves; the bar discharged only where the verification path avoids issuer-observable surfaces; a mandate of this class binds the path, not just the semantics"
+ ],
+ "grade_confession": "The authority gAID predates both its founding law and this edition: this domain remains ADOPTED-GRADE, not born-governed, per the confession carried since the 3.3->4.0 succession record; continuity with the sn 170-188 lineage again chosen over re-inception. Open by ruling and confessed in the edition's own text: the carriage encoding (chartered to the group design round, non-gating), R19's seat shape (held on upstream feasibility), the recovery-seam exception grammar (the ninth item's owed ruling), and the aggregate head's commitment-form semantics (encoding round).",
+ "method_of_record": "consume-and-regenerate under a frozen input manifest; fresh-context assembly and repair agents under the meld law (surviving bytes spliced, never retyped); two-model-family adversarial collider (42-2) preceding the full gauntlet (42-3), seed-station round (42-4) under the graduated chapter's own law, targeted re-gauntlet (42-5); the census chain is the method's safety obligation, discharged green at these exact bytes immediately before this anchoring"
+}

@@ -1,0 +1,17 @@
+{
+ "shape": "custos-effectiveness-act/1",
+ "d": "EK0oEYzOhacgEiLVSW4V1YutsVh8HFdf3V9oa2BAKxsK",
+ "act": "effectiveness",
+ "succession_object_said": "ELFM-UfvMCU168scRpX5rAPrUEd14LS9sOrxUuxB9uKY",
+ "ratification": {
+  "act_said": "ECoG_MGNiAjvfTugzV58UHusku8V8cvYGlsncNroUG8a",
+  "coordinate": {
+   "sn": 191,
+   "anchor_said": "EACWNVldou5KeYMYOq4hjOIbSoKK9-a-Fldt1VtXanr9"
+  },
+  "eligibility": "latest unsuperseded ratification by this authority for this predecessor as of this coordinate"
+ },
+ "prospectivity": "custos-4.2 binds positions at and after this coordinate, none before: succession is never retroactive (4.2 section 17)",
+ "lineage_id": "EIpz2_PtwSX8PenR6AklZffFXeH_lBwmET9p2t14pBAY",
+ "authority_aid": "EFolWr6gUggZS9im4f1pWSoKB9Ngd-T9YI0c8tlGIaHU"
+}
