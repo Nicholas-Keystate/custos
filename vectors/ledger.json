@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "title": "Custos conformance vector ledger",
-  "revision": "v2, 2026-08-07 — re-anchored to the ratified Custos 4.2",
+  "revision": "v3, 2026-08-08 — supplement 5 released; concrete cases begin",
   "note": "The corpus, not the harness. Each entry states an input shape and the expected result, at the grade the ratified law can currently carry. A disagreement about an expected value is a finding against the specification, never a bug report against an engine. Re-anchored to the ratified 4.2 edition on 2026-08-07; entries assigned by a ruling keep that ruling as their authority and carry the ratified site where the ruled text now lives.",
   "grade_discipline": {
     "rule": "R5, as clarified by supplement 1 C-1",
@@ -47,6 +47,12 @@
       "path": "reviews/ruling-record-supplement-4-2026-08-06.md",
       "sha256": "4f78d43ee7d9227f691fb804d9c3a378a55ccafe5c3c84260211fd5317445d77",
       "note": "errata against the ratified edition; both bind as reading rules now"
+    },
+    {
+      "id": "supplement-5",
+      "path": "reviews/ruling-record-supplement-5-2026-08-07.md",
+      "sha256": "02d7f4a353a7e8222c4463fda7a7c73b08a495dd96f663d8b11752414d7b9ff1",
+      "note": "the recovery seam ruled whole; the release condition S3-9 named for the held families"
     }
   ],
   "families": {
@@ -62,7 +68,8 @@
     "disclosure": "Blinding, clause membership, and presentation form.",
     "availability": "Witness state, receipts, and what the charter binds.",
     "observation": "Typed evidence about observed key state.",
-    "compact-form": "Section 19's compact receipt form and the three gates that stand it up."
+    "compact-form": "Section 19's compact receipt form and the three gates that stand it up.",
+    "covenant": "Rotation covenants of the ruled class: the ordinary branch, the recovery branch, and regrounding."
   },
   "vectors": [
     {
@@ -226,7 +233,46 @@
       "expect": "Pending, carrying the unexamined check as its typed requirement. Not defeated. An engine that returns the first defeat it finds fails this vector.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "§8.3 evidence ordering, L1754-1764 (delta 25)"
+      "ratified_site": "§8.3 evidence ordering, L1754-1764 (delta 25)",
+      "case": {
+        "given": {
+          "question": "Q1",
+          "law_head": "L1",
+          "position": "p1",
+          "bundle": [
+            "gel:A1:0-12",
+            "tel:A2:0-4"
+          ],
+          "requirement_space": [
+            "C-crypto-01",
+            "C-merit-01"
+          ],
+          "examined": [
+            "C-merit-01"
+          ],
+          "defeats_available": [
+            {
+              "class": "merit",
+              "citation": "C-merit-01",
+              "subcode": "a"
+            }
+          ]
+        },
+        "then": {
+          "value": "pending",
+          "requirement_set": [
+            {
+              "kind": "check",
+              "subject": "C-crypto-01",
+              "citing_clauses": [
+                "C-crypto-01"
+              ],
+              "species": "absent"
+            }
+          ],
+          "note": "Not defeated. An engine that returns the first defeat it finds fails here."
+        }
+      }
     },
     {
       "id": "V-R03-01",
@@ -258,7 +304,38 @@
       "expect": "The defeat with a subcode is cited. Presence is the primary key of the subcode component, so the empty subcode orders last rather than first. This is the vector the 4.1 gauntlet and census both missed.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "§8.3 canonical selection, L1766-1779 (delta 25) — see E4-2"
+      "ratified_site": "§8.3 canonical selection, L1766-1779 (delta 25) — see E4-2",
+      "case": {
+        "given": {
+          "question": "Q1",
+          "law_head": "L1",
+          "position": "p1",
+          "bundle": [
+            "gel:A1:0-12"
+          ],
+          "defeats_available": [
+            {
+              "class": "merit",
+              "citation": "C-merit-01",
+              "subcode": ""
+            },
+            {
+              "class": "merit",
+              "citation": "C-merit-01",
+              "subcode": "b"
+            }
+          ]
+        },
+        "then": {
+          "value": "defeated",
+          "cites": {
+            "class": "merit",
+            "citation": "C-merit-01",
+            "subcode": "b"
+          },
+          "note": "Presence is the primary key of the subcode component, so the empty subcode loses this tie."
+        }
+      }
     },
     {
       "id": "V-R03-03",
@@ -339,7 +416,43 @@
       "expect": "Self-convicted, with a circuit payload carrying the whole set. An engine built to a pair-shaped payload either fails to convict or convicts on an arbitrary two of the three and misstates the ground. This is the discriminating record between circuit-payload and pair-payload engines.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "§8.4 conviction ladder, L1824-1832 (delta 27) — see E4-1"
+      "ratified_site": "§8.4 conviction ladder, L1824-1832 (delta 27) — see E4-1",
+      "case": {
+        "given": {
+          "question": "Q1",
+          "law_head": "L1",
+          "position": "p1",
+          "bundle": [
+            "gel:A1:0-40"
+          ],
+          "derivations": [
+            "D1 from C-law-01",
+            "D2 from C-law-02",
+            "D3 from C-law-03"
+          ],
+          "pairwise_consistent": true,
+          "jointly_satisfiable": false,
+          "enactment_signatures": [
+            "C-law-01",
+            "C-law-02",
+            "C-law-03"
+          ]
+        },
+        "then": {
+          "value": "self-convicted",
+          "kind": "antinomy",
+          "payload": {
+            "shape": "circuit",
+            "members": [
+              "D1",
+              "D2",
+              "D3"
+            ],
+            "exhibit": "joint-unsatisfiability of {D1,D2,D3}"
+          },
+          "note": "No two of the three contradict, so a pair-shaped payload cannot be constructed and an engine that requires one fails."
+        }
+      }
     },
     {
       "id": "V-R11-01",
@@ -371,7 +484,33 @@
       "expect": "Bearing holds: conviction and pertinence both. Subject-pertinence fires the edge into self-convicted.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "§8.3 Bearing (delta 23)"
+      "ratified_site": "§8.3 Bearing (delta 23)",
+      "case": {
+        "given": {
+          "question": "Q1",
+          "subject": "A2",
+          "law_head": "L1",
+          "position": "p1",
+          "bundle": [
+            "gel:A1:0-20",
+            "kel:A2:0-6"
+          ],
+          "conviction": {
+            "tier": "governance",
+            "of": "A2",
+            "violated_predicate": "C-law-04"
+          },
+          "frame_committed_predicate": true,
+          "cited_in_bundle": [
+            "kel:A2:0-6"
+          ]
+        },
+        "then": {
+          "value": "self-convicted",
+          "kind": "duplicity",
+          "note": "Conviction and subject-pertinence both hold, so the edge fires."
+        }
+      }
     },
     {
       "id": "V-R13-02",
@@ -387,7 +526,30 @@
       "expect": "No bearing. Pertinence fails, so no edge fires, and the finding stands as computed.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "§8.3 Bearing (delta 23)"
+      "ratified_site": "§8.3 Bearing (delta 23)",
+      "case": {
+        "given": {
+          "question": "Q1",
+          "subject": "A2",
+          "law_head": "L1",
+          "position": "p1",
+          "bundle": [
+            "gel:A1:0-20",
+            "kel:A2:0-6"
+          ],
+          "conviction": {
+            "tier": "governance",
+            "of": "A9",
+            "violated_predicate": "C-law-04"
+          },
+          "frame_committed_predicate": true,
+          "cited_in_bundle": []
+        },
+        "then": {
+          "value": "affirmed",
+          "note": "A9's artifact is in neither birth-committed enumeration, so pertinence fails and the finding stands as computed."
+        }
+      }
     },
     {
       "id": "V-R13-03",
@@ -403,7 +565,30 @@
       "expect": "Consumption, not refusal and not conviction. No committed predicate means no conviction, so the pair is ordinary evidence. Axiom 3's refusal guards law running out on the question, never on this gate.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "§8.3 Bearing (delta 23)"
+      "ratified_site": "§8.3 Bearing (delta 23)",
+      "case": {
+        "given": {
+          "question": "Q1",
+          "subject": "A2",
+          "law_head": "L1",
+          "position": "p1",
+          "bundle": [
+            "gel:A1:0-20",
+            "kel:A2:0-6"
+          ],
+          "conviction": {
+            "tier": "governance",
+            "of": "A2",
+            "violated_predicate": "C-law-99"
+          },
+          "frame_committed_predicate": false
+        },
+        "then": {
+          "value": "affirmed",
+          "consumed_as_evidence": true,
+          "note": "No committed predicate means no conviction, so the pair is ordinary evidence. This gate never fires the refusal."
+        }
+      }
     },
     {
       "id": "V-R13-04",
@@ -787,11 +972,11 @@
         "source": "supplement-3",
         "ruling": "S3-9"
       },
-      "input": "The interregnum triple, the stale-quorum rotation, the covenant-violating ordinary rotation, and the covenant-conforming recovery.",
-      "expect": "Held with their items. These families cannot be specified until the owed ruling lands on the recovery-branch exception grammar, because a covenant must not convict the medium's lawful cure and the exception must itself be committed law.",
+      "input": "The rotation-covenant families S3-9 recorded as ripened and held: the interregnum triple, the stale-quorum rotation, the covenant-violating ordinary rotation, the covenant-conforming recovery.",
+      "expect": "Released. Supplement 5 ruled the recovery seam whole on 2026-08-07 and named itself the release condition, so this entry's hold is discharged and its content is stated as cases at V-S5A-01 through V-S5A-07 and V-S5B-01/02.",
       "grade": "semantic",
-      "status": "held",
-      "held_on": "the recovery-seam ruling owed by S3-9, awaiting supplement 4"
+      "status": "specifiable",
+      "ratified_site": "not carried — supplement 5 is the ruling of record; spec text executes at the next edition"
     },
     {
       "id": "V-E41-01",
@@ -804,7 +989,34 @@
       "input": "A self-convicted finding whose kind is duplicity, carrying the canonical proof package for the contradictory pair.",
       "expect": "Must-affirm. The payload obligation is discharged by the package that matches the conviction's kind, and the pair is the right package for this kind.",
       "grade": "semantic",
-      "status": "specifiable"
+      "status": "specifiable",
+      "case": {
+        "given": {
+          "question": "Q1",
+          "law_head": "L1",
+          "position": "p1",
+          "bundle": [
+            "gel:A1:0-40"
+          ],
+          "conviction_kind": "duplicity",
+          "pair": [
+            "X1",
+            "X2"
+          ]
+        },
+        "then": {
+          "value": "self-convicted",
+          "kind": "duplicity",
+          "payload": {
+            "shape": "pair",
+            "members": [
+              "X1",
+              "X2"
+            ]
+          },
+          "note": "Must-affirm: the package matches the conviction's kind."
+        }
+      }
     },
     {
       "id": "V-E41-02",
@@ -817,7 +1029,36 @@
       "input": "A self-convicted finding whose kind is antinomy, carrying a jointly-unsatisfiable circuit of cardinality three where no two derivations contradict.",
       "expect": "Must-affirm. This vector discriminates against a pair-only reading of the payload bullet: an engine that rejects a circuit-shaped payload because the bullet says 'the contradictory pair' fails here, and the erratum says the pair wording confers no such licence.",
       "grade": "semantic",
-      "status": "specifiable"
+      "status": "specifiable",
+      "case": {
+        "given": {
+          "question": "Q1",
+          "law_head": "L1",
+          "position": "p1",
+          "bundle": [
+            "gel:A1:0-40"
+          ],
+          "conviction_kind": "antinomy",
+          "circuit": [
+            "D1",
+            "D2",
+            "D3"
+          ]
+        },
+        "then": {
+          "value": "self-convicted",
+          "kind": "antinomy",
+          "payload": {
+            "shape": "circuit",
+            "members": [
+              "D1",
+              "D2",
+              "D3"
+            ]
+          },
+          "note": "Must-affirm. An engine that rejects this payload because the §8.3 bullet says 'the contradictory pair' fails; E4-1 says the wording confers no such licence."
+        }
+      }
     },
     {
       "id": "V-E42-01",
@@ -833,7 +1074,33 @@
       "input": "One defeat available for a question, carrying an empty subcode, and no other defeat at that (defeater-class rank, citation identifier).",
       "expect": "Must-select it. 'Orders last' is a tie-break annotation, so an absent subcode compares greater only against a present subcode at the same rank and identifier, and has no other effect. An engine reading 'orders last' as a global sort key demotes the only available defeat below tuples that do not exist and fails here.",
       "grade": "semantic",
-      "status": "specifiable"
+      "status": "specifiable",
+      "case": {
+        "given": {
+          "question": "Q1",
+          "law_head": "L1",
+          "position": "p1",
+          "bundle": [
+            "gel:A1:0-12"
+          ],
+          "defeats_available": [
+            {
+              "class": "merit",
+              "citation": "C-merit-01",
+              "subcode": ""
+            }
+          ]
+        },
+        "then": {
+          "value": "defeated",
+          "cites": {
+            "class": "merit",
+            "citation": "C-merit-01",
+            "subcode": ""
+          },
+          "note": "The only available defeat is cited. An engine reading 'orders last' as a global sort key returns no defeat here, or returns affirmed, and fails."
+        }
+      }
     },
     {
       "id": "V-S18-01",
@@ -933,6 +1200,335 @@
       "expect": "The receipt MUST verify and the stream MUST survive the extra attachment groups. This is the vanilla-passthrough family, at gate grade: an envelope grouping that fails is redesigned until it passes, because compatibility is a gate rather than a hope.",
       "grade": "semantic",
       "status": "specifiable"
+    },
+    {
+      "id": "V-S5A-01",
+      "family": "covenant",
+      "owed_by": {
+        "source": "supplement-5",
+        "ruling": "S5-1"
+      },
+      "ratified_site": "not carried — supplement 5 is the ruling of record; spec text executes at the next edition",
+      "input": "An ordinary establishment event of A2 that satisfies the covenant's C.ordinary predicate, carrying the required seal.",
+      "expect": "Affirmed.",
+      "grade": "semantic",
+      "status": "specifiable",
+      "case": {
+        "given": {
+          "covenant": "C-rot-01",
+          "law_head": "L1",
+          "subject": "A2",
+          "horizon_H": 8,
+          "event": {
+            "kind": "rot",
+            "sn": 14,
+            "claims_recovery": false,
+            "carries_seal": true
+          },
+          "position": "p14"
+        },
+        "then": {
+          "value": "affirmed"
+        }
+      }
+    },
+    {
+      "id": "V-S5A-02",
+      "family": "covenant",
+      "owed_by": {
+        "source": "supplement-5",
+        "ruling": "S5-1"
+      },
+      "ratified_site": "not carried — supplement 5 is the ruling of record; spec text executes at the next edition",
+      "input": "An ordinary establishment event of A2 that omits the seal C.ordinary requires.",
+      "expect": "Defeated, citing the ordinary branch.",
+      "grade": "semantic",
+      "status": "specifiable",
+      "case": {
+        "given": {
+          "covenant": "C-rot-01",
+          "law_head": "L1",
+          "subject": "A2",
+          "horizon_H": 8,
+          "event": {
+            "kind": "rot",
+            "sn": 14,
+            "claims_recovery": false,
+            "carries_seal": false
+          },
+          "position": "p14"
+        },
+        "then": {
+          "value": "defeated",
+          "cites": {
+            "branch": "C.ordinary",
+            "clause": "C-rot-01"
+          }
+        }
+      }
+    },
+    {
+      "id": "V-S5A-03",
+      "family": "covenant",
+      "owed_by": {
+        "source": "supplement-5",
+        "ruling": "S5-1"
+      },
+      "ratified_site": "not carried — supplement 5 is the ruling of record; spec text executes at the next edition",
+      "input": "An establishment event claiming recovery that is a lawful superseding recovery under the medium's rules, accompanied by a committed recovery declaration citing the compromise evidence-of-record.",
+      "expect": "Pending, under recovery, with the horizon carried.",
+      "grade": "semantic",
+      "status": "specifiable",
+      "case": {
+        "given": {
+          "covenant": "C-rot-01",
+          "law_head": "L1",
+          "subject": "A2",
+          "horizon_H": 8,
+          "event": {
+            "kind": "rot",
+            "sn": 12,
+            "claims_recovery": true,
+            "supersedes_sn": 12,
+            "signed_by": "pre-rotated keys",
+            "window": "open"
+          },
+          "declaration": {
+            "present": true,
+            "cites": "compromise-evidence-01"
+          },
+          "position": "p15"
+        },
+        "then": {
+          "value": "pending",
+          "requirement_set": [
+            {
+              "kind": "regrounding",
+              "subject": "A2",
+              "species": "window-open"
+            }
+          ],
+          "bridge": {
+            "state": "under-recovery",
+            "horizon": 8
+          }
+        }
+      }
+    },
+    {
+      "id": "V-S5A-04",
+      "family": "covenant",
+      "owed_by": {
+        "source": "supplement-5",
+        "ruling": "S5-1"
+      },
+      "ratified_site": "not carried — supplement 5 is the ruling of record; spec text executes at the next edition",
+      "input": "An event claiming recovery, signed by the identifier's current keys rather than the keys pre-rotated before the claimed compromise.",
+      "expect": "Defeated at condition (a): the event is not a lawful superseding recovery under the medium's own geometry, and the claim does not make it one.",
+      "grade": "semantic",
+      "status": "specifiable",
+      "case": {
+        "given": {
+          "covenant": "C-rot-01",
+          "law_head": "L1",
+          "subject": "A2",
+          "horizon_H": 8,
+          "event": {
+            "kind": "rot",
+            "sn": 15,
+            "claims_recovery": true,
+            "signed_by": "current keys"
+          },
+          "declaration": {
+            "present": true
+          },
+          "position": "p15"
+        },
+        "then": {
+          "value": "defeated",
+          "cites": {
+            "branch": "C.recovery",
+            "condition": "a"
+          }
+        }
+      }
+    },
+    {
+      "id": "V-S5A-05",
+      "family": "covenant",
+      "owed_by": {
+        "source": "supplement-5",
+        "ruling": "S5-1"
+      },
+      "ratified_site": "not carried — supplement 5 is the ruling of record; spec text executes at the next edition",
+      "input": "A bridge opened by a lawful recovery, followed by a regrounding act within the committed horizon.",
+      "expect": "Affirmed at the regrounding: the ordinary regime is restored.",
+      "grade": "semantic",
+      "status": "specifiable",
+      "case": {
+        "given": {
+          "covenant": "C-rot-01",
+          "law_head": "L1",
+          "subject": "A2",
+          "horizon_H": 8,
+          "event": {
+            "kind": "regrounding",
+            "sn": 19
+          },
+          "bridge_opened_at": "p15",
+          "position": "p19"
+        },
+        "then": {
+          "value": "affirmed",
+          "restores": "C.ordinary"
+        }
+      }
+    },
+    {
+      "id": "V-S5A-06",
+      "family": "covenant",
+      "owed_by": {
+        "source": "supplement-5",
+        "ruling": "S5-1"
+      },
+      "ratified_site": "not carried — supplement 5 is the ruling of record; spec text executes at the next edition",
+      "input": "A bridge opened by a lawful recovery, with the committed horizon closing and no regrounding act.",
+      "expect": "Defeated for failure to reground.",
+      "grade": "semantic",
+      "status": "specifiable",
+      "case": {
+        "given": {
+          "covenant": "C-rot-01",
+          "law_head": "L1",
+          "subject": "A2",
+          "horizon_H": 8,
+          "bridge_opened_at": "p15",
+          "position": "p23",
+          "regrounding": null
+        },
+        "then": {
+          "value": "defeated",
+          "cites": {
+            "branch": "C.recovery",
+            "condition": "c",
+            "reason": "failure-to-reground"
+          }
+        }
+      }
+    },
+    {
+      "id": "V-S5A-07",
+      "family": "covenant",
+      "owed_by": {
+        "source": "supplement-5",
+        "ruling": "S5-1"
+      },
+      "ratified_site": "not carried — supplement 5 is the ruling of record; spec text executes at the next edition",
+      "input": "An event claiming recovery that is medium-lawful but carries no committed declaration and stands under no open demand.",
+      "expect": "Defeated at condition (b): the why is owed in bytes.",
+      "grade": "semantic",
+      "status": "specifiable",
+      "case": {
+        "given": {
+          "covenant": "C-rot-01",
+          "law_head": "L1",
+          "subject": "A2",
+          "horizon_H": 8,
+          "event": {
+            "kind": "rot",
+            "sn": 12,
+            "claims_recovery": true,
+            "signed_by": "pre-rotated keys",
+            "window": "open"
+          },
+          "declaration": {
+            "present": false
+          },
+          "position": "p15"
+        },
+        "then": {
+          "value": "defeated",
+          "cites": {
+            "branch": "C.recovery",
+            "condition": "b"
+          }
+        }
+      }
+    },
+    {
+      "id": "V-S5B-01",
+      "family": "membership",
+      "owed_by": {
+        "source": "supplement-5",
+        "ruling": "S5-2"
+      },
+      "ratified_site": "not carried — supplement 5 is the ruling of record; spec text executes at the next edition",
+      "input": "A transfer of registry control that a committed successor-regime clause anticipated, with the clause's signer and evidence conditions met inside its horizon.",
+      "expect": "Admitted, and judged as an enactment under the law in force at its position.",
+      "grade": "semantic",
+      "status": "specifiable",
+      "case": {
+        "given": {
+          "covenant": "C-rot-01",
+          "law_head": "L1",
+          "subject": "A2",
+          "horizon_H": 8,
+          "transfer": {
+            "authorized_by": "C-succ-01",
+            "conditions_met": true
+          },
+          "position": "p20"
+        },
+        "then": {
+          "value": "admitted",
+          "judged_as": "enactment"
+        }
+      }
+    },
+    {
+      "id": "V-S5B-02",
+      "family": "membership",
+      "owed_by": {
+        "source": "supplement-5",
+        "ruling": "S5-2"
+      },
+      "ratified_site": "not carried — supplement 5 is the ruling of record; spec text executes at the next edition",
+      "input": "A transfer of registry control that no committed clause authorizes.",
+      "expect": "Refused, fail-loud. No clause, no admission.",
+      "grade": "semantic",
+      "status": "specifiable",
+      "case": {
+        "given": {
+          "covenant": "C-rot-01",
+          "law_head": "L1",
+          "subject": "A2",
+          "horizon_H": 8,
+          "transfer": {
+            "authorized_by": null
+          },
+          "position": "p20"
+        },
+        "then": {
+          "value": "refuse",
+          "refusal_grounds": {
+            "kind": "clause violation",
+            "seal_kind": "clause violation"
+          }
+        }
+      }
     }
-  ]
+  ],
+  "fixture_convention": {
+    "statement": "A case states its inputs and its expected value in fixture-local symbols rather than bytes, because the carriage encoding has not ratified and there are no bytes to write. The symbols are fixed, so two implementers building the same case build the same case; they become self-addressing identifiers when the encoding lands, and nothing else about the case changes.",
+    "symbols": {
+      "L<n>": "a committed law head — the Constitution state a finding is appraised under",
+      "p<n>": "an appraisal position, a log coordinate in committed order",
+      "E<n>": "a committed evidence bundle, given as the list of spans it closes over",
+      "Q<n>": "the question asked of the fold",
+      "A<n>": "an identifier: a subject, an endorser, an administrator, a delegator",
+      "C-<class>-<nn>": "a committed clause, its class naming the defeater class it produces",
+      "<log>:<id>:<sn>-<sn>": "a committed log span — gel, kel or tel, its identifier, its coordinate range"
+    },
+    "then": "The expected value is the finding's full payload under the section 17 predicate, to the depth the case discriminates. A field the case does not name is not constrained by it."
+  }
 }

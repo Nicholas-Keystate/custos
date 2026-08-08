@@ -19,7 +19,15 @@ engine's conformance. Checks (all stdlib, run from the repo root):
   5. every held vector names what it is held on, and no
      specifiable vector carries a hold;
   6. no vector claims byte grade while the carriage encoding is
-     unratified (R5's interim discipline, tracker #57).
+     unratified (R5's interim discipline, tracker #57);
+  7. every vector owed by a case-required source states a concrete
+     case — inputs and expected value, not a description of the
+     case's shape.
+
+A note on what this file does not prove. A ledger entry without a
+`case` records that a vector is owed; it is not itself a vector. The
+coverage line at the end reports both counts so the difference stays
+visible.
 
 Exit 0 = all checks pass. Nonzero = at least one FAIL.
 """
@@ -71,7 +79,17 @@ OBLIGATIONS = [
     ("supplement-3", "S3-9"),
     ("supplement-4", "E4-1"),
     ("supplement-4", "E4-2"),
+    ("supplement-5", "S5-1"),
+    ("supplement-5", "S5-2"),
 ]
+
+# Sources whose vectors must arrive as concrete cases rather than as
+# sketches. This is a ratchet, not a retrofit: the older entries carry
+# a case where one has been written and a sketch where one has not, and
+# the coverage line below reports the gap rather than hiding it. Every
+# NEW obligation from here on lands with its inputs and its expected
+# value stated, which is what a vector is.
+CASE_REQUIRED = {"supplement-4", "supplement-5"}
 
 results = []
 
@@ -151,6 +169,20 @@ def main():
     check("specifiable vectors carry no hold", not stray, ", ".join(stray))
 
     # 6 — R5's interim grade discipline.
+    missing_case = [
+        v["id"]
+        for v in vectors
+        if v.get("owed_by", {}).get("source") in CASE_REQUIRED
+        and v.get("status") == "specifiable"
+        and not v.get("case")
+        and "Superseded" not in v.get("expect", "")
+    ]
+    check(
+        "vectors from the case-required sources state a concrete case",
+        not missing_case,
+        ", ".join(missing_case),
+    )
+
     byte_claims = [v["id"] for v in vectors if v.get("grade") == "byte"]
     encoding_ratified = bool(ledger.get("grade_discipline", {}).get("byte_grade_available"))
     check(
@@ -160,9 +192,14 @@ def main():
     )
 
     held = [v for v in vectors if v.get("status") == "held"]
+    cased = [v for v in vectors if v.get("case")]
     print(
         f"\n{len(vectors)} vectors across {len(families)} families; "
         f"{len(vectors) - len(held)} specifiable, {len(held)} held."
+    )
+    print(
+        f"{len(cased)} state a concrete case; {len(vectors) - len(cased)} are still "
+        f"sketches — an obligation recorded, the case not yet written."
     )
 
 

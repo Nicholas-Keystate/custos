@@ -13,8 +13,59 @@ against an engine.** That is the correct direction of travel, and it
 is why the corpus is worth publishing before a second implementation
 exists.
 
-`ledger.json` is the corpus. `../tools/verify_vectors.py` proves the
-ledger's integrity — never an engine's conformance.
+`ledger.json` is the ledger, and the distinction matters. An entry
+records that a vector is owed — which authority assigned it, where the
+obligation lives in the ratified edition, what the case must
+discriminate. Where a case has been written, the entry carries it. An
+entry without a `case` is an obligation on the record and not yet a
+vector, and the verifier's closing line reports both counts so the
+difference cannot be read past. Today 18 of 69 entries state a case.
+
+`../tools/verify_vectors.py` proves the ledger's integrity — never an
+engine's conformance.
+
+## What a case looks like, and why it has no bytes
+
+A test vector is normally concrete data in and concrete data out. Here
+there are no bytes to write: the carriage encoding has not ratified, so
+no serialization exists to state an input in. That constrains the form
+and does not excuse prose. A case is fully concrete at the semantic
+layer — fixed symbols, named spans, an expected finding stated field by
+field — and an implementer can build and run it against an engine's API
+with no wire format at all.
+
+The symbols are the fixture convention, stated once in the ledger's
+`fixture_convention` block: `L1` a law head, `p14` a position, `E1` a
+bundle given as the spans it closes, `C-merit-01` a committed clause
+whose class names the defeater class it produces. They are fixture-local
+and fixed, so two implementers building one case build the same case.
+They become self-addressing identifiers when the encoding lands, and
+nothing else about the case changes.
+
+The shape is `given` and `then`:
+
+```json
+"case": {
+  "given": {
+    "question": "Q1", "law_head": "L1", "position": "p1",
+    "bundle": ["gel:A1:0-12"],
+    "defeats_available": [
+      {"class": "merit", "citation": "C-merit-01", "subcode": ""}
+    ]
+  },
+  "then": {
+    "value": "defeated",
+    "cites": {"class": "merit", "citation": "C-merit-01", "subcode": ""}
+  }
+}
+```
+
+That is `V-E42-01`, the sole-defeat empty-subcode boundary. An engine
+reading "orders last" as a global sort key returns something else here,
+which is the whole point of writing it down.
+
+`then` states the expected value to the depth the case discriminates. A
+field the case does not name is not constrained by it.
 
 ## What grade an expected value carries
 
@@ -105,7 +156,14 @@ empty, while the erratum's boundary is the *sole* defeat with an
 empty subcode, which is where "orders last" and "lexicographic
 minimum" actually part company.
 
-Two entries are held. The equivalence vector for the two event-form
+**The case ratchet.** Vectors owed by supplement 4 and supplement 5
+must arrive as cases; the verifier fails the build otherwise. Older
+entries carry a case where one has been written and a sketch where one
+has not. The ratchet is forward-only on purpose — retrofitting 51
+sketches at once would produce 51 guesses, and each one is worth writing
+deliberately against the ruling that assigned it.
+
+One entry is held. The equivalence vector for the two event-form
 tracks waits on R19, which waits on #55 and #56. The rotation-covenant
 families recorded as ripened in S3-9 wait on the recovery-branch
 exception grammar, the one ruling that supplement 3 names as owed:
