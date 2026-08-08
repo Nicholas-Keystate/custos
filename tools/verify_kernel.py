@@ -143,6 +143,41 @@ def main():
     else:
         print("[SKIP] gate record not present")
 
+    # 5. companion artifacts the ratified text names BY ROLE must
+    # exist. A named-but-absent companion is a dangling reference in
+    # law: §3 (4.1:575) sends a reader to "the engagement companion"
+    # for each substrate specification's revision of record, and §14
+    # (4.1:1936) sends every ratified name one hop through "the
+    # notation register". Neither is a roadmap entry; both are cited
+    # as though they exist.
+    #
+    # `enforced` is False where producing the artifact is a governance
+    # act rather than a repository edit — §14 says the ratification
+    # enactment SHALL pin the notation register's digest, and the sn
+    # 187 enactment did not, so no file in this repository can
+    # discharge it. Such a role is REPORTED as an outstanding debt and
+    # does not fail the run. Flip it to True when the enactment lands.
+    named_companions = [
+        ("engagement companion", "§3 (4.1:575)",
+         ROOT / "companions" / "engagement-companion.md", True),
+        ("notation register", "§14 (4.1:1936)",
+         ROOT / "companions" / "notation-register.md", False),
+    ]
+    missing = []
+    for role, cite, path, enforced in named_companions:
+        if path.is_file():
+            continue
+        if enforced:
+            missing.append(f"{role} ({cite}) -> {path.name}")
+        else:
+            print(f"[DEBT] {role} named at {cite} is absent — "
+                  f"owed by enactment, not by edit")
+    check(
+        "companions named by role in the ratified text exist",
+        not missing,
+        "; ".join(missing) if missing else "all enforced roles present",
+    )
+
     return finish()
 
 def finish():
