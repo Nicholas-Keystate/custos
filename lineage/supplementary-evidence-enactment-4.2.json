@@ -1,0 +1,30 @@
+{
+ "shape": "custos-supplementary-evidence-enactment/1",
+ "d": "EGAy0U90abi5CVK1SKObu6YwcZQK8gF6ZqZi6kZ6_d11",
+ "act": "supplementary-evidence-enactment",
+ "for_edition": {
+  "document": "spec/custos-4.2.md",
+  "sha256": "68cc5c9b7164b33dffcf7b705a0d1301fe108c647d35638fec61d52d29b2775a",
+  "succession_object_said": "ELFM-UfvMCU168scRpX5rAPrUEd14LS9sOrxUuxB9uKY",
+  "ratification_coordinate": {
+   "sn": 191
+  },
+  "effectiveness_coordinate": {
+   "sn": 192
+  }
+ },
+ "authority_aid": "EFolWr6gUggZS9im4f1pWSoKB9Ngd-T9YI0c8tlGIaHU",
+ "pins": {
+  "engagement-companion": {
+   "path": "companions/engagement-companion.md",
+   "sha256": "089523bd81da3d86642c3d5bf729d6509e1acf24fed605c9a7049ee8e12aad95",
+   "said": "EJGCJUacbcgFBvaQVGIYAhIiKVYQ_i8wlSXq_jZd3S8x",
+   "discharges": "section 3's commitment that the companion is pinned beside the edition's bytes by enactment (issue #43, remaining sentence); the companion names each substrate specification's revision of record"
+  },
+  "published-evidence-set": {
+   "commit": "1339afa",
+   "note": "all sixteen evidence-manifest legs + census subjects (candidates v1-v4, seed chapters v2/v3.1) recompute from a clean checkout; portable census gate (tools/census-42.py) and published-bytes replay (tools/replay-42-succession.py) wired into CI; as-run census tool preserved byte-identical at lineage/census-42-as-run.py where the manifest's census-verifier SAID resolves (finding #76)"
+  }
+ },
+ "confession": "This act cures an omission of the sn 191 ceremony: the companion existed only as an unmerged draft at ratification and no companion digest was pinned. The evidence manifest anchored at sn 191 is sealed and carries no published/held markings; that discipline becomes manifest practice at the next ceremony. The ratified bytes are untouched; this act adds, supersedes nothing."
+}

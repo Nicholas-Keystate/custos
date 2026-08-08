@@ -28,6 +28,15 @@ stranger can verify without trusting this repository.
 | Method of record | consume-and-regenerate under a frozen input manifest; two-model-family adversarial collider preceding the full gauntlet; seed-station round under the graduated chapter's own law; targeted re-gauntlet with independent composite-hunk accounting (no escape) |
 | Predecessor lineage | 4.0→4.1 ratified sn 187 / effective sn 188; 3.3→4.0 at sn 181/182; 3.2→3.3 at sn 172/173; 3.1→3.2 at sn 170/171 |
 
+## Supplementary evidence enactment (4.2)
+
+| Fact | Value |
+|---|---|
+| Act SAID | `EGAy0U90abi5CVK1SKObu6YwcZQK8gF6ZqZi6kZ6_d11`, anchored at KEL sn 193 |
+| Record | `lineage/supplementary-evidence-enactment-4.2.json` |
+| Pins | engagement companion `companions/engagement-companion.md` (sha256 `089523bd…aad95`) — discharging §3's companion-pin commitment (#43); the published evidence set at commit `1339afa` — all sixteen manifest legs + census subjects from a clean checkout (#76) |
+| Confession | cures the sn 191 ceremony's omission (companion unmerged at ratification, no digest pinned; confessed on #1 before found); adds, supersedes nothing; edition prospectivity unchanged |
+
 ## Custos 4.0 → 4.1 succession
 
 | Fact | Value |
