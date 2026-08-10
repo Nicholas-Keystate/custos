@@ -1,11 +1,14 @@
 # The Self-Evaluated Foundation
 ## A teleological history of the idea Custos runs toward
 
-**Status:** DRAFT v0.2 (2026-08-02), published to the custos
+**Status:** DRAFT v0.3 (2026-08-10), published to the custos
 companions shelf FOR ADVERSARIAL REVIEW — the claim in §V.6 is
 gated on surviving an external double-refutation pass, and this
 publication exists to feed that pass: refute it if you can.
-Informative throughout; the kernel rules on any divergence.
+v0.3 adds the law strand's three-seat deepening (Elster; Ostrom
+1992; Nash's introspective tower) and residue ledger item 7
+(the deterrence wager). Informative throughout; the kernel
+rules on any divergence.
 
 **Provenance:** four parallel research agents (Opus-class),
 2026-08-01/02, each covering one strand under citation discipline:
@@ -790,6 +793,36 @@ row 11:
    microcode. The bootstrappable-builds and DDC postures are the
    named future confessions for that floor; they are not yet
    articles.
+7. **The deterrence premise is a wager, not a theorem.** Every
+   accountability claim above runs through an equilibrium
+   premise: that a controller facing likely detection and
+   portable proof does not equivocate. The loop proves none of
+   this. What the architecture contributes is narrower and
+   real: punishment *coordination* is solved — duplicity proof
+   is portable and non-repudiable, so every counterparty's
+   response fires without a coordinator. Two quantities remain
+   premises. **p** — the probability a deviation is observed at
+   all: watchers are voluntary, replay is costly, and no
+   rational stranger re-folds; both external review panels
+   independently convicted this (a warranty economy resting on
+   "a re-folding population that does not yet exist"). **V** —
+   what a convicted deviator loses: a fresh identifier loses
+   nothing. Elster names the regress (the promise enforced by
+   the promisor); Ostrom 1992 shows the sword can be held
+   inside; Certificate Transparency shows confession alone does
+   not fund the sword — RFC 6962's gossip clause was confessed
+   and the organ still died. So this entry carries a
+   requirement, not only a confession: a regime leaning on
+   deterrence must charter and fund its monitoring organ (the
+   vLEI's QVI regime is the standing proof that charter-and-fee
+   suffices, without bonds or slashing) or must confess p ≈ 0
+   for its threat model. Unlike every ancestor here, this
+   lineage can measure its own premise: each detection and each
+   realized consequence is a sealed act, so p and V are
+   time-series readable from the log, not constants asserted
+   about it. Formalizing the equilibrium itself (monitoring
+   topology, watcher sufficiency, pricing) is arena work
+   outside this document; no equilibrium claim is made.
 
 ## V.6 The claim, and its falsifier
 
