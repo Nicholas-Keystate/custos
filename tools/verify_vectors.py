@@ -40,7 +40,10 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 LEDGER = ROOT / "vectors" / "ledger.json"
 
-ID_RE = re.compile(r"^V-[A-Z0-9]{2,4}-\d{2}$")
+# The suffix admits an optional letter so a contributed family can carry
+# its own sub-series (W for the watcher law, V for vacancy, O for office)
+# without renaming ids that have already been cited in review.
+ID_RE = re.compile(r"^V-[A-Z0-9]{2,6}-[A-Z]?\d{2}$")
 REQUIRED = ("id", "family", "owed_by", "input", "expect", "grade", "status")
 GRADES = {"semantic", "byte"}
 STATUSES = {"specifiable", "held"}

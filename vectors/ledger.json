@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "title": "Custos conformance vector ledger",
-  "revision": "v3, 2026-08-08 — supplement 5 released; concrete cases begin",
+  "revision": "v4, 2026-08-10 — the arc families integrated; R19 correction applied",
   "note": "The corpus, not the harness. Each entry states an input shape and the expected result, at the grade the ratified law can currently carry. A disagreement about an expected value is a finding against the specification, never a bug report against an engine. Re-anchored to the ratified 4.2 edition on 2026-08-07; entries assigned by a ruling keep that ruling as their authority and carry the ratified site where the ruled text now lives.",
   "grade_discipline": {
     "rule": "R5, as clarified by supplement 1 C-1",
@@ -96,7 +96,7 @@
       "expect": "Both fold to the same result. This vector is held to the extent R19 may collapse the tracks; it is written so it stays valid under either outcome.",
       "grade": "semantic",
       "status": "held",
-      "held_on": "R19, itself held on #55 and #56",
+      "held_on": "R19, which is unruled rather than merely held: it was appended the day the record drafted and fell between the sittings, so no ruling waits on #55/#56 feasibility to be applied. Corrected 2026-08-10 per the docket.",
       "predecessor_site": "section 17, L2288-2289"
     },
     {
@@ -1466,7 +1466,7 @@
       "input": "A transfer of registry control that a committed successor-regime clause anticipated, with the clause's signer and evidence conditions met inside its horizon.",
       "expect": "Admitted, and judged as an enactment under the law in force at its position.",
       "grade": "semantic",
-      "status": "specifiable",
+      "status": "held",
       "case": {
         "given": {
           "covenant": "C-rot-01",
@@ -1483,7 +1483,8 @@
           "value": "admitted",
           "judged_as": "enactment"
         }
-      }
+      },
+      "held_on": "the upstream registry-transfer form. These design against the shape `xfr` is expected to take; it is roadmap-only at the pinned checkout, so the vectors stand on the substrate's permissiveness rather than on an exhibited form — the R19 posture, and a different hold from the recovery-seam hold supplement 5 released."
     },
     {
       "id": "V-S5B-02",
@@ -1496,7 +1497,7 @@
       "input": "A transfer of registry control that no committed clause authorizes.",
       "expect": "Refused, fail-loud. No clause, no admission.",
       "grade": "semantic",
-      "status": "specifiable",
+      "status": "held",
       "case": {
         "given": {
           "covenant": "C-rot-01",
@@ -1515,7 +1516,326 @@
             "seal_kind": "clause violation"
           }
         }
-      }
+      },
+      "held_on": "the upstream registry-transfer form. These design against the shape `xfr` is expected to take; it is roadmap-only at the pinned checkout, so the vectors stand on the substrate's permissiveness rather than on an exhibited form — the R19 posture, and a different hold from the recovery-seam hold supplement 5 released."
+    },
+    {
+      "id": "V-S39-W01",
+      "family": "conviction",
+      "owed_by": {
+        "source": "supplement-3",
+        "ruling": "S3-9 (general-invocation law)"
+      },
+      "ratified_site": "not carried — successor obligation; the ratified edition does not carry the S3-9 eighth/ninth item text",
+      "input": "An unchartered courier presents an exhibit-grade conviction package against a governed domain.",
+      "expect": "Convicted. The package self-authenticates and the courier's identity is never evaluated.",
+      "grade": "semantic",
+      "status": "specifiable",
+      "case": {
+        "given": {
+          "presenter": "X1",
+          "presenter_charter": null,
+          "subject": "G1",
+          "position": "p22",
+          "package": {
+            "id": "K1",
+            "signed_act": "G1 act at p22",
+            "covenant_said": "C-cov-01",
+            "contradiction_derivable": true
+          }
+        },
+        "then": {
+          "outcome": "convicted",
+          "presenter_standing_evaluated": false,
+          "note": "A fold that weighs X1's standing before consuming K1 does not conform."
+        }
+      },
+      "contributed_by": "the ratifying authority, on PR #72, 2026-08-10"
+    },
+    {
+      "id": "V-S39-W02",
+      "family": "refusal",
+      "owed_by": {
+        "source": "supplement-3",
+        "ruling": "S3-9 (general-invocation law)"
+      },
+      "ratified_site": "not carried — successor obligation; the ratified edition does not carry the S3-9 eighth/ninth item text",
+      "input": "A chartered watcher presents a package missing the covenant citation it claims is violated.",
+      "expect": "Refused, fail-loud, grounds named. A charter confers an obligation to look, never evidentiary weight.",
+      "grade": "semantic",
+      "status": "specifiable",
+      "case": {
+        "given": {
+          "presenter": "W1",
+          "presenter_charter": "obligated looker, named in G1's founding law",
+          "subject": "G1",
+          "position": "p23",
+          "package": {
+            "signed_act": "present",
+            "covenant_said": null,
+            "contradiction_derivable": false
+          }
+        },
+        "then": {
+          "value": "refuse",
+          "fail_loud": true,
+          "refusal_grounds": {
+            "kind": "defective package",
+            "seal_kind": "clause violation"
+          },
+          "note": "A fold that admits the package on W1's charter does not conform."
+        }
+      },
+      "contributed_by": "the ratifying authority, on PR #72, 2026-08-10"
+    },
+    {
+      "id": "V-S39-W03",
+      "family": "boundary",
+      "owed_by": {
+        "source": "supplement-3",
+        "ruling": "S3-9 (obligated lookers invoked only generally)"
+      },
+      "ratified_site": "not carried — successor obligation; the ratified edition does not carry the S3-9 eighth/ninth item text",
+      "input": "A proposed clause naming one specific watcher as the required source of breach findings.",
+      "expect": "Rejected at admission: watcher obligations commit specifically, invocation is general.",
+      "grade": "semantic",
+      "status": "specifiable",
+      "case": {
+        "given": {
+          "proposed_clause": {
+            "id": "C-obs-01",
+            "text": "breach findings are admissible only when presented by watcher W1"
+          },
+          "domain": "G1"
+        },
+        "then": {
+          "outcome": "rejected-at-admission",
+          "note": "Naming a required source ranks frames and creates a capture surface. Any bearer of a valid package invokes."
+        }
+      },
+      "contributed_by": "the ratifying authority, on PR #72, 2026-08-10"
+    },
+    {
+      "id": "V-S39-V01",
+      "family": "transition",
+      "owed_by": {
+        "source": "supplement-3",
+        "ruling": "S3-9 (governed vacancy; occupancy carries taint)"
+      },
+      "ratified_site": "not carried — successor obligation; the ratified edition does not carry the S3-9 eighth/ninth item text",
+      "input": "A deposed occupant, still holding the keys, signs a governance act after the conviction position.",
+      "expect": "Defeated on ground evaporation. Acts at and before the conviction stand and bind the office.",
+      "grade": "semantic",
+      "status": "specifiable",
+      "case": {
+        "given": {
+          "domain": "G1",
+          "conviction_at": "p30",
+          "act": {
+            "signer": "deposed occupant",
+            "position": "p31",
+            "keys_held": true
+          }
+        },
+        "then": {
+          "value": "defeated",
+          "reason": "ground-evaporation",
+          "prior_acts": "p29 and before stand and bind the office",
+          "note": "The voice was deposed at p30 and position ordering is committed."
+        }
+      },
+      "contributed_by": "the ratifying authority, on PR #72, 2026-08-10"
+    },
+    {
+      "id": "V-S39-V02",
+      "family": "transition",
+      "owed_by": {
+        "source": "supplement-3",
+        "ruling": "S3-9 (caretaker law, committed at birth)"
+      },
+      "ratified_site": "not carried — successor obligation; the ratified edition does not carry the S3-9 eighth/ninth item text",
+      "input": "A caretaker acts inside its birth-committed enumerated powers during a vacancy.",
+      "expect": "Affirmed, attributed to the caretaker role and never to a new occupancy.",
+      "grade": "semantic",
+      "status": "specifiable",
+      "case": {
+        "given": {
+          "domain": "G1",
+          "vacancy_opened_at": "p30",
+          "caretaker": "Q1",
+          "powers": "O1",
+          "act": {
+            "kind": "renew witness configuration",
+            "within_O1": true
+          }
+        },
+        "then": {
+          "value": "affirmed",
+          "attribution": "caretaker role within the vacancy"
+        }
+      },
+      "contributed_by": "the ratifying authority, on PR #72, 2026-08-10"
+    },
+    {
+      "id": "V-S39-V03",
+      "family": "transition",
+      "owed_by": {
+        "source": "supplement-3",
+        "ruling": "S3-9 (caretaker law)"
+      },
+      "ratified_site": "not carried — successor obligation; the ratified edition does not carry the S3-9 eighth/ninth item text",
+      "input": "A caretaker acts outside its enumerated powers during the same vacancy.",
+      "expect": "Defeated: the vacancy clauses bound the provisional voice, and legislation awaits an occupant.",
+      "grade": "semantic",
+      "status": "specifiable",
+      "case": {
+        "given": {
+          "domain": "G1",
+          "vacancy_opened_at": "p30",
+          "caretaker": "Q1",
+          "powers": "O1",
+          "act": {
+            "kind": "amend a covenant clause of founding law",
+            "within_O1": false
+          }
+        },
+        "then": {
+          "value": "defeated",
+          "reason": "caretaker beyond enumerated scope"
+        }
+      },
+      "contributed_by": "the ratifying authority, on PR #72, 2026-08-10"
+    },
+    {
+      "id": "V-S39-O01",
+      "family": "covenant",
+      "owed_by": {
+        "source": "supplement-3",
+        "ruling": "S3-9 (office-succession; ceremony and freshness covenant)"
+      },
+      "ratified_site": "not carried — successor obligation; the ratified edition does not carry the S3-9 eighth/ninth item text",
+      "input": "A medium-valid rotation whose committed digests match, where a freshness clause was never re-derived after a quorum member rotated.",
+      "expect": "Convicted under the freshness covenant. This is the vector that proves a covenant sees what the medium cannot.",
+      "grade": "semantic",
+      "status": "specifiable",
+      "case": {
+        "given": {
+          "domain": "G1",
+          "rotation_at": "p40",
+          "n_digests": "committed at p12 by quorum ceremony",
+          "digests_match": true,
+          "member_rotation": {
+            "member": 3,
+            "at": "a committed position between p12 and p40"
+          },
+          "freshness_clause": "re-derive n within N events of any member rotation",
+          "re_derived": false
+        },
+        "then": {
+          "outcome": "convicted",
+          "branch": "C.ordinary",
+          "clause": "freshness",
+          "note": "The medium admits the rotation; the covenant fires anyway."
+        }
+      },
+      "contributed_by": "the ratifying authority, on PR #72, 2026-08-10"
+    },
+    {
+      "id": "V-S39-O02",
+      "family": "transition",
+      "owed_by": {
+        "source": "supplement-3",
+        "ruling": "S3-9 (capture-succession, the C-succ clause)"
+      },
+      "ratified_site": "not carried — successor obligation; the ratified edition does not carry the S3-9 eighth/ninth item text",
+      "input": "A custodial quorum convenes under the succession clause and incepts a successor citing the conviction.",
+      "expect": "Affirmed: lawful succession on cited ground, and the poisoned occupancy's taint does not travel.",
+      "grade": "semantic",
+      "status": "specifiable",
+      "case": {
+        "given": {
+          "domain": "G1",
+          "conviction_at": "p30",
+          "quorum": "Q1",
+          "clause": "C-succ-01",
+          "successor": "G1-prime",
+          "signatures": "3-of-5 at committed positions",
+          "cites": [
+            "K1",
+            "C-succ-01"
+          ]
+        },
+        "then": {
+          "value": "affirmed",
+          "inherits": "the office's obligations from lawful epochs",
+          "taint_travels": false
+        }
+      },
+      "contributed_by": "the ratifying authority, on PR #72, 2026-08-10"
+    },
+    {
+      "id": "V-S39-O03",
+      "family": "conviction",
+      "owed_by": {
+        "source": "supplement-3",
+        "ruling": "S3-9 (the coup vector)"
+      },
+      "ratified_site": "not carried — successor obligation; the ratified edition does not carry the S3-9 eighth/ninth item text",
+      "input": "Two quorum members, below threshold, incept a claimed successor before any conviction exists, citing a manufactured package.",
+      "expect": "The coup convicts itself: premature succession on underivable ground is exhibit-grade breach by its own signatures.",
+      "grade": "semantic",
+      "status": "specifiable",
+      "case": {
+        "given": {
+          "domain": "G1",
+          "claimed_successor_at": "p28",
+          "conviction_exists": false,
+          "signers": "Q1 members 1 and 2",
+          "threshold_met": false,
+          "package": {
+            "id": "K2",
+            "contradiction_derivable": false
+          }
+        },
+        "then": {
+          "outcome": "self-convicted",
+          "grade": "exhibit",
+          "note": "K2's defect is checkable by any fold, and the incepting members' acts become K-grade evidence against them."
+        }
+      },
+      "contributed_by": "the ratifying authority, on PR #72, 2026-08-10"
+    },
+    {
+      "id": "V-M44-01",
+      "family": "boundary",
+      "owed_by": {
+        "source": "supplement-3",
+        "ruling": "S3-9 (conditional seating: dip-anchored covenant) / keripy #1544, the pre-fix vintage"
+      },
+      "ratified_site": "not carried — successor obligation; the ratified edition does not carry the S3-9 eighth/ninth item text",
+      "input": "A delegated AID claims born-governed status while its inception event carries an empty seal list.",
+      "expect": "The born-governed claim is refused, fail-loud: no knot at inception, no birth-conditioning, adopted-grade at best.",
+      "grade": "semantic",
+      "status": "specifiable",
+      "case": {
+        "given": {
+          "aid": "a delegated AID",
+          "claim": "born-governed",
+          "founding_law_referent": "names a seating covenant the dip SHOULD anchor",
+          "dip_event": {
+            "seal_list": [],
+            "vintage": "pre-#1544 keripy, where delegated inception silently dropped data= seals"
+          }
+        },
+        "then": {
+          "value": "refuse",
+          "fail_loud": true,
+          "grade_admitted": "adopted at best",
+          "fold_states_grade": true,
+          "note": "A fold that infers the seal from the referent's naming of it does not conform."
+        }
+      },
+      "contributed_by": "the ratifying authority, on PR #72, 2026-08-10"
     }
   ],
   "fixture_convention": {
@@ -1527,7 +1847,13 @@
       "Q<n>": "the question asked of the fold",
       "A<n>": "an identifier: a subject, an endorser, an administrator, a delegator",
       "C-<class>-<nn>": "a committed clause, its class naming the defeater class it produces",
-      "<log>:<id>:<sn>-<sn>": "a committed log span — gel, kel or tel, its identifier, its coordinate range"
+      "<log>:<id>:<sn>-<sn>": "a committed log span — gel, kel or tel, its identifier, its coordinate range",
+      "G1": "a governed domain",
+      "Q1": "a custodial quorum, 3-of-5 unless the case says otherwise",
+      "W1": "a chartered watcher — an obligated looker named in founding law",
+      "X1": "an unchartered courier, holding no charter of any kind",
+      "K1": "an exhibit-grade conviction package: a signed act, the covenant SAID it violates, and a contradiction derivable from the two by any fold",
+      "O1": "a caretaker's enumerated power set, committed at the office's birth"
     },
     "then": "The expected value is the finding's full payload under the section 17 predicate, to the depth the case discriminates. A field the case does not name is not constrained by it."
   }

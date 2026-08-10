@@ -156,6 +156,25 @@ empty, while the erratum's boundary is the *sole* defeat with an
 empty subcode, which is where "orders last" and "lexicographic
 minimum" actually part company.
 
+**Contributed entries.** Ten of the cases were drafted by the ratifying
+authority and integrated on 2026-08-10; they carry a `contributed_by`
+field. They discharge the vector debts of supplement 3's eighth and
+ninth composition items — conditional seating, the watcher-invocation
+law, identifier-as-office, governed vacancy — plus one from the
+pre-fix keripy vintage that #1544 repaired. All are successor
+obligations, so each carries `ratified_site: not carried`.
+
+Their identifiers carry a sub-series letter (`W` for the watcher law,
+`V` for vacancy, `O` for office). The id pattern admits it rather than
+renaming ids already cited in review.
+
+**Family, and what it is for.** A family is a filing label, not
+provenance — `owed_by` already records which ruling produced an entry.
+File by what the case discriminates. That is why the three
+office-succession cases sit in three different families: one exercises
+a covenant firing where the medium sees nothing, one lawful succession,
+one self-conviction.
+
 **The case ratchet.** Vectors owed by supplement 4 and supplement 5
 must arrive as cases; the verifier fails the build otherwise. Older
 entries carry a case where one has been written and a sketch where one
