@@ -3,7 +3,7 @@
 - **Reviewer:** Codex (gpt-5.5), high reasoning effort, prompted as a senior DAO/Ethereum/L2-governance adversary
 - **Date:** 2026-07-27
 - **Target:** `spec/custos-4.1.md` (full text)
-- **Purpose:** deliberately import the blockchain/DAO/L2 priors that `keri-doctrine.md` instructs the KERI-native panel to *refuse* — the complementary axis. Raw run: `/tmp/custos-dao-review.log`.
+- **Purpose:** deliberately import the blockchain/DAO/L2 priors that `keri-doctrine.md` instructs the KERI-native panel to *refuse* — the complementary axis. Raw run: NOT PRESERVED — originally written to a temp path and lost before the pin-closure rule; this document is the surviving record (confessed 2026-08-10 during pin-audit cure).
 
 ## Verdict
 
