@@ -17,9 +17,11 @@ exists.
 records that a vector is owed — which authority assigned it, where the
 obligation lives in the ratified edition, what the case must
 discriminate. Where a case has been written, the entry carries it. An
-entry without a `case` is an obligation on the record and not yet a
-vector, and the verifier's closing line reports both counts so the
-difference cannot be read past. Today 18 of 69 entries state a case.
+entry without a `case` used to be an obligation on the record and not
+yet a vector. That gap is closed: 77 of 79 entries state a case, one
+names what its ruling leaves underdetermined, and one is a marker. The
+verifier fails the build if an entry is none of those three, so nothing
+can sit unwritten and unexplained again.
 
 `../tools/verify_vectors.py` proves the ledger's integrity — never an
 engine's conformance.
@@ -175,12 +177,20 @@ office-succession cases sit in three different families: one exercises
 a covenant firing where the medium sees nothing, one lawful succession,
 one self-conviction.
 
-**The case ratchet.** Vectors owed by supplement 4 and supplement 5
-must arrive as cases; the verifier fails the build otherwise. Older
-entries carry a case where one has been written and a sketch where one
-has not. The ratchet is forward-only on purpose — retrofitting 51
-sketches at once would produce 51 guesses, and each one is worth writing
-deliberately against the ruling that assigned it.
+**The case ratchet.** Every entry either states a case, says what its
+ruling leaves underdetermined, or is a marker; the verifier enforces
+the trichotomy. Vectors owed by supplement 4 and supplement 5
+additionally must arrive as cases rather than as open questions.
+
+**What a case does when its ruling determines less than the case
+needs.** It says so in its `then` note rather than inventing the
+remainder. `V-R01-01` fixes the second finding's value by giving the
+requirement space no other unexamined check, and records that the value
+follows from R2 rather than from R1 — the structural claim is what R1
+determines and what the vector tests. Where the shortfall reaches the
+case itself, the entry carries `underdetermined` and stays unwritten:
+`V-S17-02` cannot state which two expressions of one governance act are
+compared until R19 is ruled, so it does not pretend to.
 
 One entry is held. The equivalence vector for the two event-form
 tracks waits on R19, which waits on #55 and #56. The rotation-covenant

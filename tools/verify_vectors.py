@@ -22,7 +22,10 @@ engine's conformance. Checks (all stdlib, run from the repo root):
      unratified (R5's interim discipline, tracker #57);
   7. every vector owed by a case-required source states a concrete
      case — inputs and expected value, not a description of the
-     case's shape.
+     case's shape;
+  8. every entry without a case is either a marker, a held entry, or
+     names what its ruling leaves underdetermined. An entry may not
+     be silently unwritten.
 
 A note on what this file does not prove. A ledger entry without a
 `case` records that a vector is owed; it is not itself a vector. The
@@ -172,6 +175,20 @@ def main():
     check("specifiable vectors carry no hold", not stray, ", ".join(stray))
 
     # 6 — R5's interim grade discipline.
+    uncased = [
+        v["id"]
+        for v in vectors
+        if not v.get("case")
+        and v.get("kind") != "marker"
+        and not v.get("underdetermined")
+        and v.get("status") != "held"
+    ]
+    check(
+        "every entry without a case is a marker, held, or says what is underdetermined",
+        not uncased,
+        ", ".join(uncased),
+    )
+
     missing_case = [
         v["id"]
         for v in vectors
@@ -196,14 +213,18 @@ def main():
 
     held = [v for v in vectors if v.get("status") == "held"]
     cased = [v for v in vectors if v.get("case")]
+    markers = [v for v in vectors if v.get("kind") == "marker"]
+    undet = [v for v in vectors if v.get("underdetermined")]
     print(
-        f"\n{len(vectors)} vectors across {len(families)} families; "
+        f"\n{len(vectors)} entries across {len(families)} families; "
         f"{len(vectors) - len(held)} specifiable, {len(held)} held."
     )
     print(
-        f"{len(cased)} state a concrete case; {len(vectors) - len(cased)} are still "
-        f"sketches — an obligation recorded, the case not yet written."
+        f"{len(cased)} state a concrete case; {len(undet)} say what a ruling leaves "
+        f"open; {len(markers)} marker. Nothing is merely a sketch."
     )
+    for v in undet:
+        print(f"  open: {v['id']} — {v['underdetermined'][:96]}")
 
 
 def finish():

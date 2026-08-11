@@ -83,7 +83,29 @@
       "expect": "Every permutation folds to the same Constitution. A fold result that varies with arrival order, storage order or any ambient sequence does not conform.",
       "grade": "semantic",
       "status": "specifiable",
-      "predecessor_site": "section 17, L2208-2211"
+      "predecessor_site": "section 17, L2208-2211",
+      "case": {
+        "given": {
+          "stream": "one governance stream over gel:A1:0-40",
+          "presentations": [
+            {
+              "order": "as anchored"
+            },
+            {
+              "order": "reversed"
+            },
+            {
+              "order": "interleaved by log"
+            }
+          ],
+          "spans_identical_across_presentations": true
+        },
+        "then": {
+          "constitutions": "identical across all three presentations",
+          "fold_result_depends_on_arrival_order": false,
+          "note": "The confluence family. An implementation whose result varies with arrival order, storage order or any ambient sequence does not conform, and this is the exhibit for the fourth axiom's order face."
+        }
+      }
     },
     {
       "id": "V-S17-02",
@@ -97,7 +119,8 @@
       "grade": "semantic",
       "status": "held",
       "held_on": "R19, which is unruled rather than merely held: it was appended the day the record drafted and fell between the sittings, so no ruling waits on #55/#56 feasibility to be applied. Corrected 2026-08-10 per the docket.",
-      "predecessor_site": "section 17, L2288-2289"
+      "predecessor_site": "section 17, L2288-2289",
+      "underdetermined": "Whether both event-form tracks survive. R19 is unruled, not merely held, so the case cannot state which two expressions of one governance act are being compared. Written when R19 is ruled; the entry stays a sketch rather than guessing a track structure."
     },
     {
       "id": "V-S17-03",
@@ -110,7 +133,20 @@
       "expect": "Must-reject.",
       "grade": "semantic",
       "status": "specifiable",
-      "predecessor_site": "section 17, L2289-2296"
+      "predecessor_site": "section 17, L2289-2296",
+      "case": {
+        "given": {
+          "event": {
+            "log": "gel:A1",
+            "sn": 12,
+            "identity": "assigned by the producer, not self-addressing"
+          }
+        },
+        "then": {
+          "outcome": "must-reject",
+          "note": "A non-saidive event identity breaks the derivation every citation of that event depends on."
+        }
+      }
     },
     {
       "id": "V-S17-04",
@@ -123,7 +159,24 @@
       "expect": "Must-reject. Section 9's anchor-grade rule makes the designated classes establishment-anchored.",
       "grade": "semantic",
       "status": "specifiable",
-      "predecessor_site": "section 17, L2289-2296"
+      "predecessor_site": "section 17, L2289-2296",
+      "case": {
+        "given": {
+          "act": {
+            "class": "revocation of a seat",
+            "designated_class": true
+          },
+          "anchored_in": {
+            "event_kind": "interaction",
+            "log": "kel:A1",
+            "sn": 9
+          }
+        },
+        "then": {
+          "outcome": "must-reject",
+          "note": "The designated classes anchor in establishment events, where displacement forks the lineage and the fork is duplicity evident. An interaction anchor makes survival a promise of the recovery policy rather than a property of the log."
+        }
+      }
     },
     {
       "id": "V-S17-05",
@@ -136,7 +189,19 @@
       "expect": "Must-reject.",
       "grade": "semantic",
       "status": "specifiable",
-      "predecessor_site": "section 17, L2289-2296"
+      "predecessor_site": "section 17, L2289-2296",
+      "case": {
+        "given": {
+          "stream": "governance events placed under both event-form tracks",
+          "founding_law": {
+            "commits_placement_law": false
+          }
+        },
+        "then": {
+          "outcome": "must-reject",
+          "note": "Both-track placement without committed placement law leaves which track governs underivable, which is the ambient input the fourth axiom forbids."
+        }
+      }
     },
     {
       "id": "V-S17-06",
@@ -149,7 +214,19 @@
       "expect": "Must-reject. Under R15 this is the same refusal as an underivable GEL membership: designation and membership fail loud or not at all.",
       "grade": "semantic",
       "status": "specifiable",
-      "predecessor_site": "section 17, L2289-2296"
+      "predecessor_site": "section 17, L2289-2296",
+      "case": {
+        "given": {
+          "stream": {
+            "initial_track": "underivable from the applicable founding-law referent",
+            "ilk_table": "underivable from the same referent"
+          }
+        },
+        "then": {
+          "outcome": "must-reject",
+          "note": "Under R15 this is the same refusal as an underivable GEL membership: designation and membership fail loud or not at all."
+        }
+      }
     },
     {
       "id": "V-S17-07",
@@ -162,7 +239,20 @@
       "expect": "Must-reject.",
       "grade": "semantic",
       "status": "specifiable",
-      "predecessor_site": "section 17, L2289-2296"
+      "predecessor_site": "section 17, L2289-2296",
+      "case": {
+        "given": {
+          "migration": {
+            "from_grammar": "g1",
+            "to_grammar": "g2",
+            "admitted_under_g1": false
+          }
+        },
+        "then": {
+          "outcome": "must-reject",
+          "note": "A grammar migration is admitted by the grammar previously in force or not at all, which is what keeps the migration itself replayable."
+        }
+      }
     },
     {
       "id": "V-S17-08",
@@ -175,7 +265,25 @@
       "expect": "Must-reject.",
       "grade": "semantic",
       "status": "specifiable",
-      "predecessor_site": "section 17, L2289-2296"
+      "predecessor_site": "section 17, L2289-2296",
+      "case": {
+        "given": {
+          "use": {
+            "form": "compact",
+            "gates_stood": [
+              "gate one",
+              "gate two"
+            ],
+            "gates_unstood": [
+              "gate three"
+            ]
+          }
+        },
+        "then": {
+          "outcome": "must-reject",
+          "note": "The gates are ordered and the form is unavailable while any of them remains unstood. Section 19 states the same boundary from its own side."
+        }
+      }
     },
     {
       "id": "V-S17-09",
@@ -188,7 +296,34 @@
       "expect": "The first yields committed evidence and a rule-governed judgment. The second fires refusal. The line is drawn at the grammar grain, not at the ilk.",
       "grade": "semantic",
       "status": "specifiable",
-      "predecessor_site": "section 17, L2298-2300"
+      "predecessor_site": "section 17, L2298-2300",
+      "case": {
+        "given": {
+          "pair": [
+            {
+              "case": "an unrecognized governance ilk under a derivable grammar",
+              "grammar_derivable": true,
+              "ilk_recognized": false
+            },
+            {
+              "case": "an ilk whose grammar cannot be derived",
+              "grammar_derivable": false
+            }
+          ]
+        },
+        "then": {
+          "first": {
+            "outcome": "committed evidence and a rule-governed judgment",
+            "value": "pending"
+          },
+          "second": {
+            "outcome": "refuse",
+            "fail_loud": true
+          },
+          "line_drawn_at": "the grammar grain, never the ilk",
+          "note": "The discriminating pair. An engine that refuses the first has drawn the line at the ilk; an engine that judges the second has completed a grammar by convention."
+        }
+      }
     },
     {
       "id": "V-S17-10",
@@ -201,7 +336,26 @@
       "expect": "The enactment and its consumption are derivable. External recognition is not presumed by any vector, and under S3-8 the stewardship surface is stated rather than assumed.",
       "grade": "semantic",
       "status": "specifiable",
-      "predecessor_site": "section 17, L2300-2302"
+      "predecessor_site": "section 17, L2300-2302",
+      "case": {
+        "given": {
+          "reservation": {
+            "genus": "g-custos",
+            "enacted_in": "gel:A1:14",
+            "consumed_as": "committed evidence"
+          },
+          "external_recognition": {
+            "claimed": false,
+            "stewarded_elsewhere": true
+          }
+        },
+        "then": {
+          "enactment_derivable": true,
+          "consumption_derivable": true,
+          "external_recognition_presumed": false,
+          "note": "What is testable is that the reservation was enacted and consumed. Recognition by an external steward is a real dependency and no vector may presume it — S3-8 states the stewardship surface rather than assuming it away."
+        }
+      }
     },
     {
       "id": "V-R01-01",
@@ -1543,7 +1697,39 @@
       "expect": "Must-diverge from the ruled reading. The weighted-threshold satisfaction shape is shared; the slot judgment is this document's fold question and does not transfer from the substrate.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "§9 composed-evidence paragraph (repair-census D1)"
+      "ratified_site": "§9 composed-evidence paragraph (repair-census D1)",
+      "case": {
+        "given": {
+          "edge_group": {
+            "operator": "weighted threshold",
+            "slots": [
+              {
+                "slot": 1,
+                "weight": "1/2",
+                "references": "an endorsement ACDC",
+                "standing_appraised": false
+              },
+              {
+                "slot": 2,
+                "weight": "1/2",
+                "references": "an endorsement ACDC",
+                "standing_appraised": false
+              }
+            ]
+          },
+          "evaluator": "the substrate's signing-threshold evaluator, fed the slots as verified-signature indices",
+          "appraisal_performed": {
+            "schema": false,
+            "issuer_qualification": false,
+            "registry_state": false,
+            "disclosure_state": false
+          }
+        },
+        "then": {
+          "outcome": "must-diverge from the ruled reading",
+          "note": "The satisfaction shape is shared and the slot judgment is not. An engine that reaches a verdict here has computed the arithmetic over slots whose standing was never appraised, which is the discharge S3-1 says the substrate evaluator does not perform."
+        }
+      }
     },
     {
       "id": "V-S33-01",
@@ -1556,7 +1742,46 @@
       "expect": "Must-affirm membership. The verifier recomputes the clause's membership in the aggregate without seeing its siblings, which remain provably present and unreadable.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "not carried — S3-3 structure ruled, carriage to the encoding round"
+      "ratified_site": "not carried — S3-3 structure ruled, carriage to the encoding round",
+      "case": {
+        "given": {
+          "constitution_head": {
+            "form": "an aggregate commitment over per-clause sub-blocks",
+            "sub_blocks": [
+              {
+                "clause": "C-cov-01",
+                "said": "S1",
+                "blinding_factor": "u1"
+              },
+              {
+                "clause": "C-cov-02",
+                "said": "S2",
+                "blinding_factor": "u2"
+              },
+              {
+                "clause": "C-cov-03",
+                "said": "S3",
+                "blinding_factor": "u3"
+              }
+            ],
+            "anchored": true
+          },
+          "disclosed": [
+            {
+              "clause": "C-cov-01",
+              "said": "S1",
+              "blinding_factor": "u1"
+            }
+          ]
+        },
+        "then": {
+          "outcome": "must-affirm",
+          "membership_recomputed": true,
+          "siblings_seen": false,
+          "undisclosed_clauses": "provably present and unreadable",
+          "note": "Revealing a clause with its factor proves membership in the anchored aggregate. A monolithic SAID admits no partial verification, which is the defect this structure repairs."
+        }
+      }
     },
     {
       "id": "V-S33-02",
@@ -1569,7 +1794,25 @@
       "expect": "Must-refuse.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "not carried — S3-3 structure ruled, carriage to the encoding round"
+      "ratified_site": "not carried — S3-3 structure ruled, carriage to the encoding round",
+      "case": {
+        "given": {
+          "constitution_head": {
+            "form": "an aggregate commitment over per-clause sub-blocks",
+            "anchored": true
+          },
+          "offered": {
+            "clause": "C-forged-01",
+            "said": "S9",
+            "blinding_factor": "u9",
+            "member_of_anchored_aggregate": false
+          }
+        },
+        "then": {
+          "outcome": "must-refuse",
+          "note": "The forged sibling does not recompute into the anchored aggregate. This is the pair to V-S33-01: affirm the member, refuse the forgery, and an engine that does the first without the second proves nothing."
+        }
+      }
     },
     {
       "id": "V-S33-03",
@@ -1582,7 +1825,36 @@
       "expect": "The three are discriminated rather than conflated. Proving a clause's membership is not proving satisfaction of hidden evidence, and a vector that treats the three as interchangeable reproduces the defect this ruling repairs.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "not carried — S3-3 structure ruled, carriage to the encoding round"
+      "ratified_site": "not carried — S3-3 structure ruled, carriage to the encoding round",
+      "case": {
+        "given": {
+          "one_finding": "F1, defeated, citing clause C-cov-01",
+          "presentations": [
+            {
+              "form": "replay",
+              "carries": "the evidence blocks themselves"
+            },
+            {
+              "form": "warranted",
+              "carries": "a registry-bound warranty citing finding, clause, evidence commitment and lens"
+            },
+            {
+              "form": "proof",
+              "carries": "a cryptographic proof bound to the same commitments"
+            }
+          ]
+        },
+        "then": {
+          "forms_discriminated": true,
+          "forms_interchangeable": false,
+          "proves": {
+            "replay": "the evidence satisfies the clause",
+            "warranted": "a named party attests the finding under a pinned lens",
+            "proof": "the commitments hold, without disclosing what they commit"
+          },
+          "note": "Proving a clause's membership is not proving satisfaction of hidden evidence. An engine that treats the three as one reproduces the conflation the ruling names as the defect. The proof form is admitted and not delivered — the register ruling stands."
+        }
+      }
     },
     {
       "id": "V-S34-01",
@@ -1595,7 +1867,26 @@
       "expect": "Must-fail credential verification, before any fold runs. The check is evidence the fold consumes, never a verdict, so the two currents stay unmerged.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "not carried — S3-4 seat-credential edge discipline, successor obligation"
+      "ratified_site": "not carried — S3-4 seat-credential edge discipline, successor obligation",
+      "case": {
+        "given": {
+          "warranty": {
+            "warrantor": "A6",
+            "edge_to": "A6's seat credential",
+            "operator": "DI2I"
+          },
+          "seat_credential": {
+            "exists": false
+          },
+          "domain_registry": "A3"
+        },
+        "then": {
+          "outcome": "must-fail credential verification",
+          "checked_before": "any fold runs",
+          "check_is": "evidence the fold consumes, never a verdict",
+          "note": "The DI2I operator requires the issuer to be the pointed-to node's issuee or a delegated AID thereof, so an unseated warrantor's warranty fails edge validation in the existing toolchain. The two currents stay unmerged because the check produces evidence rather than a finding."
+        }
+      }
     },
     {
       "id": "V-S35-01",
@@ -1608,7 +1899,31 @@
       "expect": "Must-convict from the KEL bytes alone, derivable by any holder. Witness configuration is a governed object class.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "not carried — S3-5 charter binding, successor obligation"
+      "ratified_site": "not carried — S3-5 charter binding, successor obligation",
+      "case": {
+        "given": {
+          "charter_floor": {
+            "stratum": "S1",
+            "minimum_threshold": 3,
+            "set_stability": "no more than one witness replaced per rotation"
+          },
+          "establishment_event": {
+            "log": "kel:A2",
+            "sn": 7,
+            "new_witness_state": {
+              "wits": 4,
+              "toad": 2
+            }
+          }
+        },
+        "then": {
+          "outcome": "must-convict",
+          "derivable_from": "the KEL bytes alone",
+          "derivable_by": "any holder",
+          "convicting_field": "toad, below the chartered floor of 3",
+          "note": "Witness designation and threshold are already committed key state, so binding the charter to those fields makes breach computable rather than asserted. Witness configuration is thereby a governed object class."
+        }
+      }
     },
     {
       "id": "V-S35-02",
@@ -1621,7 +1936,46 @@
       "expect": "Pending, whose typed requirement set enumerates the missing receipt indices. The cone root carries a typed authentication grade: controller threshold verified, witness roster identified, receipt threshold satisfied, establishment coordinate cited.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "not carried — S3-5 authentication grade, successor obligation"
+      "ratified_site": "not carried — S3-5 authentication grade, successor obligation",
+      "case": {
+        "given": {
+          "cone_root": {
+            "controller_threshold": "verified",
+            "witness_roster": "identified",
+            "receipt_threshold": {
+              "required": 3,
+              "satisfied": 2
+            },
+            "establishment_coordinate": "kel:A2:5",
+            "missing_receipt_indices": [
+              2
+            ]
+          }
+        },
+        "then": {
+          "value": "pending",
+          "requirement_set": [
+            {
+              "subject": "kel:A2:5",
+              "kind": "receipt",
+              "citing_clauses": [
+                "C-avail-01"
+              ],
+              "species": "absent",
+              "missing_indices": [
+                2
+              ]
+            }
+          ],
+          "authentication_grade": {
+            "controller_threshold": true,
+            "witness_roster": true,
+            "receipt_threshold": false,
+            "establishment_coordinate": true
+          },
+          "note": "Receipts prove receipt, not serving. The grade is typed so a consumer can see which of the four the root actually carries, and the pending enumerates the indices rather than reporting a bare shortfall."
+        }
+      }
     },
     {
       "id": "V-S37-01",
@@ -1634,7 +1988,26 @@
       "expect": "Admissible in E as committed evidence. A judge's or juror's determination over it is replayable evidence and never a fold replacement.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "not carried — S3-7 typed observation evidence, successor obligation"
+      "ratified_site": "not carried — S3-7 typed observation evidence, successor obligation",
+      "case": {
+        "given": {
+          "evidence": {
+            "kind": "watcher discrepancy report",
+            "schema_typed": true,
+            "committed": true,
+            "reports": "two key states observed for A2 at one coordinate"
+          },
+          "offered_in": "the evidence bundle for Q1"
+        },
+        "then": {
+          "admissible_in_E": true,
+          "judge_determination": {
+            "if_present": "replayable evidence",
+            "replaces_the_fold": false
+          },
+          "note": "Shallow adoption on purpose: the object is typed and admissible, and the acquisition procedure that produced it is expressly open pending upstream maturation. Confessed openness beats invented closure."
+        }
+      }
     },
     {
       "id": "V-S37-02",
@@ -1647,7 +2020,22 @@
       "expect": "Admissible in E as committed evidence. The acquisition procedure that produced it is expressly open, and no vector may presume one.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "not carried — S3-7 typed observation evidence, successor obligation"
+      "ratified_site": "not carried — S3-7 typed observation evidence, successor obligation",
+      "case": {
+        "given": {
+          "evidence": {
+            "kind": "key-state-notice comparison package",
+            "schema_typed": true,
+            "committed": true
+          },
+          "offered_in": "the evidence bundle for Q1"
+        },
+        "then": {
+          "admissible_in_E": true,
+          "acquisition_procedure_presumed": false,
+          "note": "The pair to V-S37-01. No vector may presume an acquisition procedure, because the ruling declines to specify one."
+        }
+      }
     },
     {
       "id": "V-S39-01",
@@ -1660,7 +2048,9 @@
       "expect": "Released. Supplement 5 ruled the recovery seam whole on 2026-08-07 and named itself the release condition, so this entry's hold is discharged and its content is stated as cases at V-S5A-01 through V-S5A-07 and V-S5B-01/02.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "not carried — supplement 5 is the ruling of record; spec text executes at the next edition"
+      "ratified_site": "not carried — supplement 5 is the ruling of record; spec text executes at the next edition",
+      "kind": "marker",
+      "marker_note": "Not a vector and owed no case. This entry records that S3-9's held families were released by supplement 5, and points at the entries that state them. Kept so the hold has a visible discharge."
     },
     {
       "id": "V-E41-01",
@@ -1799,7 +2189,23 @@
       "input": "A membership rule that yields a proper subset of the GEL without firing a refusal.",
       "expect": "Must-reject. Designation and membership fail loud or not at all; a silently shorter GEL is the poison R15 records under partial disclosure.",
       "grade": "semantic",
-      "status": "specifiable"
+      "status": "specifiable",
+      "case": {
+        "given": {
+          "membership_rule": "a rule that resolves GEL membership under partial disclosure",
+          "committed_gel_spans": [
+            "gel:A1:0-20"
+          ],
+          "rule_yields": [
+            "gel:A1:0-12"
+          ],
+          "refusal_fired": false
+        },
+        "then": {
+          "outcome": "must-reject",
+          "note": "A proper subset yielded without a refusal is R15's recorded poison — blinded state strings produce a silently shorter GEL. Designation and membership fail loud or not at all."
+        }
+      }
     },
     {
       "id": "V-S19-01",
@@ -1811,7 +2217,33 @@
       "input": "One warranted receipt bundle presented in both presentation orders.",
       "expect": "Identical bundle identifier and identical fold consequence. This is the equivalence family of gate three.",
       "grade": "semantic",
-      "status": "specifiable"
+      "status": "specifiable",
+      "case": {
+        "given": {
+          "bundle": {
+            "id": "B1",
+            "kind": "warranted receipt bundle",
+            "groups": [
+              "g-receipt",
+              "g-warranty",
+              "g-lens"
+            ]
+          },
+          "presentations": [
+            {
+              "order": "g-receipt, g-warranty, g-lens"
+            },
+            {
+              "order": "g-lens, g-receipt, g-warranty"
+            }
+          ]
+        },
+        "then": {
+          "bundle_identifier": "identical across both presentations",
+          "fold_consequence": "identical across both presentations",
+          "note": "The equivalence family. The residual risk after gates one and two is an implementation faithful to rule and seats but sensitive to arrival, and this is the record that shows it is not."
+        }
+      }
     },
     {
       "id": "V-S19-02",
@@ -1823,7 +2255,22 @@
       "input": "A receipt bundle tampered in one byte, in any group.",
       "expect": "Must-reject.",
       "grade": "semantic",
-      "status": "specifiable"
+      "status": "specifiable",
+      "case": {
+        "given": {
+          "bundle": {
+            "id": "B1",
+            "tamper": {
+              "group": "g-warranty",
+              "bytes_changed": 1
+            }
+          }
+        },
+        "then": {
+          "outcome": "must-reject",
+          "note": "One byte in any group. The bundle identifier is computed over the assembly from outside, so a single-byte change in any group is visible at the identifier."
+        }
+      }
     },
     {
       "id": "V-S19-03",
@@ -1835,7 +2282,22 @@
       "input": "A forged group identity, offered with a between-group permutation.",
       "expect": "Must-reject. Canonical reassembly does not cure a forged group identity, and a vector that lets reassembly cure it is testing the wrong thing.",
       "grade": "semantic",
-      "status": "specifiable"
+      "status": "specifiable",
+      "case": {
+        "given": {
+          "bundle": {
+            "id": "B1",
+            "forged_group_identity": "g-warranty",
+            "offered_with": "a between-group permutation"
+          },
+          "consumer_action": "canonical reassembly before verification"
+        },
+        "then": {
+          "outcome": "must-reject",
+          "reassembly_cures_the_forgery": false,
+          "note": "Canonical reassembly repairs presentation order and nothing else. An engine that reassembles and then accepts has let a permutation launder a forged group identity."
+        }
+      }
     },
     {
       "id": "V-S19-04",
@@ -1847,7 +2309,28 @@
       "input": "The bundle identifier offered where the receipted event's identifier is required, and the converse.",
       "expect": "A conforming consumer SHALL refuse the confusion in both directions. The two digests are different types.",
       "grade": "semantic",
-      "status": "specifiable"
+      "status": "specifiable",
+      "case": {
+        "given": {
+          "pair": [
+            {
+              "offered": "the bundle identifier",
+              "where_required": "the receipted event's identifier"
+            },
+            {
+              "offered": "the receipted event's identifier",
+              "where_required": "the bundle identifier"
+            }
+          ]
+        },
+        "then": {
+          "both": {
+            "outcome": "refuse"
+          },
+          "reason": "the two digests are different types",
+          "note": "Both directions, because an engine that catches one substitution and not its converse has a type confusion in exactly one place. A conforming consumer SHALL refuse the confusion."
+        }
+      }
     },
     {
       "id": "V-S19-05",
@@ -1859,7 +2342,18 @@
       "input": "An unseated ilk in the compact form.",
       "expect": "Must-reject.",
       "grade": "semantic",
-      "status": "specifiable"
+      "status": "specifiable",
+      "case": {
+        "given": {
+          "compact_form": {
+            "ilk": "an ilk with no seat in the governed ilk table"
+          }
+        },
+        "then": {
+          "outcome": "must-reject",
+          "note": "Gate two stands the seats up; an unseated ilk in the compact form is the boundary that shows the gate is real."
+        }
+      }
     },
     {
       "id": "V-S19-06",
@@ -1871,7 +2365,22 @@
       "input": "A compact-form stream whose routes are not isolated as gate three requires.",
       "expect": "Must-reject. Route isolation is a member of the must-reject family in its own right.",
       "grade": "semantic",
-      "status": "specifiable"
+      "status": "specifiable",
+      "case": {
+        "given": {
+          "compact_form": {
+            "routes": [
+              "r-committed-endpoint",
+              "r-open"
+            ],
+            "isolation": "absent — r-open carries compact-form elements"
+          }
+        },
+        "then": {
+          "outcome": "must-reject",
+          "note": "The compact form routes to committed endpoints only. Route isolation is a must-reject member in its own right because the form changes cost, never meaning and never audience."
+        }
+      }
     },
     {
       "id": "V-S19-07",
@@ -1883,7 +2392,28 @@
       "input": "A warranted heavyweight envelope fed to an ungoverned KERI node at the pinned checkout.",
       "expect": "The receipt MUST verify and the stream MUST survive the extra attachment groups. This is the vanilla-passthrough family, at gate grade: an envelope grouping that fails is redesigned until it passes, because compatibility is a gate rather than a hope.",
       "grade": "semantic",
-      "status": "specifiable"
+      "status": "specifiable",
+      "case": {
+        "given": {
+          "envelope": {
+            "kind": "warranted heavyweight",
+            "attachment_groups": [
+              "g-warranty",
+              "g-lens"
+            ]
+          },
+          "consumer": {
+            "kind": "ungoverned KERI node",
+            "checkout": "the pinned reference implementation"
+          }
+        },
+        "then": {
+          "receipt": "MUST verify",
+          "stream": "MUST survive the extra attachment groups",
+          "on_failure": "the envelope grouping is redesigned until it passes",
+          "note": "The vanilla-passthrough family, at gate grade rather than as a hope. This is the vector that keeps governance-blind consumers able to process the stream, which is what the three-voice doctrine promises."
+        }
+      }
     },
     {
       "id": "V-S5A-01",
