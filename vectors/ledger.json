@@ -217,7 +217,52 @@
       "expect": "Two independent findings at two coordinates. The affirmed at its position stands; the later position returns what full discharge over the grown bundle yields. No edge of the transition table is crossed, because nothing mutates.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "§8.3 Inputs (delta 21)"
+      "ratified_site": "§8.3 Inputs (delta 21)",
+      "case": {
+        "given": {
+          "question": "Q1 — may A2 act in the role its grounding credential confers?",
+          "law_head": "L1",
+          "positions": [
+            "p10",
+            "p11"
+          ],
+          "bundle_at_p10": [
+            "gel:A1:0-20",
+            "kel:A2:0-5",
+            "tel:A3:0-3"
+          ],
+          "event_between": {
+            "log": "tel:A3",
+            "sn": 4,
+            "kind": "rev",
+            "subject": "the grounding credential"
+          },
+          "bundle_at_p11": [
+            "gel:A1:0-20",
+            "kel:A2:0-5",
+            "tel:A3:0-4"
+          ]
+        },
+        "then": {
+          "findings": [
+            {
+              "position": "p10",
+              "value": "affirmed"
+            },
+            {
+              "position": "p11",
+              "value": "defeated",
+              "cites": {
+                "class": "authority",
+                "citation": "tel:A3:4"
+              }
+            }
+          ],
+          "edge_crossed": false,
+          "prior_finding_rewritten": false,
+          "note": "The two findings are independent facts at two coordinates. What R1 determines is the structure — a rev event is a new span, so a new bundle, so a new finding, and no transition-table edge is in play. The second value follows from full discharge over the grown bundle under R2, not from R1."
+        }
+      }
     },
     {
       "id": "V-R02-01",
@@ -288,7 +333,58 @@
       "expect": "The ruled reading. Species is the fourth field of both the dedup key and the canonical order, so two elements agreeing at subject, kind and citing clauses but differing in species are two elements and both survive deduplication.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "§8.3 required payloads (delta 21, 22)"
+      "ratified_site": "§8.3 required payloads (delta 21, 22)",
+      "case": {
+        "given": {
+          "question": "Q1",
+          "law_head": "L1",
+          "position": "p1",
+          "bundle": [
+            "gel:A1:0-12"
+          ],
+          "requirement_elements": [
+            {
+              "subject": "A5",
+              "kind": "evidence",
+              "citing_clauses": [
+                "C-crypto-01"
+              ],
+              "species": "absent"
+            },
+            {
+              "subject": "A5",
+              "kind": "evidence",
+              "citing_clauses": [
+                "C-crypto-01"
+              ],
+              "species": "window-open"
+            }
+          ]
+        },
+        "then": {
+          "value": "pending",
+          "requirement_set_cardinality": 2,
+          "requirement_set": [
+            {
+              "subject": "A5",
+              "kind": "evidence",
+              "citing_clauses": [
+                "C-crypto-01"
+              ],
+              "species": "absent"
+            },
+            {
+              "subject": "A5",
+              "kind": "evidence",
+              "citing_clauses": [
+                "C-crypto-01"
+              ],
+              "species": "window-open"
+            }
+          ],
+          "note": "The two elements agree at subject, kind and citing clauses and differ only in species, so a three-field dedup key collapses them to one and a four-field key keeps both. This is finding #27's executed divergence: the engines that collapsed emitted cardinality 1. Species orders by its position in the section 7.2 enumeration, so absent precedes window-open."
+        }
+      }
     },
     {
       "id": "V-R03-02",
@@ -351,7 +447,50 @@
       "expect": "Identical serialized sets for the first pair, since the list is ordered before it is used as a sort component. For the second, the shorter list compares less.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "§8.3 required payloads (delta 22)"
+      "ratified_site": "§8.3 required payloads (delta 22)",
+      "case": {
+        "given": {
+          "question": "Q1",
+          "law_head": "L1",
+          "position": "p1",
+          "bundle": [
+            "gel:A1:0-12"
+          ],
+          "pair_a": {
+            "elements_differ_only_in": "the internal order of one element's citing-clause list",
+            "list_1": [
+              "C-b-02",
+              "C-a-01"
+            ],
+            "list_2": [
+              "C-a-01",
+              "C-b-02"
+            ]
+          },
+          "pair_b": {
+            "elements_differ_only_in": "citing-clause list length, one a prefix of the other",
+            "list_1": [
+              "C-a-01"
+            ],
+            "list_2": [
+              "C-a-01",
+              "C-b-02"
+            ]
+          }
+        },
+        "then": {
+          "pair_a": {
+            "serialized_sets_equal": true,
+            "note": "The list is ordered by its own members before it is used as a sort component, so the two inputs are one element."
+          },
+          "pair_b": {
+            "orders": [
+              "list_1 before list_2"
+            ],
+            "note": "Sequences compare member by member; where neither distinguishes the other within the members they share, the shorter compares less."
+          }
+        }
+      }
     },
     {
       "id": "V-R06-01",
@@ -367,7 +506,57 @@
       "expect": "At the next position, pending, carrying the taint as a typed requirement element of species unresolved-conflict. No fifth codomain value appears. The affirmed stands at its own coordinate.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "§8.4 taint current (delta 26)"
+      "ratified_site": "§8.4 taint current (delta 26)",
+      "case": {
+        "given": {
+          "question": "Q1",
+          "subject": "A2",
+          "law_head": "L1",
+          "positions": [
+            "p5",
+            "p6"
+          ],
+          "finding_at_p5": {
+            "value": "affirmed"
+          },
+          "event_between": {
+            "tier": "registry",
+            "kind": "self-conviction",
+            "of": "A2",
+            "enters_as": "new committed spans"
+          },
+          "bundle_at_p6": [
+            "gel:A1:0-20",
+            "kel:A2:0-5",
+            "tel:A3:0-9"
+          ]
+        },
+        "then": {
+          "findings": [
+            {
+              "position": "p5",
+              "value": "affirmed"
+            },
+            {
+              "position": "p6",
+              "value": "pending",
+              "requirement_set": [
+                {
+                  "subject": "A2",
+                  "kind": "taint",
+                  "citing_clauses": [
+                    "C-law-04"
+                  ],
+                  "species": "unresolved-conflict"
+                }
+              ]
+            }
+          ],
+          "codomain_members_used": 4,
+          "fifth_value_returned": false,
+          "note": "Contested standing is an evidence event with a typed consequence, not a value. The species is section 7.2's own, and its cure is an owned act by the party whose conflict it is — no log growth cures it."
+        }
+      }
     },
     {
       "id": "V-R08-01",
@@ -384,7 +573,31 @@
       "expect": "Both must-reject. The placeholder is same-length in the digest's own field; the external pin's preimage is the file as published.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "§4 reading rule 2 (delta 12)"
+      "ratified_site": "§4 reading rule 2 (delta 12)",
+      "case": {
+        "given": {
+          "pin_a": {
+            "kind": "self-addressing",
+            "placeholder_length": 40,
+            "digest_length": 44,
+            "field": "the digest's own field"
+          },
+          "pin_b": {
+            "kind": "external whole-file",
+            "preimage": "the published file with its header stripped"
+          }
+        },
+        "then": {
+          "pin_a": {
+            "outcome": "must-reject",
+            "note": "The placeholder is same-length in the digest's own field, or the round trip does not reproduce the digest."
+          },
+          "pin_b": {
+            "outcome": "must-reject",
+            "note": "The preimage is the file as published, header included. A pin whose preimage is not stated is decoration."
+          }
+        }
+      }
     },
     {
       "id": "V-R09-01",
@@ -400,7 +613,34 @@
       "expect": "Duplicity conviction. The fold makes no selection between them, and no vector may present the pair as an input to a choice. Survival is settled below the fold, at bundle assembly, by the medium's own policy.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "§16 wall 7 (delta 39)"
+      "ratified_site": "§16 wall 7 (delta 39)",
+      "case": {
+        "given": {
+          "question": "Q1",
+          "law_head": "L1",
+          "position": "p1",
+          "bundle": [
+            "gel:A1:0-20",
+            "kel:A2:0-5"
+          ],
+          "competitors": [
+            {
+              "coordinate": "kel:A2:3",
+              "version": "v-a"
+            },
+            {
+              "coordinate": "kel:A2:3",
+              "version": "v-b"
+            }
+          ]
+        },
+        "then": {
+          "value": "self-convicted",
+          "kind": "duplicity",
+          "selection_performed": false,
+          "note": "Two versions at one coordinate entering the bundle convict as duplicity. The fold makes no choice between them and no vector may present the pair as an input to one; survival is settled below the fold, at bundle assembly, by the medium's own policy."
+        }
+      }
     },
     {
       "id": "V-R10-01",
@@ -468,7 +708,34 @@
       "expect": "Both refuse, and the refusal is derivable from the triple rather than read off a record. The vector asserts determinism over the decision and asserts nothing about a committed refusal-record form, which section 15's second openness question leaves open.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "abstract replay sentence (delta 2)"
+      "ratified_site": "abstract replay sentence (delta 2)",
+      "case": {
+        "given": {
+          "invocation": "Q1 at an uncommitted composition seam",
+          "law_head": "L1",
+          "position": "p1",
+          "bundle": [
+            "gel:A1:0-12"
+          ],
+          "verifiers": [
+            "V-a",
+            "V-b"
+          ],
+          "triple_identical_for_both": true
+        },
+        "then": {
+          "both_verifiers": {
+            "value": "refuse",
+            "refusal_grounds": {
+              "kind": "clause violation",
+              "seal_kind": "clause violation"
+            }
+          },
+          "decision_derivable_from_triple": true,
+          "committed_refusal_record_required": false,
+          "note": "The vector asserts determinism over the decision and asserts nothing about a committed refusal-record form, which section 16's second openness question leaves open. It stays valid under either resolution of that question."
+        }
+      }
     },
     {
       "id": "V-R13-01",
@@ -605,7 +872,36 @@
       "expect": "Bearing by the clause-membership branch of pertinence. Flat membership in a finite committed enumeration decides it; no transitive closure is walked.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "§8.3 Bearing (delta 23)"
+      "ratified_site": "§8.3 Bearing (delta 23)",
+      "case": {
+        "given": {
+          "question": "Q1",
+          "subject": "A2",
+          "law_head": "L1",
+          "position": "p1",
+          "discharged_requirement_space": [
+            "C-law-01",
+            "C-law-02",
+            "C-law-03"
+          ],
+          "circuit": {
+            "members": [
+              "D1 from C-law-02",
+              "D2 from C-law-05",
+              "D3 from C-law-06"
+            ],
+            "jointly_satisfiable": false,
+            "pairwise_consistent": true
+          }
+        },
+        "then": {
+          "bears": true,
+          "branch": "pertinence by clause membership",
+          "member_matched": "C-law-02",
+          "transitive_closure_walked": false,
+          "note": "A producing clause of the circuit is a flat member of the finding's discharged requirement space. Membership in a finite committed enumeration decides it; C-law-05 and C-law-06 are outside the space and are not consulted."
+        }
+      }
     },
     {
       "id": "V-R13-05",
@@ -618,7 +914,42 @@
       "expect": "Ground-pertinence, which fires R6's taint succession - pending, species unresolved-conflict - and not the edge into self-convicted. The finding's voice is poisoned; the question is not.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "§8.3 Bearing (delta 23)"
+      "ratified_site": "§8.3 Bearing (delta 23)",
+      "case": {
+        "given": {
+          "question": "Q1",
+          "subject": "A2",
+          "law_head": "L1",
+          "position": "p1",
+          "bundle": [
+            "gel:A1:0-20",
+            "kel:A2:0-5",
+            "kel:A7:0-4"
+          ],
+          "conviction": {
+            "of": "A7",
+            "tier": "registry",
+            "violated_predicate": "C-law-04"
+          },
+          "A7_role": "a cited third party, not the question's subject",
+          "frame_committed_predicate": true
+        },
+        "then": {
+          "value": "pending",
+          "requirement_set": [
+            {
+              "subject": "A7",
+              "kind": "taint",
+              "citing_clauses": [
+                "C-law-04"
+              ],
+              "species": "unresolved-conflict"
+            }
+          ],
+          "edge_into_self_convicted_fired": false,
+          "note": "Ground-pertinence fires R6's taint succession, not the edge into self-convicted. The finding's voice is poisoned; the question is not."
+        }
+      }
     },
     {
       "id": "V-R14-01",
@@ -634,7 +965,49 @@
       "expect": "An ordinary succession at a new position, computed fresh by full discharge, possibly affirmed. The prior defeated stands at its coordinate. Reinstatement is a new fact, never an edge.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "§8.3 forbidden table (delta 24)"
+      "ratified_site": "§8.3 forbidden table (delta 24)",
+      "case": {
+        "given": {
+          "question": "Q1",
+          "law_head": "L1",
+          "positions": [
+            "p20",
+            "p21"
+          ],
+          "finding_at_p20": {
+            "value": "defeated",
+            "cites": {
+              "class": "authority",
+              "citation": "C-auth-01"
+            }
+          },
+          "growth": {
+            "falsifies": "the enactment of C-auth-01",
+            "span": "gel:A1:31"
+          },
+          "bundle_at_p21": [
+            "gel:A1:0-31",
+            "kel:A2:0-5"
+          ]
+        },
+        "then": {
+          "findings": [
+            {
+              "position": "p20",
+              "value": "defeated",
+              "stands": true
+            },
+            {
+              "position": "p21",
+              "value": "affirmed",
+              "computed_by": "full discharge over the grown bundle"
+            }
+          ],
+          "edge_crossed": false,
+          "reversal_condition": "undercut — the growth falsifies a ground the prior finding cites",
+          "note": "Reinstatement is a new fact at a new coordinate whose bundle contains the undercut, never an edge. Whether p21 returns affirmed depends on what the requirement space now yields; the case fixes it by giving the space no other unexamined check."
+        }
+      }
     },
     {
       "id": "V-R14-02",
@@ -650,7 +1023,40 @@
       "expect": "No reversal. The reversal condition admits undercut and not rebuttal.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "§8.3 evidence ordering (delta 25)"
+      "ratified_site": "§8.3 evidence ordering (delta 25)",
+      "case": {
+        "given": {
+          "question": "Q1",
+          "law_head": "L1",
+          "positions": [
+            "p20",
+            "p21"
+          ],
+          "finding_at_p20": {
+            "value": "defeated",
+            "cites": {
+              "class": "merit",
+              "citation": "C-merit-01"
+            }
+          },
+          "growth": {
+            "adds": "contrary weight",
+            "falsifies_a_cited_ground": false,
+            "span": "gel:A1:31"
+          }
+        },
+        "then": {
+          "finding_at_p21": {
+            "value": "defeated",
+            "cites": {
+              "class": "merit",
+              "citation": "C-merit-01"
+            }
+          },
+          "reversal": false,
+          "note": "The reversal condition admits undercut and refuses rebuttal. Added contrary weight never suffices, however much of it arrives."
+        }
+      }
     },
     {
       "id": "V-R14-03",
@@ -667,7 +1073,44 @@
       "expect": "No reversal. The reversal condition is computed through R13's pertinence, so an artifact outside the birth-committed declaration cannot undercut.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "§8.3 forbidden table (delta 24)"
+      "ratified_site": "§8.3 forbidden table (delta 24)",
+      "case": {
+        "given": {
+          "question": "Q1",
+          "law_head": "L1",
+          "positions": [
+            "p20",
+            "p21"
+          ],
+          "finding_at_p20": {
+            "value": "defeated",
+            "cites": {
+              "class": "authority",
+              "citation": "C-auth-01"
+            },
+            "birth_committed_declaration": [
+              "C-auth-01",
+              "C-crypto-01",
+              "gel:A1:0-30"
+            ]
+          },
+          "growth": {
+            "falsifies": "C-auth-09",
+            "cited_by_prior_finding": false
+          }
+        },
+        "then": {
+          "finding_at_p21": {
+            "value": "defeated",
+            "cites": {
+              "class": "authority",
+              "citation": "C-auth-01"
+            }
+          },
+          "reversal": false,
+          "note": "The reversal condition is computed through R13's pertinence, so a falsifier striking an artifact outside the prior finding's birth-committed declaration cannot undercut it."
+        }
+      }
     },
     {
       "id": "V-R15-01",
@@ -683,7 +1126,26 @@
       "expect": "Must-reject. The law head SHALL be derivable through the designation chain, and recognition weight does not substitute for designation.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "§18 boundary family (delta 46); §18 Designation and membership (delta 44)"
+      "ratified_site": "§18 boundary family (delta 46); §18 Designation and membership (delta 44)",
+      "case": {
+        "given": {
+          "warranty": {
+            "well_formed": true,
+            "cites_law_head": "L9",
+            "receipts": "heavily receipted"
+          },
+          "designation_chain": {
+            "knot": "present",
+            "founding_law": "present",
+            "designates_registry": "A3"
+          },
+          "L9_folded_from": "A8, a registry the founding law never designated"
+        },
+        "then": {
+          "outcome": "must-reject",
+          "note": "The eloquent stranger. A finding's law head SHALL be derivable as the fold of the subject's designated GEL, and recognition or receipt weight adds force above the designation check rather than in place of it."
+        }
+      }
     },
     {
       "id": "V-R15-02",
@@ -699,7 +1161,29 @@
       "expect": "Refusal, and not either invention. The vector's expected value is the refusal itself, which is what makes it discriminating.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "§18 Designation and membership (delta 44)"
+      "ratified_site": "§18 Designation and membership (delta 44)",
+      "case": {
+        "given": {
+          "committed_record": "one stream",
+          "team_a_membership_convention": "first-anchored registry",
+          "team_b_membership_convention": "most-recently-anchored registry",
+          "derived_gel_spans": {
+            "team_a": [
+              "tel:A3:0-9"
+            ],
+            "team_b": [
+              "tel:A8:0-4"
+            ]
+          },
+          "founding_law_designation": null
+        },
+        "then": {
+          "outcome": "refuse",
+          "expected_value_is_the_refusal": true,
+          "neither_invention_admitted": true,
+          "note": "The discriminating property is that the refusal is the answer. An engine that returns either team's GEL has completed membership by convention, which the fail-loud law forbids."
+        }
+      }
     },
     {
       "id": "V-R15-03",
@@ -715,7 +1199,22 @@
       "expect": "The bootstrap refusal, extended from placement to membership. Any membership rule that can yield a proper subset of the GEL without a refusal is must-reject.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "§18 boundary family (delta 46)"
+      "ratified_site": "§18 boundary family (delta 46)",
+      "case": {
+        "given": {
+          "stream": "a governance stream",
+          "founding_law": {
+            "present": true,
+            "designates_registry": null
+          }
+        },
+        "then": {
+          "outcome": "refuse",
+          "refusal": "the bootstrap refusal, extended from placement to membership",
+          "fail_loud": true,
+          "note": "Any membership rule that can yield a proper subset of the GEL without a refusal is must-reject; this is the case where nothing can be yielded at all."
+        }
+      }
     },
     {
       "id": "V-R17-01",
@@ -731,7 +1230,34 @@
       "expect": "A four-valued finding, position-indexed, inheriting bearing, reinstatement, designated law and full discharge. Satisfaction is a fold, not a byte comparison and not a negotiation.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "§10 covenant seal (delta 29)"
+      "ratified_site": "§10 covenant seal (delta 29)",
+      "case": {
+        "given": {
+          "seal": {
+            "kind": "covenant",
+            "seal_data": "the SAID of clause set {C-cov-01, C-cov-02}",
+            "carried_as": "the substrate's typed seal with a reserved type value"
+          },
+          "question": "does the successor satisfy the sealed clause set?",
+          "law_head": "L1",
+          "position": "p30",
+          "bundle": [
+            "gel:A1:0-40"
+          ]
+        },
+        "then": {
+          "value": "affirmed",
+          "returned_by": "a fold",
+          "inherits": [
+            "bearing (R13)",
+            "reinstatement (R14)",
+            "the designated law head (R15)",
+            "full discharge (R2)"
+          ],
+          "position_indexed": true,
+          "note": "Satisfaction is the third grade between byte equality and negotiation: computed and replayable. Layers 1 and 2 — carriage and attachment — are cryptographic and log-kind-uniform; only layer 3 is a fold."
+        }
+      }
     },
     {
       "id": "V-R17-02",
@@ -747,7 +1273,20 @@
       "expect": "Must-reject. Where byte equality is achievable the digest seal is mandatory, and a covenant seal over digest-sealable content is the defect.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "§1.2 admissibility (delta 5); §10 (delta 29)"
+      "ratified_site": "§1.2 admissibility (delta 5); §10 (delta 29)",
+      "case": {
+        "given": {
+          "seal": {
+            "kind": "covenant",
+            "over": "content for which byte equality is achievable"
+          },
+          "digest_seal_available": true
+        },
+        "then": {
+          "outcome": "must-reject",
+          "note": "Where byte equality is achievable the digest seal is mandatory, so a covenant seal over digest-sealable content is the defect. This replaces the undecidable lineage-invariant admissibility condition with a decidable test the section already carried."
+        }
+      }
     },
     {
       "id": "V-R17-03",
@@ -763,7 +1302,29 @@
       "expect": "Breach with a committed anchor. The seal carries the question and the fold supplies the answer; the composition of the two is what makes breach computable.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "§10 covenant seal (delta 29)"
+      "ratified_site": "§10 covenant seal (delta 29)",
+      "case": {
+        "given": {
+          "seal": {
+            "kind": "covenant",
+            "seal_data": "the SAID of clause set {C-cov-01}",
+            "anchored_at": "gel:A1:22"
+          },
+          "satisfaction_finding": {
+            "value": "defeated",
+            "position": "p30",
+            "cites": {
+              "class": "merit",
+              "citation": "C-cov-01"
+            }
+          }
+        },
+        "then": {
+          "outcome": "breach",
+          "committed_anchor": "gel:A1:22",
+          "note": "The seal carries the question forward at a committed coordinate and the fold supplies the answer; their composition is what makes breach computable rather than argued."
+        }
+      }
     },
     {
       "id": "V-R18-01",
@@ -779,7 +1340,20 @@
       "expect": "Must-reject. The blinding factor is substrate-grade, in ACDC's u-field discipline.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "§7 blinding mandate (delta 20)"
+      "ratified_site": "§7 blinding mandate (delta 20)",
+      "case": {
+        "given": {
+          "object": {
+            "said_committed_at": "gel:A1:18",
+            "intended_disclosure": "later, at a contest window",
+            "blinding_factor": null
+          }
+        },
+        "then": {
+          "outcome": "must-reject",
+          "note": "Governance preimages are near-worst-case grindable — a roster, an act kind, a coordinate. The blinding factor is substrate-grade, in ACDC's own u-field discipline, cited and not reinvented."
+        }
+      }
     },
     {
       "id": "V-R18-02",
@@ -795,7 +1369,20 @@
       "expect": "Admitted. Born-disclosed objects are exempt, and a vector that rejects them would over-apply the mandate.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "§7 blinding mandate (delta 20)"
+      "ratified_site": "§7 blinding mandate (delta 20)",
+      "case": {
+        "given": {
+          "object": {
+            "said_committed_at": "gel:A1:19",
+            "born_disclosed": true,
+            "blinding_factor": null
+          }
+        },
+        "then": {
+          "outcome": "admitted",
+          "note": "Born-disclosed objects are exempt. A vector that rejects them over-applies the mandate, which is why this case travels with V-R18-01."
+        }
+      }
     },
     {
       "id": "V-R20-01",
@@ -811,7 +1398,26 @@
       "expect": "Refusal, fail-loud. A semantics-pin mismatch is not a silent divergence, and a divergence report over unequal pins says so rather than reporting nonconformance.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "§1.4 axiom 4 semantics face, L282-295 (delta 6)"
+      "ratified_site": "§1.4 axiom 4 semantics face, L282-295 (delta 6)",
+      "case": {
+        "given": {
+          "question": "Q1",
+          "law_head": "L1",
+          "position": "p1",
+          "law_head_pins": {
+            "superseding-recovery calculus": "rev-a"
+          },
+          "engine_holds": {
+            "superseding-recovery calculus": "rev-b"
+          }
+        },
+        "then": {
+          "outcome": "refuse",
+          "fail_loud": true,
+          "reported_as_nonconformance": false,
+          "note": "A semantics-pin mismatch is not a silent divergence and not a conformance failure: the engines are appraising under two different law heads. A divergence report over unequal pins says so."
+        }
+      }
     },
     {
       "id": "V-R20-02",
@@ -827,7 +1433,34 @@
       "expect": "It governs. The enumeration clause is a functional-dependency declaration over the predicate set consumed, so completeness of the prose is not what makes a pinned rule binding.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "§15 interpretive latitude (delta 38)"
+      "ratified_site": "§15 interpretive latitude (delta 38)",
+      "case": {
+        "given": {
+          "law_head": "L1",
+          "functional_dependency_declaration": {
+            "pinned_revision": "rev-a",
+            "predicates_named_in_prose": [
+              "A0",
+              "A1",
+              "A2",
+              "B1"
+            ],
+            "predicates_in_the_pinned_revision": [
+              "A0",
+              "A1",
+              "A2",
+              "B1",
+              "B2",
+              "B3"
+            ]
+          },
+          "question_turns_on": "B3"
+        },
+        "then": {
+          "B3_governs": true,
+          "note": "The clause is a functional-dependency declaration over the predicate set consumed, and the whole-file digest is where those predicates live. Completeness of the prose is not what makes a pinned rule binding — which is the point of pinning a revision rather than transcribing rules."
+        }
+      }
     },
     {
       "id": "V-11A-01",
@@ -843,7 +1476,58 @@
       "expect": "The invocation refuses, with grounds named per section 9's three-kind discipline, and the refusal record cites both computed components, which stand as ordinary findings at their own coordinates. No product object contains a refused coordinate.",
       "grade": "semantic",
       "status": "specifiable",
-      "ratified_site": "§8.5 compound closure (delta 28)"
+      "ratified_site": "§8.5 compound closure (delta 28)",
+      "case": {
+        "given": {
+          "invocation": "a three-slot compound over Q1, Q2, Q3",
+          "law_head": "L1",
+          "position": "p1",
+          "components": [
+            {
+              "question": "Q1",
+              "result": "computed",
+              "value": "affirmed"
+            },
+            {
+              "question": "Q2",
+              "result": "computed",
+              "value": "defeated"
+            },
+            {
+              "question": "Q3",
+              "result": "refused",
+              "seam": "uncommitted composition seam"
+            }
+          ]
+        },
+        "then": {
+          "invocation": {
+            "value": "refuse",
+            "refusal_grounds": {
+              "kind": "clause violation",
+              "seal_kind": "clause violation"
+            },
+            "cites_computed_components": [
+              "Q1",
+              "Q2"
+            ]
+          },
+          "surviving_findings": [
+            {
+              "question": "Q1",
+              "value": "affirmed",
+              "stands_at": "its own coordinate"
+            },
+            {
+              "question": "Q2",
+              "value": "defeated",
+              "stands_at": "its own coordinate"
+            }
+          ],
+          "product_contains_refused_coordinate": false,
+          "note": "A sibling's refusal un-happens nothing. The refusal answers about the seam; the findings answer about their subjects."
+        }
+      }
     },
     {
       "id": "V-S31-01",
