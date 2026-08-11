@@ -647,6 +647,20 @@
       }
     },
     {
+      "id": "V-R03-04",
+      "family": "ordering",
+      "owed_by": {
+        "source": "record-2026-07-30",
+        "ruling": "R3"
+      },
+      "ratified_site": "§8.3 required payloads, L1646-1657 — precedence committed, species comparison basis not",
+      "input": "Two requirement elements agreeing at subject, kind and citing clauses, one of species window-open and one of species expired/abandoned.",
+      "expect": "Undetermined by the ratified text, which is the point of the entry. Under comparison by enumerated position window-open precedes expired/abandoned; under comparison by name bytes expired/abandoned precedes window-open. Two conforming engines serialize the same requirement set in two orders.",
+      "grade": "semantic",
+      "status": "specifiable",
+      "underdetermined": "The comparison basis for the species component. Section 8.3 commits the four-field precedence and names the third component's basis explicitly (citing-clause bytes) while leaving the fourth's unstated; section 16's wall 6 supplies a default over self-addressing identifiers, and a species is an enumerated label rather than one, so the default does not reach it. The pair here is chosen so the two surviving readings disagree — V-R03-01's pair (absent against window-open) happens to order the same way under both, so it does not discriminate. Written when the basis is fixed."
+    },
+    {
       "id": "V-R06-01",
       "family": "conviction",
       "owed_by": {
