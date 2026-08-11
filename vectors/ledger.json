@@ -2368,17 +2368,16 @@
       "status": "specifiable",
       "case": {
         "given": {
-          "compact_form": {
-            "routes": [
-              "r-committed-endpoint",
-              "r-open"
-            ],
-            "isolation": "absent — r-open carries compact-form elements"
-          }
+          "compact_form_bytes": "travelling in this standard's own genus",
+          "route": {
+            "endpoints_committed_the_regime": false
+          },
+          "consumer": "a party that never committed the regime"
         },
         "then": {
           "outcome": "must-reject",
-          "note": "The compact form routes to committed endpoints only. Route isolation is a must-reject member in its own right because the form changes cost, never meaning and never audience."
+          "refused_at": "the genus boundary",
+          "note": "A foreign-genus segment is mechanically fatal to every consumer not holding the genus, not merely unlawful — the ratified text grounds this on keripy's behavior at the pinned checkout, where an unexpected count code fails rather than being skipped. The compact form is spoken only where both endpoints committed it."
         }
       }
     },
