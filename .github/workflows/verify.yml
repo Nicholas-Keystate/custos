@@ -36,6 +36,9 @@ jobs:
       - name: 4.2 succession replay (published-bytes half; KEL seals confessed)
         run: python3 tools/replay-42-succession.py
 
+      - name: Conformance vector ledger integrity and coverage
+        run: python3 tools/verify_vectors.py
+
       - name: Round manifests verify byte-exact
         run: |
           set -e
