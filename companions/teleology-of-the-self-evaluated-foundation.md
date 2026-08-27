@@ -831,8 +831,16 @@ holds P1, P2, P3, and P4 jointly** — finding-grade evaluation of
 its own foundation, verification acts sealed attributably inside
 the system verified, as a standing organ, with the unverifiable
 residue as constitutional text. The nearest misses are Tezos
-(P1 nominal, P4 absent), Certificate Transparency (P1 partial, P4
-textual but organ-less), and Milawa (P1 maximal, P2/P3 absent).
+(P1 nominal, P4 absent), Certificate Transparency (P1 partial; P2
+fails under strict grading — monitor verification runs leave no
+sealed record inside the log, and the cure for a convicted log is
+an external authority's act, sealed nowhere inside the system
+verified), and Milawa (P1 maximal, P2/P3 absent). [Dismissal
+reason corrected 2026-08-14 per the external battery's convergent
+finding (four seats): the prior wording leaned on an organ
+requirement that P4's definition does not state — the organ lives
+in P3. P4's definition is unchanged; the P2-strict ground was
+independently verified by the same passes.]
 The claim is falsified by exhibiting one system with all four; this
 document is the standing invitation to refute it, and per this
 workspace's own audit discipline the claim does not graduate to
