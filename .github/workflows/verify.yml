@@ -22,6 +22,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Corpus character discipline (whole corpus)
+        run: python3 tools/check-corpus-characters.py
+
       - name: Block-line discipline (4.3 and later spec bytes)
         run: python3 tools/check-block-lines.py
 

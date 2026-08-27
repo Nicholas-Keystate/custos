@@ -1,3 +1,140 @@
+# Instructions to the reviewer
+
+You are one independent pass in a refutation battery. You have no sight of any
+other pass's output, and none of your output will be shown to another pass.
+
+Your job is to ATTACK the claim stated in the docket below — to destroy it, not
+to improve the document it comes from. You are asked for your strongest attempt
+at refutation, argued from evidence you can actually cite. Do not be charitable.
+Do not be agreeable. A polite endorsement is a failed pass.
+
+Hard rules:
+
+1. Verdict form, no exceptions. Your output MUST begin with one of:
+   - `VERDICT: REFUTED` — followed by the exhibit (system, citation, or
+     counterexample) and the EXACT clause of the claim it destroys; or
+   - `VERDICT: NOT REFUTED` — followed by the strongest near-misses you found,
+     RANKED, each with the reason it falls short stated against the claim's own
+     grading discipline, not charitably.
+   Where the docket names separately-fallable sub-claims (e.g. margins), give a
+   separate verdict line for each.
+2. Cite specifically. A refutation exhibit must name the system or source, the
+   year, and the specific mechanism or passage that does the work. If you are
+   uncertain a citation is real, say so explicitly — a fabricated exhibit is
+   worse than no exhibit. Mark any claim you cannot verify as UNVERIFIED.
+3. Findings that improve the document without refuting the claim go in a
+   separate section at the end headed `DRIFT`, and nowhere else.
+4. Reason from the docket's own definitions and grading. Read them before
+   attacking. An attack that succeeds only against a weaker paraphrase of the
+   claim is a near-miss, not a refutation, and must be reported as such.
+
+Everything below this line is the material under review.
+
+---
+
+## The battery's charter (verbatim README)
+
+# Refutation battery — 2026-08-10
+
+Two dockets for external adversarial review (independent
+reviewer instances pulling from this repository). Each docket
+requires a **double refutation**: two independent passes, each
+attempting to destroy the claim, run without sight of the other
+pass's output. A claim survives only if both passes fail to
+refute it; per workspace law, nothing graduates to public
+assertion before surviving this battery.
+
+| Docket | Claim under attack | Source of record |
+|---|---|---|
+| [1 — the self-evaluated foundation](docket-1-self-evaluated-foundation-v6.md) | §V.6 of the teleology companion: no prior system holds P1–P4 jointly | `companions/teleology-of-the-self-evaluated-foundation.md` (v0.3) |
+| [2 — the section criterion for duplicity](docket-2-duplicity-section-criterion.md) | Duplicity = distributed antichain in a coordinate-fibered event space; detection ⟺ comparison-graph connectivity | Docket is self-contained |
+
+Verdict form for every pass, no exceptions:
+
+- **REFUTED** — with the exhibit (system, citation, or
+  counterexample) and the exact clause it destroys; or
+- **NOT REFUTED** — with the strongest near-miss found, ranked,
+  and the reason it falls short stated against the claim's own
+  grading, not charitably.
+
+Reviewers are asked to attack the claim, not to improve the
+document. Findings that improve the document without refuting
+the claim go in a separate DRIFT section at the end of the pass.
+
+---
+
+# Docket 1 — refute §V.6 of the teleology companion
+
+**Claim under attack** (verbatim from
+`companions/teleology-of-the-self-evaluated-foundation.md`,
+§V.6, v0.3):
+
+> No prior system holds P1, P2, P3, and P4 jointly —
+> finding-grade evaluation of its own foundation, verification
+> acts sealed attributably inside the system verified, as a
+> standing organ, with the unverifiable residue as
+> constitutional text.
+
+The four properties are defined in Part 0 of the same document.
+Read them before attacking; the claim is about the conjunction
+at the stated grades, and the document itself concedes strong
+partial ancestors (Tezos, Certificate Transparency, Milawa).
+A refutation must exhibit **one system, existing before 2026,
+holding all four jointly** at grades matching Part 0 — not four
+systems holding one each, and not a system holding all four at
+degraded readings.
+
+## Rules of engagement
+
+1. Use the document's own grading discipline against it. If you
+   believe a milestone in the V.1 matrix was graded too harshly
+   (a "~" that deserves "yes"), argue the upgrade from primary
+   sources; three upgrades on one row is a refutation.
+2. The document's citation discipline is an attack surface:
+   anything marked UNVERIFIED may be false. If a load-bearing
+   UNVERIFIED item is false and its truth would have changed a
+   grade, say so.
+3. Paraphrased findings (Ostrom 1992; Elster's retraction) are
+   attack surfaces: check the paraphrase against the source.
+
+## Suggested attack directions (not exhaustive — find your own)
+
+- **Key ceremonies.** The DNSSEC root KSK ceremonies: scripted,
+  witnessed, video-recorded, attested acts governing the
+  authority that verifies them, on a recurring cadence, with
+  published ceremony scripts and audit residue. How close is
+  this to P1+P2+P3+P4, honestly graded?
+- **Post-2018 self-amending chains beyond Tezos** — any chain
+  whose amendment process includes conformance evaluation of
+  the candidate protocol to finding grade (not merely stake
+  voting) before adoption.
+- **Standards bodies with executable conformance over their own
+  process** — IETF/ICANN/ISO internal governance; financial
+  market infrastructures under CPMI-IOSCO self-assessment;
+  aviation safety management systems auditing their own audit
+  organs.
+- **The newly added seats.** Elster (V), Ostrom 1992 (X), Nash
+  (XI) entered at v0.3. Their placements create adjacency
+  claims (e.g. "alone in this lineage," "the same seam from
+  proof theory") that may be refutable even where §V.6 is not.
+- **Item 7 of the residue ledger** (the deterrence wager) makes
+  two subsidiary factual claims worth attacking: that RFC
+  6962's gossip organ died unfunded (vs. never being needed —
+  check SCT auditing practice), and that the vLEI QVI regime is
+  an existence proof of charter-and-fee-funded monitoring
+  (check what QVIs actually monitor and whether it reaches the
+  watcher function the entry needs).
+
+## Out of scope
+
+Refuting KERI, Custos, or the pilot's technical results —
+that's docket 2's territory and prior rounds'. This docket is
+the historical conjunction claim only.
+
+---
+
+# Source of record for docket 1: the teleology companion (verbatim, v0.3)
+
 # The Self-Evaluated Foundation
 ## A teleological history of the idea Custos runs toward
 
@@ -831,16 +968,8 @@ holds P1, P2, P3, and P4 jointly** — finding-grade evaluation of
 its own foundation, verification acts sealed attributably inside
 the system verified, as a standing organ, with the unverifiable
 residue as constitutional text. The nearest misses are Tezos
-(P1 nominal, P4 absent), Certificate Transparency (P1 partial; P2
-fails under strict grading — monitor verification runs leave no
-sealed record inside the log, and the cure for a convicted log is
-an external authority's act, sealed nowhere inside the system
-verified), and Milawa (P1 maximal, P2/P3 absent). [Dismissal
-reason corrected 2026-08-14 per the external battery's convergent
-finding (four seats): the prior wording leaned on an organ
-requirement that P4's definition does not state — the organ lives
-in P3. P4's definition is unchanged; the P2-strict ground was
-independently verified by the same passes.]
+(P1 nominal, P4 absent), Certificate Transparency (P1 partial, P4
+textual but organ-less), and Milawa (P1 maximal, P2/P3 absent).
 The claim is falsified by exhibiting one system with all four; this
 document is the standing invitation to refute it, and per this
 workspace's own audit discipline the claim does not graduate to
