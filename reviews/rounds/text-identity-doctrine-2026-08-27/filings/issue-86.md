@@ -1,0 +1,30 @@
+# Issue #86: Finding (MAJOR): the committed corpus form says nothing about characters, so law can be written to read one way and hash another
+Filed by dhh1128 at 2026-08-26T22:29:44Z
+
+I think there's a gap in the ratified 4.2 bytes (sha256 68cc5c9b7164b33dffcf7b705a0d1301fe108c647d35638fec61d52d29b2775a), and I'd call it MAJOR, though I'm less sure of the grade here than usual and the argument for MINOR is at the end.
+
+Section 15 already has the hook. Every conviction a federated GARD emits has to name its kind, and one of the kinds is "a canonical-form violation (the bytes fail the committed corpus form — ordering, corpus identity)" (L2777-2778). So there is a corpus form, bytes can fail it, and failing it is convictable. The trouble is what the form covers. The gloss names ordering and corpus identity, and nothing else fills it in.
+
+I searched the ratified bytes on 2026-08-26 for "unicode", "utf-8", "codepoint", "charset" and every form of "normaliz", and got no hits at all. The word "character" appears twice, both about the 44-character qb64 digest class in the pin rule (L998, L1001). So the document requires no normalization form and excludes no character. The corpus form constrains how law is arranged and says nothing about what it's made of.
+
+That seems to leave at least 4 ways to write a clause that a reader and a fold will disagree about, and they're all cheap.
+
+The first is a bidirectional override. `U+202D` and `U+202E` force every character in scope to render in a chosen direction regardless of what the character is, so logical order and displayed order come apart. A clause can display as "the applicant SHALL NOT be admitted" while the bytes say something else. This is the attack Boucher and Anderson published as Trojan Source (arXiv 2111.00169, later USENIX Security), and MITRE issued CVE-2021-42574 against the Unicode specification for it. Every reviewer approves what they read, the fold consumes what's there, and the SAID is perfectly honest about bytes nobody looked at.
+
+The second is invisible characters. A soft hyphen, a zero width space, a word joiner or a byte order mark can sit inside a clause and change nothing a reader can see. Two clauses then render identically and hash differently. That matters more here than in ordinary text, because the digest is the whole of a clause's identity under section 5's ladder: a citation can resolve to bytes a reader believes they verified, and no amount of careful reading distinguishes them.
+
+The third is confusable characters, which do the same thing without any invisible at all. A Cyrillic а inside a Latin word renders identically to the real one. MITRE issued CVE-2021-42694 for this alongside the first.
+
+The fourth needs no attacker. Absent a required normalization form, one rendering can have more than one byte sequence, so the same clause honestly drafted twice can have two SAIDs. Reading rule 2 says a digest pin names exact bytes, and that's the reason a rendering needs to have only one byte sequence available to it.
+
+I should be careful about who can do any of this. Writing text into a corpus is a privileged position — a drafting authority, or an enacting one. So most of this is an insider problem, and a domain that doesn't trust its own drafters has larger troubles. What makes me grade it above a curiosity is the cross-domain case, where a frame consumes law it did not write. A covenant seal names a clause set in another domain's registry (L2041-2045), and clause-selective disclosure hands a verifier individual clauses to check in isolation against an aggregate (L1486-1489). In both, someone is reading text from a party they are explicitly not required to trust, which is the whole point of the construction.
+
+For a repair I'd offer a shape. Say what the committed corpus form requires of characters, not just of ordering: one normalization form, an excluded set of characters that make rendering and content diverge, and a check for mixed scripts inside a single word. Make it refuse rather than repair. Stripping a bidi override from submitted text would silently produce a clause nobody wrote; refusing the submission tells someone. That also fits the existing shape, since a canonical-form violation is already a conviction rather than a cleanup.
+
+There's prior art for the exclusion list, and it's close to hand. CQT (https://dhh1128.github.io/canonical-quoted-text/) does this work in its step 2, which it explicitly frames as precondition rather than canonicalization: remove unpaired surrogates, remove control characters, and remove the two overrides, with the reasoning given as "it is the mechanism behind bidirectional spoofing, in which a signer sees one thing and signs another." Its step 5 handles the invisibles. I don't think CQT should be adopted whole for law — it folds whitespace and quote characters and dashes, which would destroy line structure and erase the distinction reading rule 1 draws between quoted and unquoted text — but the character rules port, and CQT itself notes that confusables are out of its scope and points at Unicode Technical Standard #39 for a caller who wants them.
+
+Separately, and not as a defense: CQT looks directly useful for something reading rule 1 already asks for. Keyworded text quoted from another corpus "remains that corpus's commitment, cited here." Checking that a quotation still matches its source, when the source is a differently formatted document, is the problem CQT was built for, and a quoted span could carry a CQT hash of what it quotes.
+
+On the grade, MINOR is defensible. Nothing ratified is falsified, no replay breaks, and none of this is reachable by a party who cannot already write law. What holds me at MAJOR is that section 15 states the corpus form as a convictable property and leaves the part an adversary would attack unspecified, and that the two constructions above deliberately put a verifier in front of text from a party they don't trust.
+
+Relates to #85 (the locator finding, which shares the observation that a clause's SAID is its only identity), #77, and #57 (the encoding round, where a normalization form may already belong).
