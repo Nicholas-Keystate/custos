@@ -1,2 +1,0 @@
-5698c3fd3298a7173eae5324e2ea0138317c63c06aaf25c30c52776807151b5a  reviews/rounds/text-identity-doctrine-2026-08-27/sol-verdict.md
-4a817a6e0b9ebb32a39f3c4d2a2967b45743e73b859c89c88646479b2ca7b108  reviews/rounds/text-identity-doctrine-2026-08-27/fable-verdict.md
